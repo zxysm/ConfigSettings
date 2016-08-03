@@ -101,5 +101,12 @@ namespace ConfigSettings
         public bool UsePokemonToNotCatchFilter { get; set; }
         public bool UsePokemonSniperFilterOnly { get; set; }
         public int WebSocketPort { get; set; }
+        public ItemRecycler[] ItemRecycleFilter { get; set; }
+        public string[] PokemonsNotToTransfer { get; set; }
+        public string[] PokemonsToEvolve { get; set; }
+        public string[] PokemonsToIgnore { get; set; }
+        //PokemonsTransferFilter
+        public PokemonToSnipe PokemonToSnipe { get; set; }
+        public string[] PokemonToUseMasterball { get; set; }
     }
 }

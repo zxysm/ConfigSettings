@@ -52,16 +52,18 @@ namespace ConfigSettings
 
         private void ParseConfig(string configFile)
         {
-            
+            string configJson = File.ReadAllText(configFile);
+            config = JsonConvert.DeserializeObject<Config>(configJson);
+            MessageBox.Show(config.ItemRecycleFilter[2].ToString());
         }
 
         private void ParseAuth(string authFile)
         {
             string authJson = File.ReadAllText(authFile);
             auth = JsonConvert.DeserializeObject<Auth>(authJson);
-            string o = JsonConvert.SerializeObject(auth, Formatting.Indented);
-            o = o.Replace("\r\n","\n");
-            File.WriteAllText(authFile + ".old", o);
+            //string o = JsonConvert.SerializeObject(auth, Formatting.Indented);
+            //o = o.Replace("\r\n","\n");
+            //File.WriteAllText(authFile + ".old", o);
         }
 
         private void btnOldConfigPath_Click(object sender, EventArgs e)

@@ -8,3 +8,4 @@ D:\triet\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.Properties.Resou
 D:\triet\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.csproj.GenerateResource.Cache
 D:\triet\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.exe
 D:\triet\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.pdb
+D:\triet\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.csprojResolveAssemblyReference.cache
