@@ -1,0 +1,11 @@
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\bin\Debug\ConfigSettings.exe.config
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\bin\Debug\ConfigSettings.exe
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\bin\Debug\ConfigSettings.pdb
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\bin\Debug\Newtonsoft.Json.dll
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\bin\Debug\Newtonsoft.Json.xml
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.csprojResolveAssemblyReference.cache
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.frmConfig.resources
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.Properties.Resources.resources
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.csproj.GenerateResource.Cache
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.exe
+D:\Games\ConfigSettings\ConfigSettings\ConfigSettings\obj\Debug\ConfigSettings.pdb
