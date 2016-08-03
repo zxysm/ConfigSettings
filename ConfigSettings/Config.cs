@@ -60,6 +60,46 @@ namespace ConfigSettings
         public bool UseLuckyEggConstantly { get; set; }
         public int UseLuckyEggsMinPokemonAmount { get; set; }
         public bool UseLuckyEggsWhileEvolving { get; set; }
-
+        public bool UseIncenseConstantly { get; set; }
+        public int UseBerriesMinCp { get; set; }
+        public float UseBerriesMinIv { get; set; }
+        public float UseBerriesBelowCatchProbability { get; set; }
+        public Operator UseBerriesOperator { get; set; }
+        public bool UseSnipeOnlineLocationServer { get; set; }
+        public bool UseSniptLocationServer { get; set; }
+        public string SnipeLocationServer { get; set; }
+        public int SnipeLocationServerPort { get; set; }
+        public int MinPokeballsToSnipe { get; set; }
+        public int MinPokeballsWhileSnipe { get; set; }
+        public int MinDelayBetweenSnipes { get; set; }
+        public float SnipingScanOffset { get; set; }
+        public bool SnipeAtPokestops { get; set; }
+        public bool SnipeIgnoreUnknownIv { get; set; }
+        public bool UseTransferIvForSnipe { get; set; }
+        public bool RenamePokemon { get; set; }
+        public bool RenameOnlyAboveIv { get; set; }
+        public string RenameTemplate { get; set; }
+        public int MaxPokeballsPerPokemon { get; set; }
+        public int MaxTravelDistanceInMeters { get; set; }
+        public int TotalAmountOfPokeballsToKeep { get; set; }
+        public int TotalAmountOfPotionsToKeep { get; set; }
+        public int TotalAmountOfRevicesToKeep { get; set; }
+        public int TotalAmountOfBerriesToKeep { get; set; }
+        public int UseGreatBallAboveCp { get; set; }
+        public int UseUltraBallAboceCp { get; set; }
+        public int UseMasterBallAboveCp { get; set; }
+        public float UseGreatBallAboveIv { get; set; }
+        public float UseUltraBallAboveIv { get; set; }
+        public float UseGreatBallBelowCatchProbability { get; set; }
+        public float UseUltraBallBelowCatchProbability { get; set; }
+        public float UseMasterBallBelowCatchProbability { get; set; }
+        public bool TransferWeakPokemon { get; set; }
+        public bool TransferDuplicatePokemon { get; set; }
+        public bool TransferDuplicatePokemonOnCapture { get; set; }
+        public float FavoriteMinIvPercentage { get; set; }
+        public bool AutoFavoritePokemon { get; set; }
+        public bool UsePokemonToNotCatchFilter { get; set; }
+        public bool UsePokemonSniperFilterOnly { get; set; }
+        public int WebSocketPort { get; set; }
     }
 }
