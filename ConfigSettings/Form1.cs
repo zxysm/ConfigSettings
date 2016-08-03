@@ -54,8 +54,6 @@ namespace ConfigSettings
         {
             string configJson = File.ReadAllText(configFile);
             config = JsonConvert.DeserializeObject<Config>(configJson);
-            //MessageBox.Show(config.PokemonsTransferFilter["Golduck"].ToString());
-
             //for (int i=0;i<config.PokemonsTransferFilter.Count; i++)
             //{
             //    KeyValuePair<string, PokemonTransfer> key = config.PokemonsTransferFilter.ElementAt(i);
