@@ -48,6 +48,19 @@ namespace ConfigSettings
         {
             ParseAuth(oldSettingPath + @"auth.json");
             ParseConfig(oldSettingPath + @"config.json");
+            ParseToUI();
+        }
+
+        private void ParseToUI()
+        {
+            ParseGeneralSettings();
+        }
+
+        private void ParseGeneralSettings()
+        {
+            cboxAutoUpdate.Checked = config.AutoUpdate;
+            cboxTransferConfigAndAuthOnUpdate.Checked = config.TransferConfigAndAuthOnUpdate;
+            cbxTranslationLanguageCode.SelectedItem = config.TranslationLanguageCode;
         }
 
         private void ParseConfig(string configFile)
