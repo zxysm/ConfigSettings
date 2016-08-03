@@ -54,7 +54,13 @@ namespace ConfigSettings
         {
             string configJson = File.ReadAllText(configFile);
             config = JsonConvert.DeserializeObject<Config>(configJson);
-            MessageBox.Show(config.ItemRecycleFilter[2].ToString());
+            //MessageBox.Show(config.PokemonsTransferFilter["Golduck"].ToString());
+
+            //for (int i=0;i<config.PokemonsTransferFilter.Count; i++)
+            //{
+            //    KeyValuePair<string, PokemonTransfer> key = config.PokemonsTransferFilter.ElementAt(i);
+            //    MessageBox.Show(key.Key.ToString() + " - " + key.Value.ToString());
+            //}
         }
 
         private void ParseAuth(string authFile)

@@ -34,9 +34,9 @@ namespace ConfigSettings
         public float UpgradePokemonIvMinimum { get; set; }
         public Operator UpgradePokemonMinimumStatsOperator { get; set; }
         public bool DisableHumanWalking { get; set; }
-        public float DefaultAltitude { get; set; }
-        public float DefaultLatitude { get; set; }
-        public float DefaultLongitude { get; set; }
+        public decimal DefaultAltitude { get; set; }
+        public decimal DefaultLatitude { get; set; }
+        public decimal DefaultLongitude { get; set; }
         public float WalkingSpeedInKilometerPerHour { get; set; }
         public int MaxSpawnLocationOffset { get; set; }
         public int DelayBetweenPlayerActions { get; set; }
@@ -105,7 +105,7 @@ namespace ConfigSettings
         public string[] PokemonsNotToTransfer { get; set; }
         public string[] PokemonsToEvolve { get; set; }
         public string[] PokemonsToIgnore { get; set; }
-        //PokemonsTransferFilter
+        public Dictionary<string, PokemonTransfer> PokemonsTransferFilter { get; set; }
         public PokemonToSnipe PokemonToSnipe { get; set; }
         public string[] PokemonToUseMasterball { get; set; }
     }
