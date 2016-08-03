@@ -9,6 +9,8 @@ namespace ConfigSettings
     class PokemonTransfer
     {
         public int KeepMinCp { get; set; }
+        public int KeepMinLvl { get; set; }
+        public bool UseKeepMinLvl { get; set; }
         public float KeepMinIvPercentage { get; set; }
         public int KeepMinDuplicatePokemon { get; set; }
         public string[] Moves { get; set; }

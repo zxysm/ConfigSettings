@@ -49,7 +49,9 @@ namespace ConfigSettings
         public bool KeepPokemonsThatCanEvolve { get; set; }
         public int KeepMinCp { get; set; }
         public float KeepMinIvPercentage { get; set; }
+        public int KeepMinLvl { get; set; }
         public Operator KeepMinOperator { get; set; }
+        public bool UseKeepMinLvl { get; set; }
         public bool PrioritizeIvOverCp { get; set; }
         public int KeepMinDuplicatePokemon { get; set; }
         public bool UseGpxPathing { get; set; }
@@ -69,6 +71,8 @@ namespace ConfigSettings
         public bool UseSniptLocationServer { get; set; }
         public string SnipeLocationServer { get; set; }
         public int SnipeLocationServerPort { get; set; }
+        public bool GetSniperInfoFromPokezz { get; set; }
+        public bool GetOnlyVerifiedSniperInfoFromPokezz { get; set; }
         public int MinPokeballsToSnipe { get; set; }
         public int MinPokeballsWhileSnipe { get; set; }
         public int MinDelayBetweenSnipes { get; set; }
@@ -93,6 +97,15 @@ namespace ConfigSettings
         public float UseGreatBallBelowCatchProbability { get; set; }
         public float UseUltraBallBelowCatchProbability { get; set; }
         public float UseMasterBallBelowCatchProbability { get; set; }
+        public bool EnableHumanizedThrows { get; set; }
+        public int NiceThrowChance { get; set; }
+        public int GreatThrowChance { get; set; }
+        public int ExcellentThrowChance { get; set; }
+        public int CurveThrowChance { get; set; }
+        public float ForceGreatThrowOverIv { get; set; }
+        public float ForceExcellentThrowOverIv { get; set; }
+        public float ForceGreatThrowOverCp { get; set; }
+        public float ForceExcellentThrowOverCp { get; set; }
         public bool TransferWeakPokemon { get; set; }
         public bool TransferDuplicatePokemon { get; set; }
         public bool TransferDuplicatePokemonOnCapture { get; set; }

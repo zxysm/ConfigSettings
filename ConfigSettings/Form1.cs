@@ -15,7 +15,7 @@ namespace ConfigSettings
 {
     public partial class frmConfig : Form
     {
-        private string oldSettingPath = @".\Config\";
+        private string oldSettingPath = @"..\..\Config\";
         private Auth auth;
         private Config config;
 
@@ -60,6 +60,16 @@ namespace ConfigSettings
         {
             ParseGeneralSettings();
             ParseBotSettings();
+            ParseLocationSettings();
+        }
+
+        private void ParseLocationSettings()
+        {
+            txtDefaultAltitude.Text = config.DefaultAltitude.ToString();
+            txtDefaultLatitude.Text = config.DefaultLatitude.ToString();
+            txtDefaultLongitude.Text = config.DefaultLongitude.ToString();
+            txtWalkingSpeedInKilometerPerHour.Text = config.WalkingSpeedInKilometerPerHour.ToString();
+            txtMaxSpawnLocationOffset.Text = config.MaxSpawnLocationOffset.ToString();
         }
 
         private void ParseBotSettings()
@@ -72,6 +82,8 @@ namespace ConfigSettings
             txtUpgradePokemonIvMinimum.Text = config.UpgradePokemonIvMinimum.ToString();
             cbxUpgradePokemonMinimumStatsOperator.SelectedItem = config.UpgradePokemonMinimumStatsOperator;
             cboxDisableHumanWalking.Checked = config.DisableHumanWalking;
+            txtDelayBetweenPlayerActions.Text = config.DelayBetweenPlayerActions.ToString();
+            txtDelayBetweenPokemonCatch.Text = config.DelayBetweenPokemonCatch.ToString();
         }
 
         private void ParseGeneralSettings()
@@ -164,6 +176,21 @@ namespace ConfigSettings
                     e.Handled = true;
                 }
             }
+        }
+
+        private void txtMaxSpawnLocationOffset_TextChanged(object sender, EventArgs e)
+        {
+            TextBoxAmountChanged(txtMaxSpawnLocationOffset);
+        }
+
+        private void txtDelayBetweenPlayerActions_TextChanged(object sender, EventArgs e)
+        {
+            TextBoxAmountChanged(txtDelayBetweenPlayerActions);
+        }
+
+        private void txtDelayBetweenPokemonCatch_TextChanged(object sender, EventArgs e)
+        {
+            TextBoxAmountChanged(txtDelayBetweenPokemonCatch);
         }
     }
 }

@@ -59,10 +59,26 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cboxDisableHumanWalking = new System.Windows.Forms.CheckBox();
             this.cboxDumpPokemonStats = new System.Windows.Forms.CheckBox();
+            this.grboxLocation = new System.Windows.Forms.GroupBox();
+            this.txtDefaultAltitude = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtDefaultLatitude = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDefaultLongitude = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtWalkingSpeedInKilometerPerHour = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtMaxSpawnLocationOffset = new System.Windows.Forms.TextBox();
+            this.txtDelayBetweenPlayerActions = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtDelayBetweenPokemonCatch = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grboxGeneralConfig.SuspendLayout();
             this.grboxOldSetting.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.grboxLocation.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -78,13 +94,14 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.grboxLocation);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.grboxGeneralConfig);
             this.panel1.Controls.Add(this.grboxOldSetting);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(792, 588);
+            this.panel1.Size = new System.Drawing.Size(792, 811);
             this.panel1.TabIndex = 1;
             // 
             // grboxGeneralConfig
@@ -246,7 +263,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtDelayBetweenPokemonCatch);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.txtDelayBetweenPlayerActions);
             this.groupBox1.Controls.Add(this.cboxDisableHumanWalking);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.cbxUpgradePokemonMinimumStatsOperator);
             this.groupBox1.Controls.Add(this.txtUpgradePokemonIvMinimum);
             this.groupBox1.Controls.Add(this.label8);
@@ -262,7 +283,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(3, 296);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(259, 242);
+            this.groupBox1.Size = new System.Drawing.Size(259, 394);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bot Config";
@@ -429,12 +450,157 @@
             this.cboxDumpPokemonStats.Text = "DumpPokemonStats";
             this.cboxDumpPokemonStats.UseVisualStyleBackColor = true;
             // 
+            // grboxLocation
+            // 
+            this.grboxLocation.Controls.Add(this.txtMaxSpawnLocationOffset);
+            this.grboxLocation.Controls.Add(this.txtWalkingSpeedInKilometerPerHour);
+            this.grboxLocation.Controls.Add(this.label13);
+            this.grboxLocation.Controls.Add(this.txtDefaultLongitude);
+            this.grboxLocation.Controls.Add(this.label12);
+            this.grboxLocation.Controls.Add(this.label11);
+            this.grboxLocation.Controls.Add(this.txtDefaultLatitude);
+            this.grboxLocation.Controls.Add(this.label10);
+            this.grboxLocation.Controls.Add(this.txtDefaultAltitude);
+            this.grboxLocation.Controls.Add(this.label9);
+            this.grboxLocation.Location = new System.Drawing.Point(268, 12);
+            this.grboxLocation.Name = "grboxLocation";
+            this.grboxLocation.Size = new System.Drawing.Size(512, 160);
+            this.grboxLocation.TabIndex = 10;
+            this.grboxLocation.TabStop = false;
+            this.grboxLocation.Text = "Location Settings";
+            // 
+            // txtDefaultAltitude
+            // 
+            this.txtDefaultAltitude.Location = new System.Drawing.Point(180, 22);
+            this.txtDefaultAltitude.Name = "txtDefaultAltitude";
+            this.txtDefaultAltitude.Size = new System.Drawing.Size(326, 20);
+            this.txtDefaultAltitude.TabIndex = 8;
+            this.txtDefaultAltitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 25);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "DefaultAltitude";
+            // 
+            // txtDefaultLatitude
+            // 
+            this.txtDefaultLatitude.Location = new System.Drawing.Point(180, 48);
+            this.txtDefaultLatitude.Name = "txtDefaultLatitude";
+            this.txtDefaultLatitude.Size = new System.Drawing.Size(326, 20);
+            this.txtDefaultLatitude.TabIndex = 10;
+            this.txtDefaultLatitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 51);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "DefaultLatitude";
+            // 
+            // txtDefaultLongitude
+            // 
+            this.txtDefaultLongitude.Location = new System.Drawing.Point(180, 74);
+            this.txtDefaultLongitude.Name = "txtDefaultLongitude";
+            this.txtDefaultLongitude.Size = new System.Drawing.Size(326, 20);
+            this.txtDefaultLongitude.TabIndex = 12;
+            this.txtDefaultLongitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 77);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 13);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "DefaultLongitude";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 103);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(168, 13);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "WalkingSpeedInKilometerPerHour";
+            // 
+            // txtWalkingSpeedInKilometerPerHour
+            // 
+            this.txtWalkingSpeedInKilometerPerHour.Location = new System.Drawing.Point(180, 100);
+            this.txtWalkingSpeedInKilometerPerHour.Name = "txtWalkingSpeedInKilometerPerHour";
+            this.txtWalkingSpeedInKilometerPerHour.Size = new System.Drawing.Size(326, 20);
+            this.txtWalkingSpeedInKilometerPerHour.TabIndex = 12;
+            this.txtWalkingSpeedInKilometerPerHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWalkingSpeedInKilometerPerHour.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 129);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "MaxSpawnLocationOffset";
+            // 
+            // txtMaxSpawnLocationOffset
+            // 
+            this.txtMaxSpawnLocationOffset.Location = new System.Drawing.Point(180, 126);
+            this.txtMaxSpawnLocationOffset.Name = "txtMaxSpawnLocationOffset";
+            this.txtMaxSpawnLocationOffset.Size = new System.Drawing.Size(326, 20);
+            this.txtMaxSpawnLocationOffset.TabIndex = 12;
+            this.txtMaxSpawnLocationOffset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMaxSpawnLocationOffset.TextChanged += new System.EventHandler(this.txtMaxSpawnLocationOffset_TextChanged);
+            this.txtMaxSpawnLocationOffset.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // txtDelayBetweenPlayerActions
+            // 
+            this.txtDelayBetweenPlayerActions.Location = new System.Drawing.Point(152, 223);
+            this.txtDelayBetweenPlayerActions.Name = "txtDelayBetweenPlayerActions";
+            this.txtDelayBetweenPlayerActions.Size = new System.Drawing.Size(101, 20);
+            this.txtDelayBetweenPlayerActions.TabIndex = 14;
+            this.txtDelayBetweenPlayerActions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDelayBetweenPlayerActions.TextChanged += new System.EventHandler(this.txtDelayBetweenPlayerActions_TextChanged);
+            this.txtDelayBetweenPlayerActions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 226);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 13);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "DelayBetweenPlayerActions";
+            // 
+            // txtDelayBetweenPokemonCatch
+            // 
+            this.txtDelayBetweenPokemonCatch.Location = new System.Drawing.Point(152, 249);
+            this.txtDelayBetweenPokemonCatch.Name = "txtDelayBetweenPokemonCatch";
+            this.txtDelayBetweenPokemonCatch.Size = new System.Drawing.Size(101, 20);
+            this.txtDelayBetweenPokemonCatch.TabIndex = 22;
+            this.txtDelayBetweenPokemonCatch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDelayBetweenPokemonCatch.TextChanged += new System.EventHandler(this.txtDelayBetweenPokemonCatch_TextChanged);
+            this.txtDelayBetweenPokemonCatch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(3, 252);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(149, 13);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "DelayBetweenPokemonCatch";
+            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(792, 588);
+            this.ClientSize = new System.Drawing.Size(792, 811);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -450,6 +616,8 @@
             this.grboxOldSetting.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.grboxLocation.ResumeLayout(false);
+            this.grboxLocation.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -487,6 +655,21 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox cboxDisableHumanWalking;
         private System.Windows.Forms.CheckBox cboxDumpPokemonStats;
+        private System.Windows.Forms.GroupBox grboxLocation;
+        private System.Windows.Forms.TextBox txtDefaultAltitude;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtDefaultLongitude;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtDefaultLatitude;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtWalkingSpeedInKilometerPerHour;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtMaxSpawnLocationOffset;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtDelayBetweenPlayerActions;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtDelayBetweenPokemonCatch;
+        private System.Windows.Forms.Label label15;
     }
 }
 
