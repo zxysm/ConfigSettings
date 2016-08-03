@@ -1,2 +1,2 @@
-Solution/*/bin/Debug
-Solution/*/bin/Release
+**/bin/Debug/
+**/bin/Release/
