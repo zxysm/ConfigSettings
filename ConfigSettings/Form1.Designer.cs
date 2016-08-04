@@ -53,7 +53,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtDefaultAltitude = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grboxTransfer = new System.Windows.Forms.GroupBox();
             this.txtDelayBetweenPokemonCatch = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtDelayBetweenPlayerActions = new System.Windows.Forms.TextBox();
@@ -108,13 +108,40 @@
             this.txtWebSocketPort = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboxPrioritizeIVOverCP = new System.Windows.Forms.CheckBox();
+            this.cboxTransferDuplicatePokemon = new System.Windows.Forms.CheckBox();
+            this.txtKeepMinDuplicatePokemon = new System.Windows.Forms.TextBox();
+            this.lblKeepMinDuplicatePokemon = new System.Windows.Forms.Label();
+            this.lblKeepMinIVPercentage = new System.Windows.Forms.Label();
+            this.txtKeepMinCP = new System.Windows.Forms.TextBox();
+            this.lblKeepMinCP = new System.Windows.Forms.Label();
+            this.txtKeepMinIVPercentage = new System.Windows.Forms.TextBox();
+            this.lblPokemonsNotToTransfer = new System.Windows.Forms.Label();
+            this.lstvwPokemonsNotToTransfer = new System.Windows.Forms.ListView();
+            this.lblPokemonTransferFilter = new System.Windows.Forms.Label();
+            this.dtgrvwPokemonTransferFilter = new System.Windows.Forms.DataGridView();
+            this.Pokemon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KeepMinCp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KeepMinLvl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UseKeepMinLvl = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.KeepMinIvPercentage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KeepMinDuplicatePokemon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moves = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KeepMinOperator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtKeepMinLvl = new System.Windows.Forms.TextBox();
+            this.lblKeepMinLvl = new System.Windows.Forms.Label();
+            this.cbxKeepMinOperator = new System.Windows.Forms.ComboBox();
+            this.lblKeepMinOperator = new System.Windows.Forms.Label();
+            this.cboxUseKeepMinLvl = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.grboxAuthentication.SuspendLayout();
             this.grboxLocation.SuspendLayout();
+            this.grboxTransfer.SuspendLayout();
             this.grboxGeneralConfig.SuspendLayout();
             this.grboxOldSetting.SuspendLayout();
             this.grboxEvolution.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvwPokemonTransferFilter)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -134,7 +161,7 @@
             this.panel1.Controls.Add(this.grboxEvolution);
             this.panel1.Controls.Add(this.grboxAuthentication);
             this.panel1.Controls.Add(this.grboxLocation);
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.grboxTransfer);
             this.panel1.Controls.Add(this.grboxGeneralConfig);
             this.panel1.Controls.Add(this.grboxOldSetting);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -364,14 +391,31 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "DefaultAltitude";
             // 
-            // groupBox1
+            // grboxTransfer
             // 
-            this.groupBox1.Location = new System.Drawing.Point(3, 584);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(259, 288);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Bot Config";
+            this.grboxTransfer.Controls.Add(this.cboxUseKeepMinLvl);
+            this.grboxTransfer.Controls.Add(this.cbxKeepMinOperator);
+            this.grboxTransfer.Controls.Add(this.lblKeepMinOperator);
+            this.grboxTransfer.Controls.Add(this.txtKeepMinLvl);
+            this.grboxTransfer.Controls.Add(this.lblKeepMinLvl);
+            this.grboxTransfer.Controls.Add(this.dtgrvwPokemonTransferFilter);
+            this.grboxTransfer.Controls.Add(this.lblPokemonTransferFilter);
+            this.grboxTransfer.Controls.Add(this.lstvwPokemonsNotToTransfer);
+            this.grboxTransfer.Controls.Add(this.lblPokemonsNotToTransfer);
+            this.grboxTransfer.Controls.Add(this.txtKeepMinCP);
+            this.grboxTransfer.Controls.Add(this.lblKeepMinCP);
+            this.grboxTransfer.Controls.Add(this.lblKeepMinIVPercentage);
+            this.grboxTransfer.Controls.Add(this.txtKeepMinDuplicatePokemon);
+            this.grboxTransfer.Controls.Add(this.lblKeepMinDuplicatePokemon);
+            this.grboxTransfer.Controls.Add(this.cboxTransferDuplicatePokemon);
+            this.grboxTransfer.Controls.Add(this.cboxPrioritizeIVOverCP);
+            this.grboxTransfer.Controls.Add(this.txtKeepMinIVPercentage);
+            this.grboxTransfer.Location = new System.Drawing.Point(268, 628);
+            this.grboxTransfer.Name = "grboxTransfer";
+            this.grboxTransfer.Size = new System.Drawing.Size(512, 534);
+            this.grboxTransfer.TabIndex = 9;
+            this.grboxTransfer.TabStop = false;
+            this.grboxTransfer.Text = "Transferring";
             // 
             // txtDelayBetweenPokemonCatch
             // 
@@ -435,9 +479,9 @@
             // 
             this.txtUpgradePokemonIvMinimum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUpgradePokemonIvMinimum.Enabled = false;
-            this.txtUpgradePokemonIvMinimum.Location = new System.Drawing.Point(156, 121);
+            this.txtUpgradePokemonIvMinimum.Location = new System.Drawing.Point(160, 121);
             this.txtUpgradePokemonIvMinimum.Name = "txtUpgradePokemonIvMinimum";
-            this.txtUpgradePokemonIvMinimum.Size = new System.Drawing.Size(350, 20);
+            this.txtUpgradePokemonIvMinimum.Size = new System.Drawing.Size(346, 20);
             this.txtUpgradePokemonIvMinimum.TabIndex = 19;
             this.txtUpgradePokemonIvMinimum.Text = "0";
             this.txtUpgradePokemonIvMinimum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -457,7 +501,7 @@
             // 
             this.lblUpgradePokemonIvMinimum.AutoSize = true;
             this.lblUpgradePokemonIvMinimum.Enabled = false;
-            this.lblUpgradePokemonIvMinimum.Location = new System.Drawing.Point(3, 123);
+            this.lblUpgradePokemonIvMinimum.Location = new System.Drawing.Point(6, 123);
             this.lblUpgradePokemonIvMinimum.Name = "lblUpgradePokemonIvMinimum";
             this.lblUpgradePokemonIvMinimum.Size = new System.Drawing.Size(143, 13);
             this.lblUpgradePokemonIvMinimum.TabIndex = 18;
@@ -467,7 +511,7 @@
             // 
             this.lblUpgradePokemonCpMinimum.AutoSize = true;
             this.lblUpgradePokemonCpMinimum.Enabled = false;
-            this.lblUpgradePokemonCpMinimum.Location = new System.Drawing.Point(3, 97);
+            this.lblUpgradePokemonCpMinimum.Location = new System.Drawing.Point(6, 97);
             this.lblUpgradePokemonCpMinimum.Name = "lblUpgradePokemonCpMinimum";
             this.lblUpgradePokemonCpMinimum.Size = new System.Drawing.Size(147, 13);
             this.lblUpgradePokemonCpMinimum.TabIndex = 17;
@@ -477,9 +521,9 @@
             // 
             this.txtUpgradePokemonCpMinimum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUpgradePokemonCpMinimum.Enabled = false;
-            this.txtUpgradePokemonCpMinimum.Location = new System.Drawing.Point(156, 95);
+            this.txtUpgradePokemonCpMinimum.Location = new System.Drawing.Point(159, 95);
             this.txtUpgradePokemonCpMinimum.Name = "txtUpgradePokemonCpMinimum";
-            this.txtUpgradePokemonCpMinimum.Size = new System.Drawing.Size(350, 20);
+            this.txtUpgradePokemonCpMinimum.Size = new System.Drawing.Size(347, 20);
             this.txtUpgradePokemonCpMinimum.TabIndex = 16;
             this.txtUpgradePokemonCpMinimum.Text = "0";
             this.txtUpgradePokemonCpMinimum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -509,9 +553,9 @@
             // 
             this.txtGetMinStarDustForLevelUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGetMinStarDustForLevelUp.Enabled = false;
-            this.txtGetMinStarDustForLevelUp.Location = new System.Drawing.Point(155, 69);
+            this.txtGetMinStarDustForLevelUp.Location = new System.Drawing.Point(159, 69);
             this.txtGetMinStarDustForLevelUp.Name = "txtGetMinStarDustForLevelUp";
-            this.txtGetMinStarDustForLevelUp.Size = new System.Drawing.Size(351, 20);
+            this.txtGetMinStarDustForLevelUp.Size = new System.Drawing.Size(347, 20);
             this.txtGetMinStarDustForLevelUp.TabIndex = 14;
             this.txtGetMinStarDustForLevelUp.Text = "0";
             this.txtGetMinStarDustForLevelUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -996,6 +1040,261 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Upgrade";
             // 
+            // cboxPrioritizeIVOverCP
+            // 
+            this.cboxPrioritizeIVOverCP.AutoSize = true;
+            this.cboxPrioritizeIVOverCP.Location = new System.Drawing.Point(6, 19);
+            this.cboxPrioritizeIVOverCP.Name = "cboxPrioritizeIVOverCP";
+            this.cboxPrioritizeIVOverCP.Size = new System.Drawing.Size(112, 17);
+            this.cboxPrioritizeIVOverCP.TabIndex = 14;
+            this.cboxPrioritizeIVOverCP.Text = "PrioritizeIVOverCP";
+            this.cboxPrioritizeIVOverCP.UseVisualStyleBackColor = true;
+            // 
+            // cboxTransferDuplicatePokemon
+            // 
+            this.cboxTransferDuplicatePokemon.AutoSize = true;
+            this.cboxTransferDuplicatePokemon.Location = new System.Drawing.Point(6, 41);
+            this.cboxTransferDuplicatePokemon.Name = "cboxTransferDuplicatePokemon";
+            this.cboxTransferDuplicatePokemon.Size = new System.Drawing.Size(155, 17);
+            this.cboxTransferDuplicatePokemon.TabIndex = 15;
+            this.cboxTransferDuplicatePokemon.Text = "TransferDuplicatePokemon";
+            this.cboxTransferDuplicatePokemon.UseVisualStyleBackColor = true;
+            this.cboxTransferDuplicatePokemon.CheckedChanged += new System.EventHandler(this.cboxTransferDuplicatePokemon_CheckedChanged);
+            // 
+            // txtKeepMinDuplicatePokemon
+            // 
+            this.txtKeepMinDuplicatePokemon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKeepMinDuplicatePokemon.Enabled = false;
+            this.txtKeepMinDuplicatePokemon.Location = new System.Drawing.Point(404, 15);
+            this.txtKeepMinDuplicatePokemon.Name = "txtKeepMinDuplicatePokemon";
+            this.txtKeepMinDuplicatePokemon.Size = new System.Drawing.Size(102, 20);
+            this.txtKeepMinDuplicatePokemon.TabIndex = 30;
+            this.txtKeepMinDuplicatePokemon.Text = "1";
+            this.txtKeepMinDuplicatePokemon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblKeepMinDuplicatePokemon
+            // 
+            this.lblKeepMinDuplicatePokemon.AutoSize = true;
+            this.lblKeepMinDuplicatePokemon.Enabled = false;
+            this.lblKeepMinDuplicatePokemon.Location = new System.Drawing.Point(259, 17);
+            this.lblKeepMinDuplicatePokemon.Name = "lblKeepMinDuplicatePokemon";
+            this.lblKeepMinDuplicatePokemon.Size = new System.Drawing.Size(139, 13);
+            this.lblKeepMinDuplicatePokemon.TabIndex = 29;
+            this.lblKeepMinDuplicatePokemon.Text = "KeepMinDuplicatePokemon";
+            // 
+            // lblKeepMinIVPercentage
+            // 
+            this.lblKeepMinIVPercentage.AutoSize = true;
+            this.lblKeepMinIVPercentage.Enabled = false;
+            this.lblKeepMinIVPercentage.Location = new System.Drawing.Point(259, 43);
+            this.lblKeepMinIVPercentage.Name = "lblKeepMinIVPercentage";
+            this.lblKeepMinIVPercentage.Size = new System.Drawing.Size(114, 13);
+            this.lblKeepMinIVPercentage.TabIndex = 31;
+            this.lblKeepMinIVPercentage.Text = "KeepMinIVPercentage";
+            // 
+            // txtKeepMinCP
+            // 
+            this.txtKeepMinCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKeepMinCP.Enabled = false;
+            this.txtKeepMinCP.Location = new System.Drawing.Point(404, 67);
+            this.txtKeepMinCP.Name = "txtKeepMinCP";
+            this.txtKeepMinCP.Size = new System.Drawing.Size(102, 20);
+            this.txtKeepMinCP.TabIndex = 34;
+            this.txtKeepMinCP.Text = "1500";
+            this.txtKeepMinCP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblKeepMinCP
+            // 
+            this.lblKeepMinCP.AutoSize = true;
+            this.lblKeepMinCP.Enabled = false;
+            this.lblKeepMinCP.Location = new System.Drawing.Point(259, 69);
+            this.lblKeepMinCP.Name = "lblKeepMinCP";
+            this.lblKeepMinCP.Size = new System.Drawing.Size(63, 13);
+            this.lblKeepMinCP.TabIndex = 33;
+            this.lblKeepMinCP.Text = "KeepMinCP";
+            // 
+            // txtKeepMinIVPercentage
+            // 
+            this.txtKeepMinIVPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKeepMinIVPercentage.Enabled = false;
+            this.txtKeepMinIVPercentage.Location = new System.Drawing.Point(404, 41);
+            this.txtKeepMinIVPercentage.Name = "txtKeepMinIVPercentage";
+            this.txtKeepMinIVPercentage.Size = new System.Drawing.Size(102, 20);
+            this.txtKeepMinIVPercentage.TabIndex = 16;
+            this.txtKeepMinIVPercentage.Text = "75.0";
+            this.txtKeepMinIVPercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKeepMinIVPercentage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblPokemonsNotToTransfer
+            // 
+            this.lblPokemonsNotToTransfer.AutoSize = true;
+            this.lblPokemonsNotToTransfer.Enabled = false;
+            this.lblPokemonsNotToTransfer.Location = new System.Drawing.Point(6, 122);
+            this.lblPokemonsNotToTransfer.Name = "lblPokemonsNotToTransfer";
+            this.lblPokemonsNotToTransfer.Size = new System.Drawing.Size(126, 13);
+            this.lblPokemonsNotToTransfer.TabIndex = 35;
+            this.lblPokemonsNotToTransfer.Text = "PokemonsNotToTransfer";
+            // 
+            // lstvwPokemonsNotToTransfer
+            // 
+            this.lstvwPokemonsNotToTransfer.AllowDrop = true;
+            this.lstvwPokemonsNotToTransfer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstvwPokemonsNotToTransfer.CheckBoxes = true;
+            this.lstvwPokemonsNotToTransfer.Enabled = false;
+            this.lstvwPokemonsNotToTransfer.FullRowSelect = true;
+            this.lstvwPokemonsNotToTransfer.GridLines = true;
+            this.lstvwPokemonsNotToTransfer.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lstvwPokemonsNotToTransfer.Location = new System.Drawing.Point(6, 146);
+            this.lstvwPokemonsNotToTransfer.Name = "lstvwPokemonsNotToTransfer";
+            this.lstvwPokemonsNotToTransfer.Size = new System.Drawing.Size(500, 122);
+            this.lstvwPokemonsNotToTransfer.TabIndex = 34;
+            this.lstvwPokemonsNotToTransfer.UseCompatibleStateImageBehavior = false;
+            this.lstvwPokemonsNotToTransfer.View = System.Windows.Forms.View.List;
+            // 
+            // lblPokemonTransferFilter
+            // 
+            this.lblPokemonTransferFilter.AutoSize = true;
+            this.lblPokemonTransferFilter.Enabled = false;
+            this.lblPokemonTransferFilter.Location = new System.Drawing.Point(6, 279);
+            this.lblPokemonTransferFilter.Name = "lblPokemonTransferFilter";
+            this.lblPokemonTransferFilter.Size = new System.Drawing.Size(113, 13);
+            this.lblPokemonTransferFilter.TabIndex = 37;
+            this.lblPokemonTransferFilter.Text = "PokemonTransferFilter";
+            // 
+            // dtgrvwPokemonTransferFilter
+            // 
+            this.dtgrvwPokemonTransferFilter.AllowDrop = true;
+            this.dtgrvwPokemonTransferFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgrvwPokemonTransferFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvwPokemonTransferFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pokemon,
+            this.KeepMinCp,
+            this.KeepMinLvl,
+            this.UseKeepMinLvl,
+            this.KeepMinIvPercentage,
+            this.KeepMinDuplicatePokemon,
+            this.Moves,
+            this.KeepMinOperator});
+            this.dtgrvwPokemonTransferFilter.Enabled = false;
+            this.dtgrvwPokemonTransferFilter.Location = new System.Drawing.Point(6, 303);
+            this.dtgrvwPokemonTransferFilter.Name = "dtgrvwPokemonTransferFilter";
+            this.dtgrvwPokemonTransferFilter.RowHeadersVisible = false;
+            this.dtgrvwPokemonTransferFilter.Size = new System.Drawing.Size(500, 150);
+            this.dtgrvwPokemonTransferFilter.TabIndex = 14;
+            // 
+            // Pokemon
+            // 
+            this.Pokemon.DataPropertyName = "Key";
+            this.Pokemon.HeaderText = "Pokemon";
+            this.Pokemon.Name = "Pokemon";
+            this.Pokemon.Width = 77;
+            // 
+            // KeepMinCp
+            // 
+            this.KeepMinCp.DataPropertyName = "KeepMinCp";
+            this.KeepMinCp.HeaderText = "KeepMinCp";
+            this.KeepMinCp.Name = "KeepMinCp";
+            this.KeepMinCp.Width = 87;
+            // 
+            // KeepMinLvl
+            // 
+            this.KeepMinLvl.DataPropertyName = "KeepMinLvl";
+            this.KeepMinLvl.HeaderText = "KeepMinLvl";
+            this.KeepMinLvl.Name = "KeepMinLvl";
+            this.KeepMinLvl.Width = 88;
+            // 
+            // UseKeepMinLvl
+            // 
+            this.UseKeepMinLvl.DataPropertyName = "UseKeepMinLvl";
+            this.UseKeepMinLvl.HeaderText = "UseKeepMinLvl";
+            this.UseKeepMinLvl.Name = "UseKeepMinLvl";
+            this.UseKeepMinLvl.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.UseKeepMinLvl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.UseKeepMinLvl.Width = 107;
+            // 
+            // KeepMinIvPercentage
+            // 
+            this.KeepMinIvPercentage.DataPropertyName = "KeepMinIvPercentage";
+            this.KeepMinIvPercentage.HeaderText = "KeepMinIvPercentage";
+            this.KeepMinIvPercentage.Name = "KeepMinIvPercentage";
+            this.KeepMinIvPercentage.Width = 138;
+            // 
+            // KeepMinDuplicatePokemon
+            // 
+            this.KeepMinDuplicatePokemon.DataPropertyName = "KeepMinDuplicatePokemon";
+            this.KeepMinDuplicatePokemon.HeaderText = "KeepMinDuplicatePokemon";
+            this.KeepMinDuplicatePokemon.Name = "KeepMinDuplicatePokemon";
+            this.KeepMinDuplicatePokemon.Width = 164;
+            // 
+            // Moves
+            // 
+            this.Moves.DataPropertyName = "MovesToDisplay";
+            this.Moves.HeaderText = "Moves";
+            this.Moves.Name = "Moves";
+            this.Moves.Width = 64;
+            // 
+            // KeepMinOperator
+            // 
+            this.KeepMinOperator.DataPropertyName = "KeepMinOperator";
+            this.KeepMinOperator.HeaderText = "KeepMinOperator";
+            this.KeepMinOperator.Name = "KeepMinOperator";
+            this.KeepMinOperator.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.KeepMinOperator.Width = 115;
+            // 
+            // txtKeepMinLvl
+            // 
+            this.txtKeepMinLvl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKeepMinLvl.Enabled = false;
+            this.txtKeepMinLvl.Location = new System.Drawing.Point(404, 93);
+            this.txtKeepMinLvl.Name = "txtKeepMinLvl";
+            this.txtKeepMinLvl.Size = new System.Drawing.Size(102, 20);
+            this.txtKeepMinLvl.TabIndex = 39;
+            this.txtKeepMinLvl.Text = "1";
+            this.txtKeepMinLvl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKeepMinLvl.TextChanged += new System.EventHandler(this.txtKeepMinLvl_TextChanged);
+            this.txtKeepMinLvl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblKeepMinLvl
+            // 
+            this.lblKeepMinLvl.AutoSize = true;
+            this.lblKeepMinLvl.Enabled = false;
+            this.lblKeepMinLvl.Location = new System.Drawing.Point(259, 95);
+            this.lblKeepMinLvl.Name = "lblKeepMinLvl";
+            this.lblKeepMinLvl.Size = new System.Drawing.Size(63, 13);
+            this.lblKeepMinLvl.TabIndex = 38;
+            this.lblKeepMinLvl.Text = "KeepMinLvl";
+            // 
+            // cbxKeepMinOperator
+            // 
+            this.cbxKeepMinOperator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxKeepMinOperator.Enabled = false;
+            this.cbxKeepMinOperator.FormattingEnabled = true;
+            this.cbxKeepMinOperator.Location = new System.Drawing.Point(404, 119);
+            this.cbxKeepMinOperator.Name = "cbxKeepMinOperator";
+            this.cbxKeepMinOperator.Size = new System.Drawing.Size(102, 21);
+            this.cbxKeepMinOperator.TabIndex = 22;
+            // 
+            // lblKeepMinOperator
+            // 
+            this.lblKeepMinOperator.AutoSize = true;
+            this.lblKeepMinOperator.Enabled = false;
+            this.lblKeepMinOperator.Location = new System.Drawing.Point(259, 122);
+            this.lblKeepMinOperator.Name = "lblKeepMinOperator";
+            this.lblKeepMinOperator.Size = new System.Drawing.Size(90, 13);
+            this.lblKeepMinOperator.TabIndex = 21;
+            this.lblKeepMinOperator.Text = "KeepMinOperator";
+            // 
+            // cboxUseKeepMinLvl
+            // 
+            this.cboxUseKeepMinLvl.AutoSize = true;
+            this.cboxUseKeepMinLvl.Location = new System.Drawing.Point(6, 94);
+            this.cboxUseKeepMinLvl.Name = "cboxUseKeepMinLvl";
+            this.cboxUseKeepMinLvl.Size = new System.Drawing.Size(101, 17);
+            this.cboxUseKeepMinLvl.TabIndex = 40;
+            this.cboxUseKeepMinLvl.Text = "UseKeepMinLvl";
+            this.cboxUseKeepMinLvl.UseVisualStyleBackColor = true;
+            this.cboxUseKeepMinLvl.CheckedChanged += new System.EventHandler(this.cboxUseKeepMinLvl_CheckedChanged);
+            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1015,6 +1314,8 @@
             this.grboxAuthentication.PerformLayout();
             this.grboxLocation.ResumeLayout(false);
             this.grboxLocation.PerformLayout();
+            this.grboxTransfer.ResumeLayout(false);
+            this.grboxTransfer.PerformLayout();
             this.grboxGeneralConfig.ResumeLayout(false);
             this.grboxGeneralConfig.PerformLayout();
             this.grboxOldSetting.ResumeLayout(false);
@@ -1023,6 +1324,7 @@
             this.grboxEvolution.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvwPokemonTransferFilter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1043,7 +1345,7 @@
         private System.Windows.Forms.CheckBox cboxStartUpWelcomeDelay;
         private System.Windows.Forms.TextBox txtAmountOfPokemonToDisplayOnStart;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grboxTransfer;
         private System.Windows.Forms.CheckBox cboxShowPokeballCountsBeforeRecycle;
         private System.Windows.Forms.CheckBox cboxAutomaticallyLevelUpPokemon;
         private System.Windows.Forms.TextBox txtAmountOfTimesToUpgradeLoop;
@@ -1108,6 +1410,31 @@
         private System.Windows.Forms.TextBox txtWebSocketPort;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtKeepMinDuplicatePokemon;
+        private System.Windows.Forms.Label lblKeepMinDuplicatePokemon;
+        private System.Windows.Forms.CheckBox cboxTransferDuplicatePokemon;
+        private System.Windows.Forms.CheckBox cboxPrioritizeIVOverCP;
+        private System.Windows.Forms.TextBox txtKeepMinCP;
+        private System.Windows.Forms.Label lblKeepMinCP;
+        private System.Windows.Forms.Label lblKeepMinIVPercentage;
+        private System.Windows.Forms.TextBox txtKeepMinIVPercentage;
+        private System.Windows.Forms.ListView lstvwPokemonsNotToTransfer;
+        private System.Windows.Forms.Label lblPokemonsNotToTransfer;
+        private System.Windows.Forms.Label lblPokemonTransferFilter;
+        private System.Windows.Forms.DataGridView dtgrvwPokemonTransferFilter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pokemon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KeepMinCp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KeepMinLvl;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn UseKeepMinLvl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KeepMinIvPercentage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KeepMinDuplicatePokemon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Moves;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KeepMinOperator;
+        private System.Windows.Forms.TextBox txtKeepMinLvl;
+        private System.Windows.Forms.Label lblKeepMinLvl;
+        private System.Windows.Forms.ComboBox cbxKeepMinOperator;
+        private System.Windows.Forms.Label lblKeepMinOperator;
+        private System.Windows.Forms.CheckBox cboxUseKeepMinLvl;
     }
 }
 

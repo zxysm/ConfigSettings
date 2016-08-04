@@ -41,10 +41,14 @@ namespace ConfigSettings
             cbxAuthType.DataSource = Enum.GetValues(typeof(ConfigSettings.Auth.Authentication));
             cbxAuthType.SelectedIndex = 0;
             lstvwPokemonsToEvolve.Items.Clear();
+            lstvwPokemonsNotToTransfer.Items.Clear();
             for (int i = 0; i < StaticList.PokemonNames.Length; i++)
             {
                 lstvwPokemonsToEvolve.Items.Add(StaticList.PokemonIndex[i] + " - " + StaticList.PokemonNames[i]);
+                lstvwPokemonsNotToTransfer.Items.Add(StaticList.PokemonIndex[i] + " - " + StaticList.PokemonNames[i]);
             }
+            cbxKeepMinOperator.DataSource = Enum.GetValues(typeof(ConfigSettings.Config.Operator));
+            cbxKeepMinOperator.SelectedIndex = 0;
         }
 
         private void btnUpdateSettings_Click(object sender, EventArgs e)
@@ -69,6 +73,39 @@ namespace ConfigSettings
             ParseLocationSettings();
             ParseEvolutionSettings();
             ParseUpgradeSettings();
+            ParseTransferSettings();
+        }
+
+        private void ParseTransferSettings()
+        {
+            cboxPrioritizeIVOverCP.Checked = config.PrioritizeIvOverCp;
+            cboxTransferDuplicatePokemon.Checked = config.TransferDuplicatePokemon;
+            txtKeepMinDuplicatePokemon.Text = config.KeepMinDuplicatePokemon.ToString();
+            txtKeepMinIVPercentage.Text = config.KeepMinIvPercentage.ToString();
+            txtKeepMinCP.Text = config.KeepMinCp.ToString();
+            cboxUseKeepMinLvl.Checked = config.UseKeepMinLvl;
+            txtKeepMinLvl.Text = config.KeepMinLvl.ToString();
+            cbxKeepMinOperator.SelectedItem = config.KeepMinOperator; 
+            foreach (string pokemonName in config.PokemonsNotToTransfer)
+            {
+                lstvwPokemonsNotToTransfer.Items[Array.IndexOf(StaticList.PokemonNames, pokemonName)].Checked = true;
+            }
+            foreach (KeyValuePair<string, PokemonTransfer> pair in config.PokemonsTransferFilter)
+            {
+                config.PokemonsTransferFilter[pair.Key].MovesToDisplay = string.Join(",", pair.Value.Moves);
+            }
+            dtgrvwPokemonTransferFilter.DataSource = (from pokemon in config.PokemonsTransferFilter
+                                                      select new
+                                                      {
+                                                          pokemon.Key,
+                                                          pokemon.Value.KeepMinCp,
+                                                          pokemon.Value.KeepMinLvl,
+                                                          pokemon.Value.UseKeepMinLvl,
+                                                          pokemon.Value.KeepMinIvPercentage,
+                                                          pokemon.Value.KeepMinDuplicatePokemon,
+                                                          pokemon.Value.MovesToDisplay,
+                                                          pokemon.Value.KeepMinOperator,
+                                                      }).ToList();
         }
 
         private void ParseUpgradeSettings()
@@ -390,6 +427,65 @@ namespace ConfigSettings
                 txtUpgradePokemonCpMinimum.Enabled = false;
                 lblUpgradePokemonIvMinimum.Enabled = false;
                 txtUpgradePokemonIvMinimum.Enabled = false;
+            }
+        }
+
+        private void cboxTransferDuplicatePokemon_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxTransferDuplicatePokemon.Checked)
+            {
+                lblKeepMinDuplicatePokemon.Enabled = true;
+                txtKeepMinDuplicatePokemon.Enabled = true;
+                lblKeepMinIVPercentage.Enabled = true;
+                txtKeepMinIVPercentage.Enabled = true;
+                lblKeepMinCP.Enabled = true;
+                txtKeepMinCP.Enabled = true;
+                lblPokemonsNotToTransfer.Enabled = true;
+                lstvwPokemonsNotToTransfer.Enabled = true;
+                lblPokemonTransferFilter.Enabled = true;
+                dtgrvwPokemonTransferFilter.Enabled = true;
+                cboxUseKeepMinLvl.Enabled = true;
+                lblKeepMinLvl.Enabled = true & cboxUseKeepMinLvl.Checked;
+                txtKeepMinLvl.Enabled = true & cboxUseKeepMinLvl.Checked;
+                lblKeepMinOperator.Enabled = true;
+                cbxKeepMinOperator.Enabled = true;
+            }
+            else
+            {
+                lblKeepMinDuplicatePokemon.Enabled = false;
+                txtKeepMinDuplicatePokemon.Enabled = false;
+                lblKeepMinIVPercentage.Enabled = false;
+                txtKeepMinIVPercentage.Enabled = false;
+                lblKeepMinCP.Enabled = false;
+                txtKeepMinCP.Enabled = false;
+                lblPokemonsNotToTransfer.Enabled = false;
+                lstvwPokemonsNotToTransfer.Enabled = false;
+                lblPokemonTransferFilter.Enabled = false;
+                dtgrvwPokemonTransferFilter.Enabled = false;
+                cboxUseKeepMinLvl.Enabled = false;
+                lblKeepMinLvl.Enabled = false & cboxUseKeepMinLvl.Checked;
+                txtKeepMinLvl.Enabled = false & cboxUseKeepMinLvl.Checked;
+                lblKeepMinOperator.Enabled = false;
+                cbxKeepMinOperator.Enabled = false;
+            }
+        }
+
+        private void txtKeepMinLvl_TextChanged(object sender, EventArgs e)
+        {
+            TextBoxAmountChanged(txtKeepMinLvl);
+        }
+
+        private void cboxUseKeepMinLvl_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxUseKeepMinLvl.Checked)
+            {
+                lblKeepMinLvl.Enabled = true;
+                txtKeepMinLvl.Enabled = true;
+            }
+            else
+            {
+                lblKeepMinLvl.Enabled = false;
+                txtKeepMinLvl.Enabled = false;
             }
         }
     }

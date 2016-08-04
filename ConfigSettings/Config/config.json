@@ -284,13 +284,13 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 95.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": [],
+      "Moves": ["ia chay", "nhuc dau"],
       "KeepMinOperator": "or"
     },
     "Farfetchd": {
       "KeepMinCp": 1250,
       "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
+      "UseKeepMinLvl": true,
       "KeepMinIvPercentage": 80.0,
       "KeepMinDuplicatePokemon": 1,
       "Moves": [],

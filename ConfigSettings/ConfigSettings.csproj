@@ -60,7 +60,6 @@
     <Compile Include="Location.cs" />
     <Compile Include="PokemonToSnipe.cs" />
     <Compile Include="PokemonTransfer.cs" />
-    <Compile Include="PokemonTransferFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticList.cs" />

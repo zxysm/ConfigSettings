@@ -14,6 +14,7 @@ namespace ConfigSettings
         public float KeepMinIvPercentage { get; set; }
         public int KeepMinDuplicatePokemon { get; set; }
         public string[] Moves { get; set; }
+        public string MovesToDisplay { get; set; }
         public ConfigSettings.Config.Operator KeepMinOperator { get; set; }
 
         public override string ToString()

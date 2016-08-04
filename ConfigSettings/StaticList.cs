@@ -283,7 +283,7 @@ namespace ConfigSettings
                                             "seaking",
                                             "staryu",
                                             "starmie",
-                                            "mrmime",
+                                            "mrMime",
                                             "scyther",
                                             "jynx",
                                             "electabuzz",
