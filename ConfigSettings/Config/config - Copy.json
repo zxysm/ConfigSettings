@@ -1,5 +1,4 @@
 {
-  "UseKeepMinLvl": false,
   "VerboseRecycling": false,
   "RecycleInventoryAtUsagePercentage": 90.0,
   "UseEggIncubators": true,
