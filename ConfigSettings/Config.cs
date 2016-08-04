@@ -45,7 +45,7 @@ namespace ConfigSettings
         public float EvolveAboveIvValue { get; set; }
         public bool EvolveAllPokemonAboveIv { get; set; }
         public bool EvolveAllPokemonWithEnoughCandy { get; set; }
-        public float EvolveKeptPokemonAtStorageUsagePercentage { get; set; }
+        public float EvolveKeptPokemonsAtStorageUsagePercentage { get; set; }
         public bool KeepPokemonsThatCanEvolve { get; set; }
         public int KeepMinCp { get; set; }
         public float KeepMinIvPercentage { get; set; }

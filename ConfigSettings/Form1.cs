@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using static ConfigSettings.Config;
 
 namespace ConfigSettings
 {
@@ -35,10 +34,17 @@ namespace ConfigSettings
         {
             txtOldConfigPath.Text = oldSettingPath;
             cbxTranslationLanguageCode.SelectedIndex = 2;
-            cbxLevelUpByCPOrIv.DataSource = Enum.GetValues(typeof(Power));
+            cbxLevelUpByCPOrIv.DataSource = Enum.GetValues(typeof(ConfigSettings.Config.Power));
             cbxLevelUpByCPOrIv.SelectedIndex = 0;
-            cbxUpgradePokemonMinimumStatsOperator.DataSource = Enum.GetValues(typeof(Operator));
+            cbxUpgradePokemonMinimumStatsOperator.DataSource = Enum.GetValues(typeof(ConfigSettings.Config.Operator));
             cbxUpgradePokemonMinimumStatsOperator.SelectedIndex = 0;
+            cbxAuthType.DataSource = Enum.GetValues(typeof(ConfigSettings.Auth.Authentication));
+            cbxAuthType.SelectedIndex = 0;
+            lstvwPokemonsToEvolve.Items.Clear();
+            for (int i = 0; i < StaticList.PokemonNames.Length; i++)
+            {
+                lstvwPokemonsToEvolve.Items.Add(StaticList.PokemonIndex[i] + " - " + StaticList.PokemonNames[i]);
+            }
         }
 
         private void btnUpdateSettings_Click(object sender, EventArgs e)
@@ -58,9 +64,44 @@ namespace ConfigSettings
 
         private void ParseToUI()
         {
+            ParseAuthToUI();
             ParseGeneralSettings();
-            ParseBotSettings();
             ParseLocationSettings();
+            ParseEvolutionSettings();
+            ParseUpgradeSettings();
+        }
+
+        private void ParseUpgradeSettings()
+        {
+            cboxAutomaticallyLevelUpPokemon.Checked = config.AutomaticallyLevelUpPokemon;
+            txtAmountOfTimesToUpgradeLoop.Text = config.AmountOfTimesToUpgradeLoop.ToString();
+            cbxLevelUpByCPOrIv.SelectedItem = config.LevelUpByCPOrIv;
+            cbxUpgradePokemonMinimumStatsOperator.SelectedItem = config.UpgradePokemonMinimumStatsOperator;
+            txtGetMinStarDustForLevelUp.Text = config.GetMinStarDustForLevelUp.ToString();
+            txtUpgradePokemonCpMinimum.Text = config.UpgradePokemonCpMinimum.ToString();
+            txtUpgradePokemonIvMinimum.Text = config.UpgradePokemonIvMinimum.ToString(); 
+        }
+
+        private void ParseEvolutionSettings()
+        {
+            cboxEvolveAllPokemonAboveIV.Checked = config.EvolveAllPokemonAboveIv;
+            txtEvolveAboveIVValue.Text = config.EvolveAboveIvValue.ToString();
+            cboxEvolveAllPokemonWithEnoughCandy.Checked = config.EvolveAllPokemonWithEnoughCandy;
+            foreach (string pokemonName in config.PokemonsToEvolve)
+            {
+                lstvwPokemonsToEvolve.Items[Array.IndexOf(StaticList.PokemonNames, pokemonName)].Checked = true;
+            }
+            cboxKeepPokemonsThatCanEvolve.Checked = config.KeepPokemonsThatCanEvolve;
+            txtEvolveKeptPokemonsAtStorageUsagePercentage.Text = config.EvolveKeptPokemonsAtStorageUsagePercentage.ToString();
+        }
+
+        private void ParseAuthToUI()
+        {
+            cbxAuthType.SelectedItem = auth.AuthType;
+            txtGoogleUsername.Text = auth.GoogleUserName;
+            txtGooglePassword.Text = auth.GooglePassword;
+            txtPtcUsername.Text = auth.PtcUsername;
+            txtPtcPassword.Text = auth.PtcPassword;
         }
 
         private void ParseLocationSettings()
@@ -68,33 +109,29 @@ namespace ConfigSettings
             txtDefaultAltitude.Text = config.DefaultAltitude.ToString();
             txtDefaultLatitude.Text = config.DefaultLatitude.ToString();
             txtDefaultLongitude.Text = config.DefaultLongitude.ToString();
-            txtWalkingSpeedInKilometerPerHour.Text = config.WalkingSpeedInKilometerPerHour.ToString();
-            txtMaxSpawnLocationOffset.Text = config.MaxSpawnLocationOffset.ToString();
-        }
-
-        private void ParseBotSettings()
-        {
-            cboxAutomaticallyLevelUpPokemon.Checked = config.AutomaticallyLevelUpPokemon;
-            txtAmountOfTimesToUpgradeLoop.Text = config.AmountOfTimesToUpgradeLoop.ToString();
-            txtGetMinStarDustForLevelUp.Text = config.GetMinStarDustForLevelUp.ToString();
-            cbxLevelUpByCPOrIv.SelectedItem = config.LevelUpByCPOrIv;
-            txtUpgradePokemonCpMinimum.Text = config.UpgradePokemonCpMinimum.ToString();
-            txtUpgradePokemonIvMinimum.Text = config.UpgradePokemonIvMinimum.ToString();
-            cbxUpgradePokemonMinimumStatsOperator.SelectedItem = config.UpgradePokemonMinimumStatsOperator;
             cboxDisableHumanWalking.Checked = config.DisableHumanWalking;
-            txtDelayBetweenPlayerActions.Text = config.DelayBetweenPlayerActions.ToString();
-            txtDelayBetweenPokemonCatch.Text = config.DelayBetweenPokemonCatch.ToString();
+            txtWalkingSpeedInKilometerPerHour.Text = config.WalkingSpeedInKilometerPerHour.ToString();
+            txtMaxTravelDistanceInMeters.Text = config.MaxTravelDistanceInMeters.ToString();
+            cboxUseGPXPathing.Checked = config.UseGpxPathing;
+            txtGPXFile.Text = config.GpxFile;
+            txtMaxSpawnLocationOffset.Text = config.MaxSpawnLocationOffset.ToString();
         }
 
         private void ParseGeneralSettings()
         {
             cboxAutoUpdate.Checked = config.AutoUpdate;
-            cboxTransferConfigAndAuthOnUpdate.Checked = config.TransferConfigAndAuthOnUpdate;
             cbxTranslationLanguageCode.SelectedItem = config.TranslationLanguageCode;
+            cboxTransferConfigAndAuthOnUpdate.Checked = config.TransferConfigAndAuthOnUpdate;
             cboxStartUpWelcomeDelay.Checked = config.StartupWelcomeDelay;
             txtAmountOfPokemonToDisplayOnStart.Text = config.AmountOfPokemonToDisplayOnStart.ToString();
             cboxShowPokeballCountsBeforeRecycle.Checked = config.ShowPokeballCountsBeforeRecycle;
             cboxDumpPokemonStats.Checked = config.DumpPokemonStats;
+            txtDelayBetweenPlayerActions.Text = config.DelayBetweenPlayerActions.ToString();
+            txtDelayBetweenPokemonCatch.Text = config.DelayBetweenPokemonCatch.ToString();
+            cboxRenamePokemon.Checked = config.RenamePokemon;
+            cboxRenameOnlyAboveIv.Checked = config.RenameOnlyAboveIv;
+            txtRenameTemplate.Text = config.RenameTemplate;
+            txtWebSocketPort.Text = config.WebSocketPort.ToString();
         }
 
         private void ParseConfig(string configFile)
@@ -191,6 +228,169 @@ namespace ConfigSettings
         private void txtDelayBetweenPokemonCatch_TextChanged(object sender, EventArgs e)
         {
             TextBoxAmountChanged(txtDelayBetweenPokemonCatch);
+        }
+
+        private void cbxAuthType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((ConfigSettings.Auth.Authentication)cbxAuthType.SelectedItem == ConfigSettings.Auth.Authentication.google)
+            {
+                lblPtcUsername.Enabled = false;
+                lblPtcPassword.Enabled = false;
+                txtPtcUsername.Enabled = false;
+                txtPtcPassword.Enabled = false;
+
+                lblGoogleUsername.Enabled = true;
+                lblGooglePassword.Enabled = true;
+                txtGoogleUsername.Enabled = true;
+                txtGooglePassword.Enabled = true;
+            }
+            else
+            {
+                lblGoogleUsername.Enabled = false;
+                lblGooglePassword.Enabled = false;
+                txtGoogleUsername.Enabled = false;
+                txtGooglePassword.Enabled = false;
+
+                lblPtcUsername.Enabled = true;
+                lblPtcPassword.Enabled = true;
+                txtPtcUsername.Enabled = true;
+                txtPtcPassword.Enabled = true;
+            }
+        }
+
+        private void txtMaxTravelDistanceInMeters_TextChanged(object sender, EventArgs e)
+        {
+            TextBoxAmountChanged(txtMaxTravelDistanceInMeters);
+        }
+
+        private void cboxUseGPXPathing_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxUseGPXPathing.Checked)
+            {
+                txtGPXFile.Enabled = true;
+                lblGPXFile.Enabled = true;
+            }
+            else
+            {
+                txtGPXFile.Enabled = false;
+                lblGPXFile.Enabled = false;
+            }
+        }
+
+        private void cboxEvolveAllPokemonAboveIV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxEvolveAllPokemonAboveIV.Checked)
+            {
+                lblEvolveAboveIVValue.Enabled = true;
+                txtEvolveAboveIVValue.Enabled = true;
+            }
+            else
+            {
+                lblEvolveAboveIVValue.Enabled = false;
+                txtEvolveAboveIVValue.Enabled = false;
+            }
+        }
+
+        private void cboxEvolveAllPokemonWithEnoughCandy_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxEvolveAllPokemonWithEnoughCandy.Checked)
+            {
+                cboxEvolveAllPokemonAboveIV.Enabled = true;
+                lblEvolveAboveIVValue.Enabled = true & cboxEvolveAllPokemonAboveIV.Checked;
+                txtEvolveAboveIVValue.Enabled = true & cboxEvolveAllPokemonAboveIV.Checked;
+                lblPokemonsToEvolve.Enabled = true;
+                lstvwPokemonsToEvolve.Enabled = true;
+                cboxKeepPokemonsThatCanEvolve.Enabled = true;
+                lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = true & cboxKeepPokemonsThatCanEvolve.Checked;
+                txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = true & cboxKeepPokemonsThatCanEvolve.Checked;
+            }
+            else
+            {
+                cboxEvolveAllPokemonAboveIV.Enabled = false;
+                lblEvolveAboveIVValue.Enabled = false & cboxEvolveAllPokemonAboveIV.Checked;
+                txtEvolveAboveIVValue.Enabled = false & cboxEvolveAllPokemonAboveIV.Checked;
+                lblPokemonsToEvolve.Enabled = false;
+                lstvwPokemonsToEvolve.Enabled = false;
+                cboxKeepPokemonsThatCanEvolve.Enabled = false;
+                lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = false & cboxKeepPokemonsThatCanEvolve.Checked;
+                txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = false & cboxKeepPokemonsThatCanEvolve.Checked;
+            }
+        }
+
+        private void cboxKeepPokemonsThatCanEvolve_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxKeepPokemonsThatCanEvolve.Checked)
+            {
+                lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = true;
+                txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = true;
+            }
+            else
+            {
+                lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = false;
+                txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = false;
+            }
+        }
+
+        private void cboxRenamePokemon_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxRenamePokemon.Checked)
+            {
+                cboxRenameOnlyAboveIv.Enabled = true;
+                lblRenameTemplate.Enabled = true;
+                txtRenameTemplate.Enabled = true;
+            }
+            else
+            {
+                cboxRenameOnlyAboveIv.Enabled = false;
+                lblRenameTemplate.Enabled = false;
+                txtRenameTemplate.Enabled = false;
+            }
+        }
+
+        private void txtWebSocketPort_TextChanged(object sender, EventArgs e)
+        {
+            int t;
+            if (txtWebSocketPort.Text == "")
+                t = 14251;
+            else
+                t = Int32.Parse(txtWebSocketPort.Text);
+            if (t < 0)
+                t = 14251;
+            txtWebSocketPort.Text = t.ToString();
+        }
+
+        private void cboxAutomaticallyLevelUpPokemon_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxAutomaticallyLevelUpPokemon.Checked)
+            {
+                lblAmountOfTimesToUpgradeLoop.Enabled = true;
+                txtAmountOfTimesToUpgradeLoop.Enabled = true;
+                lblLevelUpByCPOrIv.Enabled = true;
+                cbxLevelUpByCPOrIv.Enabled = true;
+                lblUpgradePokemonMinimumStatsOperator.Enabled = true;
+                cbxUpgradePokemonMinimumStatsOperator.Enabled = true;
+                lblGetMinStarDustForLevelUp.Enabled = true;
+                txtGetMinStarDustForLevelUp.Enabled = true;
+                lblUpgradePokemonCpMinimum.Enabled = true;
+                txtUpgradePokemonCpMinimum.Enabled = true;
+                lblUpgradePokemonIvMinimum.Enabled = true;
+                txtUpgradePokemonIvMinimum.Enabled = true;
+            }
+            else
+            {
+                lblAmountOfTimesToUpgradeLoop.Enabled = false;
+                txtAmountOfTimesToUpgradeLoop.Enabled = false;
+                lblLevelUpByCPOrIv.Enabled = false;
+                cbxLevelUpByCPOrIv.Enabled = false;
+                lblUpgradePokemonMinimumStatsOperator.Enabled = false;
+                cbxUpgradePokemonMinimumStatsOperator.Enabled = false;
+                lblGetMinStarDustForLevelUp.Enabled = false;
+                txtGetMinStarDustForLevelUp.Enabled = false;
+                lblUpgradePokemonCpMinimum.Enabled = false;
+                txtUpgradePokemonCpMinimum.Enabled = false;
+                lblUpgradePokemonIvMinimum.Enabled = false;
+                txtUpgradePokemonIvMinimum.Enabled = false;
+            }
         }
     }
 }

@@ -8,7 +8,12 @@ namespace ConfigSettings
 {
     class Auth
     {
-        public string AuthType { get; set; }
+        public enum Authentication
+        {
+            google,
+            ptc
+        }
+        public Authentication AuthType { get; set; }
         public string GoogleUserName { get; set; }
         public string GooglePassword { get; set; }
         public string PtcPassword { get; set; }
