@@ -49,6 +49,9 @@ namespace ConfigSettings
             }
             cbxKeepMinOperator.DataSource = Enum.GetValues(typeof(ConfigSettings.Config.Operator));
             cbxKeepMinOperator.SelectedIndex = 0;
+            BindingSource bs = new BindingSource();
+            bs.DataSource = StaticList.Items.ToList();
+            dtgrvwItemRecycleFilter.DataSource = bs;
         }
 
         private void btnUpdateSettings_Click(object sender, EventArgs e)
@@ -74,6 +77,26 @@ namespace ConfigSettings
             ParseEvolutionSettings();
             ParseUpgradeSettings();
             ParseTransferSettings();
+            ParseItemsSettings();
+        }
+
+        private void ParseItemsSettings()
+        {
+            cboxUseEggIncubators.Checked = config.UseEggIncubators;
+            cboxUseLuckyEggsWhileEvolving.Checked = config.UseLuckyEggsWhileEvolving;
+            txtUseLuckyEggsMinPokemonAmount.Text = config.UseLuckyEggsMinPokemonAmount.ToString();
+            cboxUseLuckyEggConstantly.Checked = config.UseLuckyEggConstantly;
+            cboxUseIncenseConstantly.Checked = config.UseIncenseConstantly;
+            cboxVerboseRecycling.Checked = config.VerboseRecycling;
+            txtRecycleInventoryAtUsagePercentage.Text = config.RecycleInventoryAtUsagePercentage.ToString();
+            txtTotalAmountOfPokeballsToKeep.Text = config.TotalAmountOfPokeballsToKeep.ToString();
+            txtTotalAmountOfPotionsToKeep.Text = config.TotalAmountOfPotionsToKeep.ToString();
+            txtTotalAmountOfRevivesToKeep.Text = config.TotalAmountOfRevicesToKeep.ToString();
+            txtTotalAmountOfBerriesToKeep.Text = config.TotalAmountOfBerriesToKeep.ToString();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = config.ItemRecycleFilter.ToList();
+            dtgrvwItemRecycleFilter.DataSource = null;
+            dtgrvwItemRecycleFilter.DataSource = bs;
         }
 
         private void ParseTransferSettings()
@@ -90,22 +113,21 @@ namespace ConfigSettings
             {
                 lstvwPokemonsNotToTransfer.Items[Array.IndexOf(StaticList.PokemonNames, pokemonName)].Checked = true;
             }
-            foreach (KeyValuePair<string, PokemonTransfer> pair in config.PokemonsTransferFilter)
-            {
-                config.PokemonsTransferFilter[pair.Key].MovesToDisplay = string.Join(",", pair.Value.Moves);
-            }
-            dtgrvwPokemonTransferFilter.DataSource = (from pokemon in config.PokemonsTransferFilter
-                                                      select new
-                                                      {
-                                                          pokemon.Key,
-                                                          pokemon.Value.KeepMinCp,
-                                                          pokemon.Value.KeepMinLvl,
-                                                          pokemon.Value.UseKeepMinLvl,
-                                                          pokemon.Value.KeepMinIvPercentage,
-                                                          pokemon.Value.KeepMinDuplicatePokemon,
-                                                          pokemon.Value.MovesToDisplay,
-                                                          pokemon.Value.KeepMinOperator,
-                                                      }).ToList();
+            config.ConvertTransferT();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = (from pokemon in config.PokemonsTransferFilterT
+                             select new PokemonTransferT
+                             {
+                                 Key = pokemon.Key,
+                                 KeepMinCp = pokemon.KeepMinCp,
+                                 KeepMinLvl = pokemon.KeepMinLvl,
+                                 UseKeepMinLvl = pokemon.UseKeepMinLvl,
+                                 KeepMinIvPercentage = pokemon.KeepMinIvPercentage,
+                                 KeepMinDuplicatePokemon = pokemon.KeepMinDuplicatePokemon,
+                                 MovesToDisplay = pokemon.MovesToDisplay,
+                                 KeepMinOperator = pokemon.KeepMinOperator,
+                             }).Distinct<PokemonTransferT>().ToList();
+            dtgrvwPokemonTransferFilter.DataSource = bs;
         }
 
         private void ParseUpgradeSettings()

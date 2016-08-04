@@ -121,5 +121,31 @@ namespace ConfigSettings
         public Dictionary<string, PokemonTransfer> PokemonsTransferFilter { get; set; }
         public PokemonToSnipe PokemonToSnipe { get; set; }
         public string[] PokemonToUseMasterball { get; set; }
+
+        public PokemonTransferT[] PokemonsTransferFilterT { get; set; }
+        public void ConvertTransferT()
+        {
+            PokemonsTransferFilterT = new PokemonTransferT[PokemonsTransferFilter.Count];
+            int i = 0;
+            foreach (KeyValuePair<string, PokemonTransfer> pkm in PokemonsTransferFilter)
+            {
+                PokemonsTransferFilterT[i] = new PokemonTransferT(pkm.Key, pkm.Value.KeepMinCp, pkm.Value.KeepMinLvl,
+                                                                    pkm.Value.UseKeepMinLvl, pkm.Value.KeepMinIvPercentage,
+                                                                    pkm.Value.KeepMinDuplicatePokemon, pkm.Value.Moves,
+                                                                    pkm.Value.KeepMinOperator);
+                i++;
+            }
+        }
+        public void ConvertTransfer()
+        {
+            PokemonsTransferFilter = new Dictionary<string, PokemonTransfer>();
+            //TODO: Add method convert transferT to transfer
+            //required method: string -> string[]
+        }
+        private string[] SplitMoves(string moves)
+        {
+            string[] _moves = null;
+            return _moves;
+        }
     }
 }

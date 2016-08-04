@@ -11,9 +11,16 @@ namespace ConfigSettings
         public string Key { get; set; }
         public int Value { get; set; }
 
-        public override string ToString()
+        public ItemRecycler()
         {
-            return "Key: " + Key + " - Value: " + Value;
+            Key = "";
+            Value = 0;
+        }
+
+        public ItemRecycler(string Key, int Value)
+        {
+            this.Key = Key;
+            this.Value = Value;
         }
     }
 }

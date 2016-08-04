@@ -8,6 +8,39 @@ namespace ConfigSettings
 {
     static class StaticList
     {
+        public static ItemRecycler[] Items =
+        {
+            new ItemRecycler("itemUnknown", 0),
+            new ItemRecycler("itemPokeBall", 10),
+            new ItemRecycler("itemGreatBall", 20),
+            new ItemRecycler("itemUltraBall", 70),
+            new ItemRecycler("itemMasterBall", 150),
+            new ItemRecycler("itemPotion", 0),
+            new ItemRecycler("itemSuperPotion", 10),
+            new ItemRecycler("itemHyperPotion", 20),
+            new ItemRecycler("itemMaxPotion", 30),
+            new ItemRecycler("itemRevive", 10),
+            new ItemRecycler("itemMaxRevive", 20),
+            new ItemRecycler("itemLuckyEgg", 200),
+            new ItemRecycler("itemIncenseOrdinary", 100),
+            new ItemRecycler("itemIncenseSpicy", 100),
+            new ItemRecycler("itemIncenseCool", 100),
+            new ItemRecycler("itemIncenseFloral", 100),
+            new ItemRecycler("itemTroyDisk", 100),
+            new ItemRecycler("itemXAttack", 100),
+            new ItemRecycler("itemXDefense", 100),
+            new ItemRecycler("itemXMiracle", 100),
+            new ItemRecycler("itemRazzBerry", 50),
+            new ItemRecycler("itemBlukBerry", 10),
+            new ItemRecycler("itemNanabBerry", 10),
+            new ItemRecycler("itemWeparBerry", 30),
+            new ItemRecycler("itemPinapBerry", 30),
+            new ItemRecycler("itemSpecialCamera", 100),
+            new ItemRecycler("itemIncubatorBasicUnlimited", 100),
+            new ItemRecycler("itemIncubatorBasic", 100),
+            new ItemRecycler("itemPokemonStorageUpgrade", 100),
+            new ItemRecycler("itemItemStorageUpgrade", 100),
+        };
         public static readonly string[] PokemonIndex = {
                                                             "001",
                                                             "002",

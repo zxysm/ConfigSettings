@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfig));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grboxItem = new System.Windows.Forms.GroupBox();
+            this.txtUseLuckyEggsMinPokemonAmount = new System.Windows.Forms.TextBox();
+            this.lblUseLuckyEggsMinPokemonAmount = new System.Windows.Forms.Label();
+            this.cboxUseLuckyEggsWhileEvolving = new System.Windows.Forms.CheckBox();
+            this.cboxUseEggIncubators = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtGetMinStarDustForLevelUp = new System.Windows.Forms.TextBox();
             this.cbxUpgradePokemonMinimumStatsOperator = new System.Windows.Forms.ComboBox();
@@ -133,12 +138,25 @@
             this.lblOldConfigPath = new System.Windows.Forms.Label();
             this.btnOldConfigPath = new System.Windows.Forms.Button();
             this.btnUpdateSettings = new System.Windows.Forms.Button();
-            this.grboxItem = new System.Windows.Forms.GroupBox();
-            this.cboxUseEggIncubators = new System.Windows.Forms.CheckBox();
-            this.cboxUseLuckyEggsWhileEvolving = new System.Windows.Forms.CheckBox();
-            this.lblUseLuckyEggsMinPokemonAmount = new System.Windows.Forms.Label();
-            this.txtUseLuckyEggsMinPokemonAmount = new System.Windows.Forms.TextBox();
+            this.cboxUseLuckyEggConstantly = new System.Windows.Forms.CheckBox();
+            this.cboxUseIncenseConstantly = new System.Windows.Forms.CheckBox();
+            this.cboxVerboseRecycling = new System.Windows.Forms.CheckBox();
+            this.lblRecycleInventoryAtUsagePercentage = new System.Windows.Forms.Label();
+            this.txtRecycleInventoryAtUsagePercentage = new System.Windows.Forms.TextBox();
+            this.lblTotalAmountOfPokeballsToKeep = new System.Windows.Forms.Label();
+            this.txtTotalAmountOfPokeballsToKeep = new System.Windows.Forms.TextBox();
+            this.txtTotalAmountOfPotionsToKeep = new System.Windows.Forms.TextBox();
+            this.lblTotalAmountOfPotionsToKeep = new System.Windows.Forms.Label();
+            this.txtTotalAmountOfRevivesToKeep = new System.Windows.Forms.TextBox();
+            this.lblTotalAmountOfRevivesToKeep = new System.Windows.Forms.Label();
+            this.txtTotalAmountOfBerriesToKeep = new System.Windows.Forms.TextBox();
+            this.lblTotalAmountOfBerriesToKeep = new System.Windows.Forms.Label();
+            this.dtgrvwItemRecycleFilter = new System.Windows.Forms.DataGridView();
+            this.lblItemRecycleFilter = new System.Windows.Forms.Label();
+            this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.grboxItem.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grboxEvolution.SuspendLayout();
             this.grboxAuthentication.SuspendLayout();
@@ -147,7 +165,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvwPokemonTransferFilter)).BeginInit();
             this.grboxGeneralConfig.SuspendLayout();
             this.grboxOldSetting.SuspendLayout();
-            this.grboxItem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvwItemRecycleFilter)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -174,8 +192,78 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 811);
+            this.panel1.Size = new System.Drawing.Size(801, 727);
             this.panel1.TabIndex = 1;
+            // 
+            // grboxItem
+            // 
+            this.grboxItem.Controls.Add(this.lblItemRecycleFilter);
+            this.grboxItem.Controls.Add(this.dtgrvwItemRecycleFilter);
+            this.grboxItem.Controls.Add(this.txtRecycleInventoryAtUsagePercentage);
+            this.grboxItem.Controls.Add(this.lblTotalAmountOfBerriesToKeep);
+            this.grboxItem.Controls.Add(this.lblTotalAmountOfRevivesToKeep);
+            this.grboxItem.Controls.Add(this.lblTotalAmountOfPotionsToKeep);
+            this.grboxItem.Controls.Add(this.lblTotalAmountOfPokeballsToKeep);
+            this.grboxItem.Controls.Add(this.lblRecycleInventoryAtUsagePercentage);
+            this.grboxItem.Controls.Add(this.cboxVerboseRecycling);
+            this.grboxItem.Controls.Add(this.cboxUseIncenseConstantly);
+            this.grboxItem.Controls.Add(this.cboxUseLuckyEggConstantly);
+            this.grboxItem.Controls.Add(this.txtTotalAmountOfBerriesToKeep);
+            this.grboxItem.Controls.Add(this.txtTotalAmountOfRevivesToKeep);
+            this.grboxItem.Controls.Add(this.txtTotalAmountOfPotionsToKeep);
+            this.grboxItem.Controls.Add(this.txtTotalAmountOfPokeballsToKeep);
+            this.grboxItem.Controls.Add(this.txtUseLuckyEggsMinPokemonAmount);
+            this.grboxItem.Controls.Add(this.lblUseLuckyEggsMinPokemonAmount);
+            this.grboxItem.Controls.Add(this.cboxUseLuckyEggsWhileEvolving);
+            this.grboxItem.Controls.Add(this.cboxUseEggIncubators);
+            this.grboxItem.Location = new System.Drawing.Point(3, 584);
+            this.grboxItem.Name = "grboxItem";
+            this.grboxItem.Size = new System.Drawing.Size(259, 508);
+            this.grboxItem.TabIndex = 14;
+            this.grboxItem.TabStop = false;
+            this.grboxItem.Text = "Items";
+            // 
+            // txtUseLuckyEggsMinPokemonAmount
+            // 
+            this.txtUseLuckyEggsMinPokemonAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseLuckyEggsMinPokemonAmount.Enabled = false;
+            this.txtUseLuckyEggsMinPokemonAmount.Location = new System.Drawing.Point(189, 65);
+            this.txtUseLuckyEggsMinPokemonAmount.Name = "txtUseLuckyEggsMinPokemonAmount";
+            this.txtUseLuckyEggsMinPokemonAmount.Size = new System.Drawing.Size(64, 20);
+            this.txtUseLuckyEggsMinPokemonAmount.TabIndex = 29;
+            this.txtUseLuckyEggsMinPokemonAmount.Text = "10";
+            this.txtUseLuckyEggsMinPokemonAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblUseLuckyEggsMinPokemonAmount
+            // 
+            this.lblUseLuckyEggsMinPokemonAmount.AutoSize = true;
+            this.lblUseLuckyEggsMinPokemonAmount.Enabled = false;
+            this.lblUseLuckyEggsMinPokemonAmount.Location = new System.Drawing.Point(6, 67);
+            this.lblUseLuckyEggsMinPokemonAmount.Name = "lblUseLuckyEggsMinPokemonAmount";
+            this.lblUseLuckyEggsMinPokemonAmount.Size = new System.Drawing.Size(177, 13);
+            this.lblUseLuckyEggsMinPokemonAmount.TabIndex = 1;
+            this.lblUseLuckyEggsMinPokemonAmount.Text = "UseLuckyEggsMinPokemonAmount";
+            // 
+            // cboxUseLuckyEggsWhileEvolving
+            // 
+            this.cboxUseLuckyEggsWhileEvolving.AutoSize = true;
+            this.cboxUseLuckyEggsWhileEvolving.Location = new System.Drawing.Point(9, 42);
+            this.cboxUseLuckyEggsWhileEvolving.Name = "cboxUseLuckyEggsWhileEvolving";
+            this.cboxUseLuckyEggsWhileEvolving.Size = new System.Drawing.Size(166, 17);
+            this.cboxUseLuckyEggsWhileEvolving.TabIndex = 0;
+            this.cboxUseLuckyEggsWhileEvolving.Text = "UseLuckyEggsWhileEvolving";
+            this.cboxUseLuckyEggsWhileEvolving.UseVisualStyleBackColor = true;
+            this.cboxUseLuckyEggsWhileEvolving.CheckedChanged += new System.EventHandler(this.cboxUseLuckyEggsWhileEvolving_CheckedChanged);
+            // 
+            // cboxUseEggIncubators
+            // 
+            this.cboxUseEggIncubators.AutoSize = true;
+            this.cboxUseEggIncubators.Location = new System.Drawing.Point(9, 19);
+            this.cboxUseEggIncubators.Name = "cboxUseEggIncubators";
+            this.cboxUseEggIncubators.Size = new System.Drawing.Size(114, 17);
+            this.cboxUseEggIncubators.TabIndex = 0;
+            this.cboxUseEggIncubators.Text = "UseEggIncubators";
+            this.cboxUseEggIncubators.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -835,6 +923,7 @@
             this.dtgrvwPokemonTransferFilter.Location = new System.Drawing.Point(6, 303);
             this.dtgrvwPokemonTransferFilter.Name = "dtgrvwPokemonTransferFilter";
             this.dtgrvwPokemonTransferFilter.RowHeadersVisible = false;
+            this.dtgrvwPokemonTransferFilter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgrvwPokemonTransferFilter.Size = new System.Drawing.Size(500, 150);
             this.dtgrvwPokemonTransferFilter.TabIndex = 14;
             // 
@@ -1306,67 +1395,176 @@
             this.btnUpdateSettings.UseVisualStyleBackColor = true;
             this.btnUpdateSettings.Click += new System.EventHandler(this.btnUpdateSettings_Click);
             // 
-            // grboxItem
+            // cboxUseLuckyEggConstantly
             // 
-            this.grboxItem.Controls.Add(this.txtUseLuckyEggsMinPokemonAmount);
-            this.grboxItem.Controls.Add(this.lblUseLuckyEggsMinPokemonAmount);
-            this.grboxItem.Controls.Add(this.cboxUseLuckyEggsWhileEvolving);
-            this.grboxItem.Controls.Add(this.cboxUseEggIncubators);
-            this.grboxItem.Location = new System.Drawing.Point(3, 584);
-            this.grboxItem.Name = "grboxItem";
-            this.grboxItem.Size = new System.Drawing.Size(259, 497);
-            this.grboxItem.TabIndex = 14;
-            this.grboxItem.TabStop = false;
-            this.grboxItem.Text = "Items";
+            this.cboxUseLuckyEggConstantly.AutoSize = true;
+            this.cboxUseLuckyEggConstantly.Location = new System.Drawing.Point(9, 91);
+            this.cboxUseLuckyEggConstantly.Name = "cboxUseLuckyEggConstantly";
+            this.cboxUseLuckyEggConstantly.Size = new System.Drawing.Size(142, 17);
+            this.cboxUseLuckyEggConstantly.TabIndex = 30;
+            this.cboxUseLuckyEggConstantly.Text = "UseLuckyEggConstantly";
+            this.cboxUseLuckyEggConstantly.UseVisualStyleBackColor = true;
             // 
-            // cboxUseEggIncubators
+            // cboxUseIncenseConstantly
             // 
-            this.cboxUseEggIncubators.AutoSize = true;
-            this.cboxUseEggIncubators.Location = new System.Drawing.Point(9, 19);
-            this.cboxUseEggIncubators.Name = "cboxUseEggIncubators";
-            this.cboxUseEggIncubators.Size = new System.Drawing.Size(114, 17);
-            this.cboxUseEggIncubators.TabIndex = 0;
-            this.cboxUseEggIncubators.Text = "UseEggIncubators";
-            this.cboxUseEggIncubators.UseVisualStyleBackColor = true;
+            this.cboxUseIncenseConstantly.AutoSize = true;
+            this.cboxUseIncenseConstantly.Location = new System.Drawing.Point(9, 114);
+            this.cboxUseIncenseConstantly.Name = "cboxUseIncenseConstantly";
+            this.cboxUseIncenseConstantly.Size = new System.Drawing.Size(132, 17);
+            this.cboxUseIncenseConstantly.TabIndex = 31;
+            this.cboxUseIncenseConstantly.Text = "UseIncenseConstantly";
+            this.cboxUseIncenseConstantly.UseVisualStyleBackColor = true;
             // 
-            // cboxUseLuckyEggsWhileEvolving
+            // cboxVerboseRecycling
             // 
-            this.cboxUseLuckyEggsWhileEvolving.AutoSize = true;
-            this.cboxUseLuckyEggsWhileEvolving.Location = new System.Drawing.Point(9, 42);
-            this.cboxUseLuckyEggsWhileEvolving.Name = "cboxUseLuckyEggsWhileEvolving";
-            this.cboxUseLuckyEggsWhileEvolving.Size = new System.Drawing.Size(166, 17);
-            this.cboxUseLuckyEggsWhileEvolving.TabIndex = 0;
-            this.cboxUseLuckyEggsWhileEvolving.Text = "UseLuckyEggsWhileEvolving";
-            this.cboxUseLuckyEggsWhileEvolving.UseVisualStyleBackColor = true;
-            this.cboxUseLuckyEggsWhileEvolving.CheckedChanged += new System.EventHandler(this.cboxUseLuckyEggsWhileEvolving_CheckedChanged);
+            this.cboxVerboseRecycling.AutoSize = true;
+            this.cboxVerboseRecycling.Location = new System.Drawing.Point(9, 137);
+            this.cboxVerboseRecycling.Name = "cboxVerboseRecycling";
+            this.cboxVerboseRecycling.Size = new System.Drawing.Size(112, 17);
+            this.cboxVerboseRecycling.TabIndex = 32;
+            this.cboxVerboseRecycling.Text = "VerboseRecycling";
+            this.cboxVerboseRecycling.UseVisualStyleBackColor = true;
             // 
-            // lblUseLuckyEggsMinPokemonAmount
+            // lblRecycleInventoryAtUsagePercentage
             // 
-            this.lblUseLuckyEggsMinPokemonAmount.AutoSize = true;
-            this.lblUseLuckyEggsMinPokemonAmount.Enabled = false;
-            this.lblUseLuckyEggsMinPokemonAmount.Location = new System.Drawing.Point(6, 67);
-            this.lblUseLuckyEggsMinPokemonAmount.Name = "lblUseLuckyEggsMinPokemonAmount";
-            this.lblUseLuckyEggsMinPokemonAmount.Size = new System.Drawing.Size(177, 13);
-            this.lblUseLuckyEggsMinPokemonAmount.TabIndex = 1;
-            this.lblUseLuckyEggsMinPokemonAmount.Text = "UseLuckyEggsMinPokemonAmount";
+            this.lblRecycleInventoryAtUsagePercentage.AutoSize = true;
+            this.lblRecycleInventoryAtUsagePercentage.Location = new System.Drawing.Point(6, 166);
+            this.lblRecycleInventoryAtUsagePercentage.Name = "lblRecycleInventoryAtUsagePercentage";
+            this.lblRecycleInventoryAtUsagePercentage.Size = new System.Drawing.Size(186, 13);
+            this.lblRecycleInventoryAtUsagePercentage.TabIndex = 33;
+            this.lblRecycleInventoryAtUsagePercentage.Text = "RecycleInventoryAtUsagePercentage";
             // 
-            // txtUseLuckyEggsMinPokemonAmount
+            // txtRecycleInventoryAtUsagePercentage
             // 
-            this.txtUseLuckyEggsMinPokemonAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseLuckyEggsMinPokemonAmount.Enabled = false;
-            this.txtUseLuckyEggsMinPokemonAmount.Location = new System.Drawing.Point(189, 65);
-            this.txtUseLuckyEggsMinPokemonAmount.Name = "txtUseLuckyEggsMinPokemonAmount";
-            this.txtUseLuckyEggsMinPokemonAmount.Size = new System.Drawing.Size(64, 20);
-            this.txtUseLuckyEggsMinPokemonAmount.TabIndex = 29;
-            this.txtUseLuckyEggsMinPokemonAmount.Text = "10";
-            this.txtUseLuckyEggsMinPokemonAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRecycleInventoryAtUsagePercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRecycleInventoryAtUsagePercentage.Location = new System.Drawing.Point(198, 163);
+            this.txtRecycleInventoryAtUsagePercentage.Name = "txtRecycleInventoryAtUsagePercentage";
+            this.txtRecycleInventoryAtUsagePercentage.Size = new System.Drawing.Size(55, 20);
+            this.txtRecycleInventoryAtUsagePercentage.TabIndex = 41;
+            this.txtRecycleInventoryAtUsagePercentage.Text = "75.0";
+            this.txtRecycleInventoryAtUsagePercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblTotalAmountOfPokeballsToKeep
+            // 
+            this.lblTotalAmountOfPokeballsToKeep.AutoSize = true;
+            this.lblTotalAmountOfPokeballsToKeep.Location = new System.Drawing.Point(6, 191);
+            this.lblTotalAmountOfPokeballsToKeep.Name = "lblTotalAmountOfPokeballsToKeep";
+            this.lblTotalAmountOfPokeballsToKeep.Size = new System.Drawing.Size(162, 13);
+            this.lblTotalAmountOfPokeballsToKeep.TabIndex = 33;
+            this.lblTotalAmountOfPokeballsToKeep.Text = "TotalAmountOfPokeballsToKeep";
+            // 
+            // txtTotalAmountOfPokeballsToKeep
+            // 
+            this.txtTotalAmountOfPokeballsToKeep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotalAmountOfPokeballsToKeep.Location = new System.Drawing.Point(174, 189);
+            this.txtTotalAmountOfPokeballsToKeep.Name = "txtTotalAmountOfPokeballsToKeep";
+            this.txtTotalAmountOfPokeballsToKeep.Size = new System.Drawing.Size(79, 20);
+            this.txtTotalAmountOfPokeballsToKeep.TabIndex = 29;
+            this.txtTotalAmountOfPokeballsToKeep.Text = "10";
+            this.txtTotalAmountOfPokeballsToKeep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalAmountOfPokeballsToKeep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // txtTotalAmountOfPotionsToKeep
+            // 
+            this.txtTotalAmountOfPotionsToKeep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotalAmountOfPotionsToKeep.Location = new System.Drawing.Point(174, 215);
+            this.txtTotalAmountOfPotionsToKeep.Name = "txtTotalAmountOfPotionsToKeep";
+            this.txtTotalAmountOfPotionsToKeep.Size = new System.Drawing.Size(79, 20);
+            this.txtTotalAmountOfPotionsToKeep.TabIndex = 29;
+            this.txtTotalAmountOfPotionsToKeep.Text = "10";
+            this.txtTotalAmountOfPotionsToKeep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalAmountOfPotionsToKeep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblTotalAmountOfPotionsToKeep
+            // 
+            this.lblTotalAmountOfPotionsToKeep.AutoSize = true;
+            this.lblTotalAmountOfPotionsToKeep.Location = new System.Drawing.Point(6, 217);
+            this.lblTotalAmountOfPotionsToKeep.Name = "lblTotalAmountOfPotionsToKeep";
+            this.lblTotalAmountOfPotionsToKeep.Size = new System.Drawing.Size(151, 13);
+            this.lblTotalAmountOfPotionsToKeep.TabIndex = 33;
+            this.lblTotalAmountOfPotionsToKeep.Text = "TotalAmountOfPotionsToKeep";
+            // 
+            // txtTotalAmountOfRevivesToKeep
+            // 
+            this.txtTotalAmountOfRevivesToKeep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotalAmountOfRevivesToKeep.Location = new System.Drawing.Point(174, 241);
+            this.txtTotalAmountOfRevivesToKeep.Name = "txtTotalAmountOfRevivesToKeep";
+            this.txtTotalAmountOfRevivesToKeep.Size = new System.Drawing.Size(79, 20);
+            this.txtTotalAmountOfRevivesToKeep.TabIndex = 29;
+            this.txtTotalAmountOfRevivesToKeep.Text = "10";
+            this.txtTotalAmountOfRevivesToKeep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalAmountOfRevivesToKeep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblTotalAmountOfRevivesToKeep
+            // 
+            this.lblTotalAmountOfRevivesToKeep.AutoSize = true;
+            this.lblTotalAmountOfRevivesToKeep.Location = new System.Drawing.Point(6, 243);
+            this.lblTotalAmountOfRevivesToKeep.Name = "lblTotalAmountOfRevivesToKeep";
+            this.lblTotalAmountOfRevivesToKeep.Size = new System.Drawing.Size(155, 13);
+            this.lblTotalAmountOfRevivesToKeep.TabIndex = 33;
+            this.lblTotalAmountOfRevivesToKeep.Text = "TotalAmountOfRevivesToKeep";
+            // 
+            // txtTotalAmountOfBerriesToKeep
+            // 
+            this.txtTotalAmountOfBerriesToKeep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotalAmountOfBerriesToKeep.Location = new System.Drawing.Point(174, 267);
+            this.txtTotalAmountOfBerriesToKeep.Name = "txtTotalAmountOfBerriesToKeep";
+            this.txtTotalAmountOfBerriesToKeep.Size = new System.Drawing.Size(79, 20);
+            this.txtTotalAmountOfBerriesToKeep.TabIndex = 29;
+            this.txtTotalAmountOfBerriesToKeep.Text = "10";
+            this.txtTotalAmountOfBerriesToKeep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalAmountOfBerriesToKeep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblTotalAmountOfBerriesToKeep
+            // 
+            this.lblTotalAmountOfBerriesToKeep.AutoSize = true;
+            this.lblTotalAmountOfBerriesToKeep.Location = new System.Drawing.Point(6, 269);
+            this.lblTotalAmountOfBerriesToKeep.Name = "lblTotalAmountOfBerriesToKeep";
+            this.lblTotalAmountOfBerriesToKeep.Size = new System.Drawing.Size(148, 13);
+            this.lblTotalAmountOfBerriesToKeep.TabIndex = 33;
+            this.lblTotalAmountOfBerriesToKeep.Text = "TotalAmountOfBerriesToKeep";
+            // 
+            // dtgrvwItemRecycleFilter
+            // 
+            this.dtgrvwItemRecycleFilter.AllowDrop = true;
+            this.dtgrvwItemRecycleFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgrvwItemRecycleFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvwItemRecycleFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Key,
+            this.Value});
+            this.dtgrvwItemRecycleFilter.Location = new System.Drawing.Point(9, 322);
+            this.dtgrvwItemRecycleFilter.Name = "dtgrvwItemRecycleFilter";
+            this.dtgrvwItemRecycleFilter.RowHeadersVisible = false;
+            this.dtgrvwItemRecycleFilter.Size = new System.Drawing.Size(244, 174);
+            this.dtgrvwItemRecycleFilter.TabIndex = 42;
+            // 
+            // lblItemRecycleFilter
+            // 
+            this.lblItemRecycleFilter.AutoSize = true;
+            this.lblItemRecycleFilter.Location = new System.Drawing.Point(6, 299);
+            this.lblItemRecycleFilter.Name = "lblItemRecycleFilter";
+            this.lblItemRecycleFilter.Size = new System.Drawing.Size(88, 13);
+            this.lblItemRecycleFilter.TabIndex = 43;
+            this.lblItemRecycleFilter.Text = "ItemRecycleFilter";
+            // 
+            // Key
+            // 
+            this.Key.DataPropertyName = "Key";
+            this.Key.HeaderText = "Key";
+            this.Key.Name = "Key";
+            // 
+            // Value
+            // 
+            this.Value.DataPropertyName = "Value";
+            this.Value.HeaderText = "Value";
+            this.Value.Name = "Value";
             // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(801, 811);
+            this.ClientSize = new System.Drawing.Size(801, 727);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1376,6 +1574,8 @@
             this.Text = "Configuration";
             this.Load += new System.EventHandler(this.frmConfig_Load);
             this.panel1.ResumeLayout(false);
+            this.grboxItem.ResumeLayout(false);
+            this.grboxItem.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grboxEvolution.ResumeLayout(false);
@@ -1391,8 +1591,7 @@
             this.grboxGeneralConfig.PerformLayout();
             this.grboxOldSetting.ResumeLayout(false);
             this.grboxOldSetting.PerformLayout();
-            this.grboxItem.ResumeLayout(false);
-            this.grboxItem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvwItemRecycleFilter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1508,6 +1707,23 @@
         private System.Windows.Forms.CheckBox cboxUseEggIncubators;
         private System.Windows.Forms.Label lblUseLuckyEggsMinPokemonAmount;
         private System.Windows.Forms.TextBox txtUseLuckyEggsMinPokemonAmount;
+        private System.Windows.Forms.CheckBox cboxUseIncenseConstantly;
+        private System.Windows.Forms.CheckBox cboxUseLuckyEggConstantly;
+        private System.Windows.Forms.CheckBox cboxVerboseRecycling;
+        private System.Windows.Forms.TextBox txtRecycleInventoryAtUsagePercentage;
+        private System.Windows.Forms.Label lblRecycleInventoryAtUsagePercentage;
+        private System.Windows.Forms.Label lblTotalAmountOfPokeballsToKeep;
+        private System.Windows.Forms.Label lblTotalAmountOfRevivesToKeep;
+        private System.Windows.Forms.Label lblTotalAmountOfPotionsToKeep;
+        private System.Windows.Forms.TextBox txtTotalAmountOfRevivesToKeep;
+        private System.Windows.Forms.TextBox txtTotalAmountOfPotionsToKeep;
+        private System.Windows.Forms.TextBox txtTotalAmountOfPokeballsToKeep;
+        private System.Windows.Forms.Label lblTotalAmountOfBerriesToKeep;
+        private System.Windows.Forms.TextBox txtTotalAmountOfBerriesToKeep;
+        private System.Windows.Forms.Label lblItemRecycleFilter;
+        private System.Windows.Forms.DataGridView dtgrvwItemRecycleFilter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Key;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Value;
     }
 }
 

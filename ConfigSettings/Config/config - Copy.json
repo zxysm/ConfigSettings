@@ -1,11 +1,4 @@
 {
-  "VerboseRecycling": false,
-  "RecycleInventoryAtUsagePercentage": 90.0,
-  "UseEggIncubators": true,
-  "UseLuckyEggConstantly": false,
-  "UseLuckyEggsMinPokemonAmount": 30,
-  "UseLuckyEggsWhileEvolving": false,
-  "UseIncenseConstantly": false,
   "UseBerriesMinCp": 1000,
   "UseBerriesMinIv": 90.0,
   "UseBerriesBelowCatchProbability": 0.2,
