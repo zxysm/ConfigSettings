@@ -133,6 +133,11 @@
             this.lblOldConfigPath = new System.Windows.Forms.Label();
             this.btnOldConfigPath = new System.Windows.Forms.Button();
             this.btnUpdateSettings = new System.Windows.Forms.Button();
+            this.grboxItem = new System.Windows.Forms.GroupBox();
+            this.cboxUseEggIncubators = new System.Windows.Forms.CheckBox();
+            this.cboxUseLuckyEggsWhileEvolving = new System.Windows.Forms.CheckBox();
+            this.lblUseLuckyEggsMinPokemonAmount = new System.Windows.Forms.Label();
+            this.txtUseLuckyEggsMinPokemonAmount = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grboxEvolution.SuspendLayout();
@@ -142,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvwPokemonTransferFilter)).BeginInit();
             this.grboxGeneralConfig.SuspendLayout();
             this.grboxOldSetting.SuspendLayout();
+            this.grboxItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -157,6 +163,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.grboxItem);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.grboxEvolution);
             this.panel1.Controls.Add(this.grboxAuthentication);
@@ -936,6 +943,8 @@
             this.txtKeepMinCP.TabIndex = 34;
             this.txtKeepMinCP.Text = "1500";
             this.txtKeepMinCP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKeepMinCP.TextChanged += new System.EventHandler(this.txtKeepMinCP_TextChanged);
+            this.txtKeepMinCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
             // 
             // lblKeepMinCP
             // 
@@ -967,6 +976,8 @@
             this.txtKeepMinDuplicatePokemon.TabIndex = 30;
             this.txtKeepMinDuplicatePokemon.Text = "1";
             this.txtKeepMinDuplicatePokemon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKeepMinDuplicatePokemon.TextChanged += new System.EventHandler(this.txtKeepMinDuplicatePokemon_TextChanged);
+            this.txtKeepMinDuplicatePokemon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
             // 
             // lblKeepMinDuplicatePokemon
             // 
@@ -1295,6 +1306,61 @@
             this.btnUpdateSettings.UseVisualStyleBackColor = true;
             this.btnUpdateSettings.Click += new System.EventHandler(this.btnUpdateSettings_Click);
             // 
+            // grboxItem
+            // 
+            this.grboxItem.Controls.Add(this.txtUseLuckyEggsMinPokemonAmount);
+            this.grboxItem.Controls.Add(this.lblUseLuckyEggsMinPokemonAmount);
+            this.grboxItem.Controls.Add(this.cboxUseLuckyEggsWhileEvolving);
+            this.grboxItem.Controls.Add(this.cboxUseEggIncubators);
+            this.grboxItem.Location = new System.Drawing.Point(3, 584);
+            this.grboxItem.Name = "grboxItem";
+            this.grboxItem.Size = new System.Drawing.Size(259, 497);
+            this.grboxItem.TabIndex = 14;
+            this.grboxItem.TabStop = false;
+            this.grboxItem.Text = "Items";
+            // 
+            // cboxUseEggIncubators
+            // 
+            this.cboxUseEggIncubators.AutoSize = true;
+            this.cboxUseEggIncubators.Location = new System.Drawing.Point(9, 19);
+            this.cboxUseEggIncubators.Name = "cboxUseEggIncubators";
+            this.cboxUseEggIncubators.Size = new System.Drawing.Size(114, 17);
+            this.cboxUseEggIncubators.TabIndex = 0;
+            this.cboxUseEggIncubators.Text = "UseEggIncubators";
+            this.cboxUseEggIncubators.UseVisualStyleBackColor = true;
+            // 
+            // cboxUseLuckyEggsWhileEvolving
+            // 
+            this.cboxUseLuckyEggsWhileEvolving.AutoSize = true;
+            this.cboxUseLuckyEggsWhileEvolving.Location = new System.Drawing.Point(9, 42);
+            this.cboxUseLuckyEggsWhileEvolving.Name = "cboxUseLuckyEggsWhileEvolving";
+            this.cboxUseLuckyEggsWhileEvolving.Size = new System.Drawing.Size(166, 17);
+            this.cboxUseLuckyEggsWhileEvolving.TabIndex = 0;
+            this.cboxUseLuckyEggsWhileEvolving.Text = "UseLuckyEggsWhileEvolving";
+            this.cboxUseLuckyEggsWhileEvolving.UseVisualStyleBackColor = true;
+            this.cboxUseLuckyEggsWhileEvolving.CheckedChanged += new System.EventHandler(this.cboxUseLuckyEggsWhileEvolving_CheckedChanged);
+            // 
+            // lblUseLuckyEggsMinPokemonAmount
+            // 
+            this.lblUseLuckyEggsMinPokemonAmount.AutoSize = true;
+            this.lblUseLuckyEggsMinPokemonAmount.Enabled = false;
+            this.lblUseLuckyEggsMinPokemonAmount.Location = new System.Drawing.Point(6, 67);
+            this.lblUseLuckyEggsMinPokemonAmount.Name = "lblUseLuckyEggsMinPokemonAmount";
+            this.lblUseLuckyEggsMinPokemonAmount.Size = new System.Drawing.Size(177, 13);
+            this.lblUseLuckyEggsMinPokemonAmount.TabIndex = 1;
+            this.lblUseLuckyEggsMinPokemonAmount.Text = "UseLuckyEggsMinPokemonAmount";
+            // 
+            // txtUseLuckyEggsMinPokemonAmount
+            // 
+            this.txtUseLuckyEggsMinPokemonAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseLuckyEggsMinPokemonAmount.Enabled = false;
+            this.txtUseLuckyEggsMinPokemonAmount.Location = new System.Drawing.Point(189, 65);
+            this.txtUseLuckyEggsMinPokemonAmount.Name = "txtUseLuckyEggsMinPokemonAmount";
+            this.txtUseLuckyEggsMinPokemonAmount.Size = new System.Drawing.Size(64, 20);
+            this.txtUseLuckyEggsMinPokemonAmount.TabIndex = 29;
+            this.txtUseLuckyEggsMinPokemonAmount.Text = "10";
+            this.txtUseLuckyEggsMinPokemonAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1325,6 +1391,8 @@
             this.grboxGeneralConfig.PerformLayout();
             this.grboxOldSetting.ResumeLayout(false);
             this.grboxOldSetting.PerformLayout();
+            this.grboxItem.ResumeLayout(false);
+            this.grboxItem.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1435,6 +1503,11 @@
         private System.Windows.Forms.ComboBox cbxKeepMinOperator;
         private System.Windows.Forms.Label lblKeepMinOperator;
         private System.Windows.Forms.CheckBox cboxUseKeepMinLvl;
+        private System.Windows.Forms.GroupBox grboxItem;
+        private System.Windows.Forms.CheckBox cboxUseLuckyEggsWhileEvolving;
+        private System.Windows.Forms.CheckBox cboxUseEggIncubators;
+        private System.Windows.Forms.Label lblUseLuckyEggsMinPokemonAmount;
+        private System.Windows.Forms.TextBox txtUseLuckyEggsMinPokemonAmount;
     }
 }
 

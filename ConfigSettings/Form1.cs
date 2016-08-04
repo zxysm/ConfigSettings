@@ -488,5 +488,29 @@ namespace ConfigSettings
                 txtKeepMinLvl.Enabled = false;
             }
         }
+
+        private void txtKeepMinDuplicatePokemon_TextChanged(object sender, EventArgs e)
+        {
+            TextBoxAmountChanged(txtKeepMinDuplicatePokemon);
+        }
+
+        private void txtKeepMinCP_TextChanged(object sender, EventArgs e)
+        {
+            TextBoxAmountChanged(txtKeepMinCP);
+        }
+
+        private void cboxUseLuckyEggsWhileEvolving_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxUseLuckyEggsWhileEvolving.Checked)
+            {
+                lblUseLuckyEggsMinPokemonAmount.Enabled = true;
+                txtUseLuckyEggsMinPokemonAmount.Enabled = true;
+            }
+            else
+            {
+                lblUseLuckyEggsMinPokemonAmount.Enabled = false;
+                txtUseLuckyEggsMinPokemonAmount.Enabled = false;
+            }
+        }
     }
 }
