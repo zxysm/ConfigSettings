@@ -46,6 +46,7 @@ namespace ConfigSettings
             {
                 lstvwPokemonsToEvolve.Items.Add(StaticList.PokemonIndex[i] + " - " + StaticList.PokemonNames[i]);
                 lstvwPokemonsNotToTransfer.Items.Add(StaticList.PokemonIndex[i] + " - " + StaticList.PokemonNames[i]);
+                lstvwPokemonsToIgnore.Items.Add(StaticList.PokemonIndex[i] + " - " + StaticList.PokemonNames[i]);
             }
             cbxKeepMinOperator.DataSource = Enum.GetValues(typeof(ConfigSettings.Config.Operator));
             cbxKeepMinOperator.SelectedIndex = 0;
@@ -108,7 +109,7 @@ namespace ConfigSettings
             txtKeepMinCP.Text = config.KeepMinCp.ToString();
             cboxUseKeepMinLvl.Checked = config.UseKeepMinLvl;
             txtKeepMinLvl.Text = config.KeepMinLvl.ToString();
-            cbxKeepMinOperator.SelectedItem = config.KeepMinOperator; 
+            cbxKeepMinOperator.SelectedItem = config.KeepMinOperator;
             foreach (string pokemonName in config.PokemonsNotToTransfer)
             {
                 lstvwPokemonsNotToTransfer.Items[Array.IndexOf(StaticList.PokemonNames, pokemonName)].Checked = true;
@@ -138,7 +139,7 @@ namespace ConfigSettings
             cbxUpgradePokemonMinimumStatsOperator.SelectedItem = config.UpgradePokemonMinimumStatsOperator;
             txtGetMinStarDustForLevelUp.Text = config.GetMinStarDustForLevelUp.ToString();
             txtUpgradePokemonCpMinimum.Text = config.UpgradePokemonCpMinimum.ToString();
-            txtUpgradePokemonIvMinimum.Text = config.UpgradePokemonIvMinimum.ToString(); 
+            txtUpgradePokemonIvMinimum.Text = config.UpgradePokemonIvMinimum.ToString();
         }
 
         private void ParseEvolutionSettings()
@@ -240,7 +241,7 @@ namespace ConfigSettings
             int t;
             if (txt.Text == "")
                 t = 0;
-            else 
+            else
                 t = Int32.Parse(txt.Text);
             if (t < 0)
                 t = 0;
@@ -324,86 +325,39 @@ namespace ConfigSettings
 
         private void cboxUseGPXPathing_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxUseGPXPathing.Checked)
-            {
-                txtGPXFile.Enabled = true;
-                lblGPXFile.Enabled = true;
-            }
-            else
-            {
-                txtGPXFile.Enabled = false;
-                lblGPXFile.Enabled = false;
-            }
+            txtGPXFile.Enabled = cboxUseGPXPathing.Checked;
+            lblGPXFile.Enabled = cboxUseGPXPathing.Checked;
         }
 
         private void cboxEvolveAllPokemonAboveIV_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxEvolveAllPokemonAboveIV.Checked)
-            {
-                lblEvolveAboveIVValue.Enabled = true;
-                txtEvolveAboveIVValue.Enabled = true;
-            }
-            else
-            {
-                lblEvolveAboveIVValue.Enabled = false;
-                txtEvolveAboveIVValue.Enabled = false;
-            }
+            lblEvolveAboveIVValue.Enabled = cboxEvolveAllPokemonAboveIV.Checked;
+            txtEvolveAboveIVValue.Enabled = cboxEvolveAllPokemonAboveIV.Checked;
         }
 
         private void cboxEvolveAllPokemonWithEnoughCandy_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxEvolveAllPokemonWithEnoughCandy.Checked)
-            {
-                cboxEvolveAllPokemonAboveIV.Enabled = true;
-                lblEvolveAboveIVValue.Enabled = true & cboxEvolveAllPokemonAboveIV.Checked;
-                txtEvolveAboveIVValue.Enabled = true & cboxEvolveAllPokemonAboveIV.Checked;
-                lblPokemonsToEvolve.Enabled = true;
-                lstvwPokemonsToEvolve.Enabled = true;
-                cboxKeepPokemonsThatCanEvolve.Enabled = true;
-                lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = true & cboxKeepPokemonsThatCanEvolve.Checked;
-                txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = true & cboxKeepPokemonsThatCanEvolve.Checked;
-            }
-            else
-            {
-                cboxEvolveAllPokemonAboveIV.Enabled = false;
-                lblEvolveAboveIVValue.Enabled = false & cboxEvolveAllPokemonAboveIV.Checked;
-                txtEvolveAboveIVValue.Enabled = false & cboxEvolveAllPokemonAboveIV.Checked;
-                lblPokemonsToEvolve.Enabled = false;
-                lstvwPokemonsToEvolve.Enabled = false;
-                cboxKeepPokemonsThatCanEvolve.Enabled = false;
-                lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = false & cboxKeepPokemonsThatCanEvolve.Checked;
-                txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = false & cboxKeepPokemonsThatCanEvolve.Checked;
-            }
+            cboxEvolveAllPokemonAboveIV.Enabled = cboxEvolveAllPokemonWithEnoughCandy.Checked;
+            lblEvolveAboveIVValue.Enabled = cboxEvolveAllPokemonWithEnoughCandy.Checked & cboxEvolveAllPokemonAboveIV.Checked;
+            txtEvolveAboveIVValue.Enabled = cboxEvolveAllPokemonWithEnoughCandy.Checked & cboxEvolveAllPokemonAboveIV.Checked;
+            lblPokemonsToEvolve.Enabled = cboxEvolveAllPokemonWithEnoughCandy.Checked;
+            lstvwPokemonsToEvolve.Enabled = cboxEvolveAllPokemonWithEnoughCandy.Checked;
+            cboxKeepPokemonsThatCanEvolve.Enabled = cboxEvolveAllPokemonWithEnoughCandy.Checked;
+            lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = cboxEvolveAllPokemonWithEnoughCandy.Checked & cboxKeepPokemonsThatCanEvolve.Checked;
+            txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = cboxEvolveAllPokemonWithEnoughCandy.Checked & cboxKeepPokemonsThatCanEvolve.Checked;
         }
 
         private void cboxKeepPokemonsThatCanEvolve_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxKeepPokemonsThatCanEvolve.Checked)
-            {
-                lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = true;
-                txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = true;
-            }
-            else
-            {
-                lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = false;
-                txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = false;
-            }
+            lblEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = cboxKeepPokemonsThatCanEvolve.Checked;
+            txtEvolveKeptPokemonsAtStorageUsagePercentage.Enabled = cboxKeepPokemonsThatCanEvolve.Checked;
         }
 
         private void cboxRenamePokemon_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxRenamePokemon.Checked)
-            {
-                cboxRenameOnlyAboveIv.Enabled = true;
-                lblRenameTemplate.Enabled = true;
-                txtRenameTemplate.Enabled = true;
-            }
-            else
-            {
-                cboxRenameOnlyAboveIv.Enabled = false;
-                lblRenameTemplate.Enabled = false;
-                txtRenameTemplate.Enabled = false;
-            }
+            cboxRenameOnlyAboveIv.Enabled = cboxRenamePokemon.Checked;
+            lblRenameTemplate.Enabled = cboxRenamePokemon.Checked;
+            txtRenameTemplate.Enabled = cboxRenamePokemon.Checked;
         }
 
         private void txtWebSocketPort_TextChanged(object sender, EventArgs e)
@@ -420,76 +374,37 @@ namespace ConfigSettings
 
         private void cboxAutomaticallyLevelUpPokemon_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxAutomaticallyLevelUpPokemon.Checked)
-            {
-                lblAmountOfTimesToUpgradeLoop.Enabled = true;
-                txtAmountOfTimesToUpgradeLoop.Enabled = true;
-                lblLevelUpByCPOrIv.Enabled = true;
-                cbxLevelUpByCPOrIv.Enabled = true;
-                lblUpgradePokemonMinimumStatsOperator.Enabled = true;
-                cbxUpgradePokemonMinimumStatsOperator.Enabled = true;
-                lblGetMinStarDustForLevelUp.Enabled = true;
-                txtGetMinStarDustForLevelUp.Enabled = true;
-                lblUpgradePokemonCpMinimum.Enabled = true;
-                txtUpgradePokemonCpMinimum.Enabled = true;
-                lblUpgradePokemonIvMinimum.Enabled = true;
-                txtUpgradePokemonIvMinimum.Enabled = true;
-            }
-            else
-            {
-                lblAmountOfTimesToUpgradeLoop.Enabled = false;
-                txtAmountOfTimesToUpgradeLoop.Enabled = false;
-                lblLevelUpByCPOrIv.Enabled = false;
-                cbxLevelUpByCPOrIv.Enabled = false;
-                lblUpgradePokemonMinimumStatsOperator.Enabled = false;
-                cbxUpgradePokemonMinimumStatsOperator.Enabled = false;
-                lblGetMinStarDustForLevelUp.Enabled = false;
-                txtGetMinStarDustForLevelUp.Enabled = false;
-                lblUpgradePokemonCpMinimum.Enabled = false;
-                txtUpgradePokemonCpMinimum.Enabled = false;
-                lblUpgradePokemonIvMinimum.Enabled = false;
-                txtUpgradePokemonIvMinimum.Enabled = false;
-            }
+            lblAmountOfTimesToUpgradeLoop.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            txtAmountOfTimesToUpgradeLoop.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            lblLevelUpByCPOrIv.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            cbxLevelUpByCPOrIv.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            lblUpgradePokemonMinimumStatsOperator.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            cbxUpgradePokemonMinimumStatsOperator.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            lblGetMinStarDustForLevelUp.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            txtGetMinStarDustForLevelUp.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            lblUpgradePokemonCpMinimum.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            txtUpgradePokemonCpMinimum.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            lblUpgradePokemonIvMinimum.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
+            txtUpgradePokemonIvMinimum.Enabled = cboxAutomaticallyLevelUpPokemon.Checked;
         }
 
         private void cboxTransferDuplicatePokemon_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxTransferDuplicatePokemon.Checked)
-            {
-                lblKeepMinDuplicatePokemon.Enabled = true;
-                txtKeepMinDuplicatePokemon.Enabled = true;
-                lblKeepMinIVPercentage.Enabled = true;
-                txtKeepMinIVPercentage.Enabled = true;
-                lblKeepMinCP.Enabled = true;
-                txtKeepMinCP.Enabled = true;
-                lblPokemonsNotToTransfer.Enabled = true;
-                lstvwPokemonsNotToTransfer.Enabled = true;
-                lblPokemonTransferFilter.Enabled = true;
-                dtgrvwPokemonTransferFilter.Enabled = true;
-                cboxUseKeepMinLvl.Enabled = true;
-                lblKeepMinLvl.Enabled = true & cboxUseKeepMinLvl.Checked;
-                txtKeepMinLvl.Enabled = true & cboxUseKeepMinLvl.Checked;
-                lblKeepMinOperator.Enabled = true;
-                cbxKeepMinOperator.Enabled = true;
-            }
-            else
-            {
-                lblKeepMinDuplicatePokemon.Enabled = false;
-                txtKeepMinDuplicatePokemon.Enabled = false;
-                lblKeepMinIVPercentage.Enabled = false;
-                txtKeepMinIVPercentage.Enabled = false;
-                lblKeepMinCP.Enabled = false;
-                txtKeepMinCP.Enabled = false;
-                lblPokemonsNotToTransfer.Enabled = false;
-                lstvwPokemonsNotToTransfer.Enabled = false;
-                lblPokemonTransferFilter.Enabled = false;
-                dtgrvwPokemonTransferFilter.Enabled = false;
-                cboxUseKeepMinLvl.Enabled = false;
-                lblKeepMinLvl.Enabled = false & cboxUseKeepMinLvl.Checked;
-                txtKeepMinLvl.Enabled = false & cboxUseKeepMinLvl.Checked;
-                lblKeepMinOperator.Enabled = false;
-                cbxKeepMinOperator.Enabled = false;
-            }
+            lblKeepMinDuplicatePokemon.Enabled = cboxTransferDuplicatePokemon.Checked;
+            txtKeepMinDuplicatePokemon.Enabled = cboxTransferDuplicatePokemon.Checked;
+            lblKeepMinIVPercentage.Enabled = cboxTransferDuplicatePokemon.Checked;
+            txtKeepMinIVPercentage.Enabled = cboxTransferDuplicatePokemon.Checked;
+            lblKeepMinCP.Enabled = cboxTransferDuplicatePokemon.Checked;
+            txtKeepMinCP.Enabled = cboxTransferDuplicatePokemon.Checked;
+            lblPokemonsNotToTransfer.Enabled = cboxTransferDuplicatePokemon.Checked;
+            lstvwPokemonsNotToTransfer.Enabled = cboxTransferDuplicatePokemon.Checked;
+            lblPokemonTransferFilter.Enabled = cboxTransferDuplicatePokemon.Checked;
+            dtgrvwPokemonTransferFilter.Enabled = cboxTransferDuplicatePokemon.Checked;
+            cboxUseKeepMinLvl.Enabled = cboxTransferDuplicatePokemon.Checked;
+            lblKeepMinLvl.Enabled = cboxTransferDuplicatePokemon.Checked & cboxUseKeepMinLvl.Checked;
+            txtKeepMinLvl.Enabled = cboxTransferDuplicatePokemon.Checked & cboxUseKeepMinLvl.Checked;
+            lblKeepMinOperator.Enabled = cboxTransferDuplicatePokemon.Checked;
+            cbxKeepMinOperator.Enabled = cboxTransferDuplicatePokemon.Checked;
         }
 
         private void txtKeepMinLvl_TextChanged(object sender, EventArgs e)
@@ -499,16 +414,8 @@ namespace ConfigSettings
 
         private void cboxUseKeepMinLvl_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxUseKeepMinLvl.Checked)
-            {
-                lblKeepMinLvl.Enabled = true;
-                txtKeepMinLvl.Enabled = true;
-            }
-            else
-            {
-                lblKeepMinLvl.Enabled = false;
-                txtKeepMinLvl.Enabled = false;
-            }
+            lblKeepMinLvl.Enabled = cboxUseKeepMinLvl.Checked;
+            txtKeepMinLvl.Enabled = cboxUseKeepMinLvl.Checked;
         }
 
         private void txtKeepMinDuplicatePokemon_TextChanged(object sender, EventArgs e)
@@ -523,16 +430,14 @@ namespace ConfigSettings
 
         private void cboxUseLuckyEggsWhileEvolving_CheckedChanged(object sender, EventArgs e)
         {
-            if (cboxUseLuckyEggsWhileEvolving.Checked)
-            {
-                lblUseLuckyEggsMinPokemonAmount.Enabled = true;
-                txtUseLuckyEggsMinPokemonAmount.Enabled = true;
-            }
-            else
-            {
-                lblUseLuckyEggsMinPokemonAmount.Enabled = false;
-                txtUseLuckyEggsMinPokemonAmount.Enabled = false;
-            }
+            lblUseLuckyEggsMinPokemonAmount.Enabled = cboxUseLuckyEggsWhileEvolving.Checked;
+            txtUseLuckyEggsMinPokemonAmount.Enabled = cboxUseLuckyEggsWhileEvolving.Checked;
+        }
+
+        private void cboxUsePokemonToNotCatchFilter_CheckedChanged(object sender, EventArgs e)
+        {
+            lblPokemonsToIgnore.Enabled = cboxUsePokemonToNotCatchFilter.Checked;
+            lstvwPokemonsToIgnore.Enabled = cboxUsePokemonToNotCatchFilter.Checked;
         }
     }
 }
