@@ -142,6 +142,7 @@ namespace ConfigSettings
         }
         public void ConvertTransfer(PokemonTransferT[] PokemonTransferFilterT)
         {
+            char[] charSep = new char[] { ',' };
             PokemonsTransferFilter = new Dictionary<string, PokemonTransfer>();
             foreach (PokemonTransferT pkmT in PokemonTransferFilterT)
             {
@@ -151,7 +152,7 @@ namespace ConfigSettings
                 pkm.UseKeepMinLvl = pkmT.UseKeepMinLvl;
                 pkm.KeepMinIvPercentage = pkmT.KeepMinIvPercentage;
                 pkm.KeepMinDuplicatePokemon = pkmT.KeepMinDuplicatePokemon;
-                pkm.Moves = pkmT.MovesToDisplay.Split(',');
+                pkm.Moves = pkmT.MovesToDisplay.Split(charSep,StringSplitOptions.RemoveEmptyEntries);
                 pkm.KeepMinOperator = pkmT.KeepMinOperator;
                 PokemonsTransferFilter.Add(pkmT.Key, pkm);
             }

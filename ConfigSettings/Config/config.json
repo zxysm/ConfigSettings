@@ -28,7 +28,7 @@
   "KeepPokemonsThatCanEvolve": false,
   "KeepMinCp": 1800,
   "KeepMinIvPercentage": 92.9,
-  "KeepMinLvl": 6,
+  "KeepMinLvl": 0,
   "KeepMinOperator": "or",
   "UseKeepMinLvl": false,
   "PrioritizeIvOverCp": true,
@@ -46,12 +46,12 @@
   "UseBerriesMinIv": 90.0,
   "UseBerriesBelowCatchProbability": 0.2,
   "UseBerriesOperator": "and",
-  "UseSnipeOnlineLocationServer": false,
-  "UseSnipeLocationServer": false,
+  "UseSnipeOnlineLocationServer": true,
+  "UseSnipeLocationServer": true,
   "SnipeLocationServer": "localhost",
   "SnipeLocationServerPort": 16969,
-  "GetSniperInfoFromPokezz": true,
-  "GetOnlyVerifiedSniperInfoFromPokezz": true,
+  "GetSniperInfoFromPokezz": false,
+  "GetOnlyVerifiedSniperInfoFromPokezz": false,
   "MinPokeballsToSnipe": 20,
   "MinPokeballsWhileSnipe": 0,
   "MinDelayBetweenSnipes": 60000,
@@ -64,7 +64,7 @@
   "RenameTemplate": "{1}_{0}",
   "MaxPokeballsPerPokemon": 10,
   "MaxTravelDistanceInMeters": 10000,
-  "TotalAmountOfPokeballsToKeep": 120,
+  "TotalAmountOfPokeballsToKeep": 150,
   "TotalAmountOfPotionsToKeep": 60,
   "TotalAmountOfRevivesToKeep": 20,
   "TotalAmountOfBerriesToKeep": 50,
@@ -77,14 +77,14 @@
   "UseUltraBallBelowCatchProbability": 0.0,
   "UseMasterBallBelowCatchProbability": 0.0,
   "EnableHumanizedThrows": false,
-  "NiceThrowChance": 40,
-  "GreatThrowChance": 30,
-  "ExcellentThrowChance": 10,
-  "CurveThrowChance": 90,
-  "ForceGreatThrowOverIv": 90.0,
-  "ForceExcellentThrowOverIv": 95.0,
-  "ForceGreatThrowOverCp": 1000,
-  "ForceExcellentThrowOverCp": 1500,
+  "NiceThrowChance": 0,
+  "GreatThrowChance": 0,
+  "ExcellentThrowChance": 0,
+  "CurveThrowChance": 0,
+  "ForceGreatThrowOverIv": 0.0,
+  "ForceExcellentThrowOverIv": 0.0,
+  "ForceGreatThrowOverCp": 0,
+  "ForceExcellentThrowOverCp": 0,
   "TransferWeakPokemon": false,
   "TransferDuplicatePokemon": true,
   "TransferDuplicatePokemonOnCapture": true,
@@ -278,71 +278,22 @@
     "doduo"
   ],
   "PokemonsTransferFilter": {
-    "Golduck": {
-      "KeepMinCp": 1800,
-      "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 95.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        "ia chay",
-        "nhuc dau"
-      ],
-      "KeepMinOperator": "or"
-    },
     "Farfetchd": {
       "KeepMinCp": 1250,
       "KeepMinLvl": 0,
-      "UseKeepMinLvl": true,
-      "KeepMinIvPercentage": 80.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
-      "KeepMinOperator": "or"
-    },
-    "Krabby": {
-      "KeepMinCp": 1250,
-      "KeepMinLvl": 0,
       "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 95.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "KeepMinIvPercentage": 80.0,
+      "KeepMinDuplicatePokemon": 10,
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Kangaskhan": {
       "KeepMinCp": 1500,
       "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
+      "UseKeepMinLvl": true,
       "KeepMinIvPercentage": 60.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
-      "KeepMinOperator": "or"
-    },
-    "Horsea": {
-      "KeepMinCp": 1250,
-      "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 95.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
-      "KeepMinOperator": "or"
-    },
-    "Staryu": {
-      "KeepMinCp": 1250,
-      "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 95.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "KeepMinDuplicatePokemon": 10,
+      "Moves": ["ia chay", "nhuc dau"],
       "KeepMinOperator": "or"
     },
     "MrMime": {
@@ -350,65 +301,8 @@
       "KeepMinLvl": 0,
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 40.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
-      "KeepMinOperator": "or"
-    },
-    "Scyther": {
-      "KeepMinCp": 1800,
-      "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 80.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
-      "KeepMinOperator": "or"
-    },
-    "Jynx": {
-      "KeepMinCp": 1250,
-      "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 95.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
-      "KeepMinOperator": "or"
-    },
-    "Electabuzz": {
-      "KeepMinCp": 1250,
-      "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 80.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
-      "KeepMinOperator": "or"
-    },
-    "Magmar": {
-      "KeepMinCp": 1500,
-      "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 80.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
-      "KeepMinOperator": "or"
-    },
-    "Pinsir": {
-      "KeepMinCp": 1800,
-      "KeepMinLvl": 0,
-      "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 95.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "KeepMinDuplicatePokemon": 10,
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Tauros": {
@@ -416,10 +310,8 @@
       "KeepMinLvl": 0,
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 90.0,
-      "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "KeepMinDuplicatePokemon": 10,
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Magikarp": {
@@ -428,9 +320,7 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 95.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Gyarados": {
@@ -439,20 +329,16 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 90.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Lapras": {
       "KeepMinCp": 1000,
       "KeepMinLvl": 0,
       "UseKeepMinLvl": false,
-      "KeepMinIvPercentage": 80.0,
+      "KeepMinIvPercentage": 10.0,
       "KeepMinDuplicatePokemon": 10,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Eevee": {
@@ -461,9 +347,7 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 95.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Vaporeon": {
@@ -472,9 +356,7 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 90.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Jolteon": {
@@ -483,9 +365,7 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 90.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Flareon": {
@@ -494,9 +374,7 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 90.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Porygon": {
@@ -505,9 +383,7 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 60.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Snorlax": {
@@ -516,9 +392,7 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 90.0,
       "KeepMinDuplicatePokemon": 10,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     },
     "Dragonite": {
@@ -527,9 +401,7 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 90.0,
       "KeepMinDuplicatePokemon": 10,
-      "Moves": [
-        ""
-      ],
+      "Moves": [],
       "KeepMinOperator": "or"
     }
   },

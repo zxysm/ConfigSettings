@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -14,8 +15,8 @@ namespace ConfigSettings
 {
     public partial class frmConfig : Form
     {
-        private string oldSettingPath = @"..\..\Config\";
-        private string newSettingPath = @"..\..\Config\New\";
+        private string oldSettingPath = @".\Config\";
+        private string newSettingPath = @".\Config\";
         private Auth auth;
         private Config config;
 
@@ -103,7 +104,7 @@ namespace ConfigSettings
             bckgrwkrLoading.ReportProgress(93);
 
             ParseSnipingSettings();
-            bckgrwkrLoading.ReportProgress(99);
+            bckgrwkrLoading.ReportProgress(100);
         }
 
         private void ParseSnipingSettings()
@@ -299,7 +300,7 @@ namespace ConfigSettings
                 return;
             }
             cbxAuthType.SelectedItem = auth.AuthType;
-            txtGoogleUsername.Text = auth.GoogleUserName;
+            txtGoogleUsername.Text = auth.GoogleUsername;
             txtGooglePassword.Text = auth.GooglePassword;
             txtPtcUsername.Text = auth.PtcUsername;
             txtPtcPassword.Text = auth.PtcPassword;
@@ -629,7 +630,6 @@ namespace ConfigSettings
             lblSavingPath.Enabled = !cboxOverrideOldSettings.Checked;
             txtSavingPath.Enabled = !cboxOverrideOldSettings.Checked;
             btnBrowse.Enabled = !cboxOverrideOldSettings.Checked;
-            cboxKeepOldConfigFiles.Enabled = cboxOverrideOldSettings.Checked;
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -705,7 +705,7 @@ namespace ConfigSettings
             config.MinDelayBetweenSnipes = int.Parse(txtMinDelayBetweenSnipes.Text);
             config.SnipingScanOffset = float.Parse(txtSnipingScanOffset.Text);
             List<Location> locations = new List<Location>();
-            for (int i=0; i<dtgrvwLocations.Rows.Count - 1; i++)
+            for (int i = 0; i < dtgrvwLocations.Rows.Count - 1; i++)
             {
                 Location _location = new Location();
                 _location.Latitude = (decimal)dtgrvwLocations.Rows[i].Cells[0].Value;
@@ -840,7 +840,8 @@ namespace ConfigSettings
                 _pkmT.UseKeepMinLvl = (bool)dtgrvwPokemonTransferFilter.Rows[i].Cells[3].Value;
                 _pkmT.KeepMinIvPercentage = (float)dtgrvwPokemonTransferFilter.Rows[i].Cells[4].Value;
                 _pkmT.KeepMinDuplicatePokemon = (int)dtgrvwPokemonTransferFilter.Rows[i].Cells[5].Value;
-                _pkmT.MovesToDisplay = dtgrvwPokemonTransferFilter.Rows[i].Cells[6].Value.ToString();
+                _pkmT.MovesToDisplay
+                    = dtgrvwPokemonTransferFilter.Rows[i].Cells[6].Value == null ? "" : dtgrvwPokemonTransferFilter.Rows[i].Cells[6].Value.ToString();
                 _pkmT.KeepMinOperator = (ConfigSettings.Config.Operator)dtgrvwPokemonTransferFilter.Rows[i].Cells[7].Value;
                 pkmT.Add(_pkmT);
             }
@@ -936,7 +937,7 @@ namespace ConfigSettings
                 return;
             }
             auth.AuthType = (ConfigSettings.Auth.Authentication)cbxAuthType.SelectedItem;
-            auth.GoogleUserName = txtGoogleUsername.Text;
+            auth.GoogleUsername = txtGoogleUsername.Text;
             auth.GooglePassword = txtGooglePassword.Text;
             auth.PtcUsername = txtPtcUsername.Text;
             auth.PtcPassword = txtPtcPassword.Text;
@@ -945,23 +946,20 @@ namespace ConfigSettings
         private void bckgrwkrSaving_DoWork(object sender, DoWorkEventArgs e)
         {
             bckgrwkrSaving.ReportProgress(0);
-            if (cboxOverrideOldSettings.Checked)
+            if (!cboxOverrideOldSettings.Checked)
             {
                 newSettingPath = oldSettingPath;
-                if (cboxKeepOldConfigFiles.Checked)
-                {
-                    if (File.Exists(oldSettingPath + @"auth.json.old"))
-                        File.Delete(oldSettingPath + @"auth.json.old");
-                    if (File.Exists(oldSettingPath + @"config.json.old"))
-                        File.Delete(oldSettingPath + @"config.json.old");
-                    File.Move(oldSettingPath + @"auth.json", oldSettingPath + @"auth.json.old");
-                    File.Move(oldSettingPath + @"config.json", oldSettingPath + @"config.json.old");
-                }
-                else
-                {
-                    File.Delete(oldSettingPath + @"auth.json");
-                    File.Delete(oldSettingPath + @"config.json");
-                }
+                if (File.Exists(oldSettingPath + @"auth.json.old"))
+                    File.Delete(oldSettingPath + @"auth.json.old");
+                if (File.Exists(oldSettingPath + @"config.json.old"))
+                    File.Delete(oldSettingPath + @"config.json.old");
+                File.Move(oldSettingPath + @"auth.json", oldSettingPath + @"auth.json.old");
+                File.Move(oldSettingPath + @"config.json", oldSettingPath + @"config.json.old");
+            }
+            else
+            {
+                File.Delete(oldSettingPath + @"auth.json");
+                File.Delete(oldSettingPath + @"config.json");
             }
             bckgrwkrSaving.ReportProgress(2);
             if (!Directory.Exists(newSettingPath))
@@ -1000,6 +998,11 @@ namespace ConfigSettings
         private void bckgrwkrLoading_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar2.Value = e.ProgressPercentage;
+        }
+
+        private void btnStartBot_Click(object sender, EventArgs e)
+        {
+            Process.Start(txtBotLocation.Text);
         }
     }
 }

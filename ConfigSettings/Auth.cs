@@ -17,9 +17,9 @@ namespace ConfigSettings
             ptc
         }
         public Authentication AuthType { get; set; }
-        public string GoogleUserName { get; set; }
+        public string GoogleUsername { get; set; }
         public string GooglePassword { get; set; }
-        public string PtcPassword { get; set; }
         public string PtcUsername { get; set; }
+        public string PtcPassword { get; set; }
     }
 }

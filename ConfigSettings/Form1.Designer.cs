@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfig));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -249,7 +249,6 @@
             this.lblSavingPath = new System.Windows.Forms.Label();
             this.txtSavingPath = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.cboxKeepOldConfigFiles = new System.Windows.Forms.CheckBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.bckgrwkrSaving = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -257,6 +256,8 @@
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.btnStartBot = new System.Windows.Forms.Button();
             this.bckgrwkrLoading = new System.ComponentModel.BackgroundWorker();
+            this.txtBotLocation = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grboxAdvancedCatching.SuspendLayout();
             this.grboxCatching.SuspendLayout();
@@ -934,26 +935,26 @@
             // 
             this.dtgrvwItemRecycleFilter.AllowDrop = true;
             this.dtgrvwItemRecycleFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwItemRecycleFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwItemRecycleFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgrvwItemRecycleFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwItemRecycleFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Key,
             this.Value});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwItemRecycleFilter.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwItemRecycleFilter.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgrvwItemRecycleFilter.EnableHeadersVisualStyles = false;
             this.dtgrvwItemRecycleFilter.Location = new System.Drawing.Point(9, 322);
             this.dtgrvwItemRecycleFilter.Name = "dtgrvwItemRecycleFilter";
@@ -1797,14 +1798,14 @@
             // 
             this.dtgrvwPokemonTransferFilter.AllowDrop = true;
             this.dtgrvwPokemonTransferFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwPokemonTransferFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwPokemonTransferFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgrvwPokemonTransferFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwPokemonTransferFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pokemon,
@@ -1815,14 +1816,14 @@
             this.KeepMinDuplicatePokemon,
             this.Moves,
             this.KeepMinOperator});
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwPokemonTransferFilter.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwPokemonTransferFilter.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgrvwPokemonTransferFilter.Enabled = false;
             this.dtgrvwPokemonTransferFilter.EnableHeadersVisualStyles = false;
             this.dtgrvwPokemonTransferFilter.Location = new System.Drawing.Point(6, 303);
@@ -2592,26 +2593,26 @@
             // 
             this.dtgrvwLocations.AllowDrop = true;
             this.dtgrvwLocations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwLocations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwLocations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgrvwLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwLocations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Latitude,
             this.Longitude});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwLocations.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwLocations.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgrvwLocations.EnableHeadersVisualStyles = false;
             this.dtgrvwLocations.Location = new System.Drawing.Point(6, 32);
             this.dtgrvwLocations.Name = "dtgrvwLocations";
@@ -2658,11 +2659,12 @@
             // 
             // grboxSaving
             // 
+            this.grboxSaving.Controls.Add(this.label3);
+            this.grboxSaving.Controls.Add(this.txtBotLocation);
             this.grboxSaving.Controls.Add(this.btnStartBot);
             this.grboxSaving.Controls.Add(this.lblProgress);
             this.grboxSaving.Controls.Add(this.progressBar1);
             this.grboxSaving.Controls.Add(this.btnBrowse);
-            this.grboxSaving.Controls.Add(this.cboxKeepOldConfigFiles);
             this.grboxSaving.Controls.Add(this.btnSave);
             this.grboxSaving.Controls.Add(this.txtSavingPath);
             this.grboxSaving.Controls.Add(this.lblSavingPath);
@@ -2712,19 +2714,6 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // cboxKeepOldConfigFiles
-            // 
-            this.cboxKeepOldConfigFiles.AutoSize = true;
-            this.cboxKeepOldConfigFiles.Checked = true;
-            this.cboxKeepOldConfigFiles.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cboxKeepOldConfigFiles.Enabled = false;
-            this.cboxKeepOldConfigFiles.Location = new System.Drawing.Point(246, 19);
-            this.cboxKeepOldConfigFiles.Name = "cboxKeepOldConfigFiles";
-            this.cboxKeepOldConfigFiles.Size = new System.Drawing.Size(127, 17);
-            this.cboxKeepOldConfigFiles.TabIndex = 4;
-            this.cboxKeepOldConfigFiles.Text = "Keep Old Config Files";
-            this.cboxKeepOldConfigFiles.UseVisualStyleBackColor = true;
-            // 
             // btnBrowse
             // 
             this.btnBrowse.Image = ((System.Drawing.Image)(resources.GetObject("btnBrowse.Image")));
@@ -2767,18 +2756,36 @@
             // 
             // btnStartBot
             // 
-            this.btnStartBot.Location = new System.Drawing.Point(6, 88);
+            this.btnStartBot.Location = new System.Drawing.Point(390, 86);
             this.btnStartBot.Name = "btnStartBot";
-            this.btnStartBot.Size = new System.Drawing.Size(500, 23);
+            this.btnStartBot.Size = new System.Drawing.Size(116, 23);
             this.btnStartBot.TabIndex = 8;
             this.btnStartBot.Text = "Start Bot";
             this.btnStartBot.UseVisualStyleBackColor = true;
+            this.btnStartBot.Click += new System.EventHandler(this.btnStartBot_Click);
             // 
             // bckgrwkrLoading
             // 
             this.bckgrwkrLoading.WorkerReportsProgress = true;
             this.bckgrwkrLoading.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bckgrwkrLoading_DoWork);
             this.bckgrwkrLoading.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bckgrwkrLoading_ProgressChanged);
+            // 
+            // txtBotLocation
+            // 
+            this.txtBotLocation.Location = new System.Drawing.Point(79, 88);
+            this.txtBotLocation.Name = "txtBotLocation";
+            this.txtBotLocation.Size = new System.Drawing.Size(305, 20);
+            this.txtBotLocation.TabIndex = 9;
+            this.txtBotLocation.Text = ".\\NecroBot.exe";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Bot Location";
             // 
             // frmConfig
             // 
@@ -3044,7 +3051,6 @@
         private System.Windows.Forms.TextBox txtSavingPath;
         private System.Windows.Forms.Label lblSavingPath;
         private System.Windows.Forms.CheckBox cboxOverrideOldSettings;
-        private System.Windows.Forms.CheckBox cboxKeepOldConfigFiles;
         private System.Windows.Forms.Button btnBrowse;
         private System.ComponentModel.BackgroundWorker bckgrwkrSaving;
         private System.Windows.Forms.ProgressBar progressBar1;
@@ -3052,6 +3058,8 @@
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Button btnStartBot;
         private System.ComponentModel.BackgroundWorker bckgrwkrLoading;
+        private System.Windows.Forms.TextBox txtBotLocation;
+        private System.Windows.Forms.Label label3;
     }
 }
 
