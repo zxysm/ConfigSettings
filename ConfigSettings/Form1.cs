@@ -63,10 +63,7 @@ namespace ConfigSettings
 
         private void btnUpdateSettings_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(oldSettingPath + @"config.json") || !File.Exists(oldSettingPath + @"auth.json"))
-                MessageBox.Show("Config files not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                ParseSettings();
+            bckgrwkrLoading.RunWorkerAsync();
         }
 
         private void ParseSettings()
@@ -79,19 +76,44 @@ namespace ConfigSettings
         private void ParseToUI()
         {
             ParseAuthToUI();
+            bckgrwkrLoading.ReportProgress(10);
+
             ParseGeneralSettings();
+            bckgrwkrLoading.ReportProgress(20);
+
             ParseLocationSettings();
+            bckgrwkrLoading.ReportProgress(25);
+
             ParseEvolutionSettings();
+            bckgrwkrLoading.ReportProgress(36);
+
             ParseUpgradeSettings();
+            bckgrwkrLoading.ReportProgress(50);
+
             ParseTransferSettings();
+            bckgrwkrLoading.ReportProgress(77);
+
             ParseItemsSettings();
+            bckgrwkrLoading.ReportProgress(85);
+
             ParseCatchingSettings();
+            bckgrwkrLoading.ReportProgress(88);
+
             ParseAdvancedCatchingSettings();
+            bckgrwkrLoading.ReportProgress(93);
+
             ParseSnipingSettings();
+            bckgrwkrLoading.ReportProgress(99);
         }
 
         private void ParseSnipingSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseSnipingSettings);
+                Invoke(method);
+                return;
+            }
             cboxUseSnipeOnlineLocationServer.Checked = config.UseSnipeOnlineLocationServer;
             cboxUseSnipeLocationServer.Checked = config.UseSnipeLocationServer;
             txtSnipeLocationServer.Text = config.SnipeLocationServer;
@@ -118,6 +140,12 @@ namespace ConfigSettings
 
         private void ParseAdvancedCatchingSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseAdvancedCatchingSettings);
+                Invoke(method);
+                return;
+            }
             cboxEnableHumanizedThrows.Checked = config.EnableHumanizedThrows;
             txtNiceThrowChance.Text = config.NiceThrowChance.ToString();
             txtGreatThrowChance.Text = config.GreatThrowChance.ToString();
@@ -133,6 +161,12 @@ namespace ConfigSettings
 
         private void ParseCatchingSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseCatchingSettings);
+                Invoke(method);
+                return;
+            }
             cboxUsePokemonToNotCatchFilter.Checked = config.UsePokemonToNotCatchFilter;
             foreach (string pokemonName in config.PokemonsToIgnore)
             {
@@ -159,6 +193,12 @@ namespace ConfigSettings
 
         private void ParseItemsSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseItemsSettings);
+                Invoke(method);
+                return;
+            }
             cboxUseEggIncubators.Checked = config.UseEggIncubators;
             cboxUseLuckyEggsWhileEvolving.Checked = config.UseLuckyEggsWhileEvolving;
             txtUseLuckyEggsMinPokemonAmount.Text = config.UseLuckyEggsMinPokemonAmount.ToString();
@@ -178,6 +218,12 @@ namespace ConfigSettings
 
         private void ParseTransferSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseTransferSettings);
+                Invoke(method);
+                return;
+            }
             cboxPrioritizeIVOverCP.Checked = config.PrioritizeIvOverCp;
             cboxTransferDuplicatePokemon.Checked = config.TransferDuplicatePokemon;
             txtKeepMinDuplicatePokemon.Text = config.KeepMinDuplicatePokemon.ToString();
@@ -210,6 +256,12 @@ namespace ConfigSettings
 
         private void ParseUpgradeSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseUpgradeSettings);
+                Invoke(method);
+                return;
+            }
             cboxAutomaticallyLevelUpPokemon.Checked = config.AutomaticallyLevelUpPokemon;
             txtAmountOfTimesToUpgradeLoop.Text = config.AmountOfTimesToUpgradeLoop.ToString();
             cbxLevelUpByCPOrIv.SelectedItem = config.LevelUpByCPorIv;
@@ -221,6 +273,12 @@ namespace ConfigSettings
 
         private void ParseEvolutionSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseEvolutionSettings);
+                Invoke(method);
+                return;
+            }
             cboxEvolveAllPokemonAboveIV.Checked = config.EvolveAllPokemonAboveIv;
             txtEvolveAboveIVValue.Text = config.EvolveAboveIvValue.ToString();
             cboxEvolveAllPokemonWithEnoughCandy.Checked = config.EvolveAllPokemonWithEnoughCandy;
@@ -234,6 +292,12 @@ namespace ConfigSettings
 
         private void ParseAuthToUI()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseAuthToUI);
+                Invoke(method);
+                return;
+            }
             cbxAuthType.SelectedItem = auth.AuthType;
             txtGoogleUsername.Text = auth.GoogleUserName;
             txtGooglePassword.Text = auth.GooglePassword;
@@ -243,6 +307,12 @@ namespace ConfigSettings
 
         private void ParseLocationSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseLocationSettings);
+                Invoke(method);
+                return;
+            }
             txtDefaultAltitude.Text = config.DefaultAltitude.ToString();
             txtDefaultLatitude.Text = config.DefaultLatitude.ToString();
             txtDefaultLongitude.Text = config.DefaultLongitude.ToString();
@@ -256,6 +326,12 @@ namespace ConfigSettings
 
         private void ParseGeneralSettings()
         {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseGeneralSettings);
+                Invoke(method);
+                return;
+            }
             cboxAutoUpdate.Checked = config.AutoUpdate;
             cbxTranslationLanguageCode.SelectedItem = config.TranslationLanguageCode;
             cboxTransferConfigAndAuthOnUpdate.Checked = config.TransferConfigAndAuthOnUpdate;
@@ -277,11 +353,6 @@ namespace ConfigSettings
         {
             string configJson = File.ReadAllText(configFile);
             config = JsonConvert.DeserializeObject<Config>(configJson);
-            //for (int i=0;i<config.PokemonsTransferFilter.Count; i++)
-            //{
-            //    KeyValuePair<string, PokemonTransfer> key = config.PokemonsTransferFilter.ElementAt(i);
-            //    MessageBox.Show(key.Key.ToString() + " - " + key.Value.ToString());
-            //}
         }
 
         private void ParseAuth(string authFile)
@@ -915,6 +986,20 @@ namespace ConfigSettings
                 lblProgress.Text = progressBar1.Value.ToString() + "%";
             else
                 lblProgress.Text = "Done";
+        }
+
+        private void bckgrwkrLoading_DoWork(object sender, DoWorkEventArgs e)
+        {
+            bckgrwkrLoading.ReportProgress(0);
+            if (!File.Exists(oldSettingPath + @"config.json") || !File.Exists(oldSettingPath + @"auth.json"))
+                MessageBox.Show("Config files not exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                ParseSettings();
+        }
+
+        private void bckgrwkrLoading_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar2.Value = e.ProgressPercentage;
         }
     }
 }
