@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ConfigSettings
 {
     class Config
     {
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum Power
         {
             cp,
             iv
         }
 
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum Operator
         {
             and,
@@ -29,7 +33,7 @@ namespace ConfigSettings
         public bool AutomaticallyLevelUpPokemon { get; set; }
         public int AmountOfTimesToUpgradeLoop { get; set; }
         public int GetMinStarDustForLevelUp { get; set; }
-        public Power LevelUpByCPOrIv { get; set; }
+        public Power LevelUpByCPorIv { get; set; }
         public float UpgradePokemonCpMinimum { get; set; }
         public float UpgradePokemonIvMinimum { get; set; }
         public Operator UpgradePokemonMinimumStatsOperator { get; set; }
@@ -68,7 +72,7 @@ namespace ConfigSettings
         public float UseBerriesBelowCatchProbability { get; set; }
         public Operator UseBerriesOperator { get; set; }
         public bool UseSnipeOnlineLocationServer { get; set; }
-        public bool UseSniptLocationServer { get; set; }
+        public bool UseSnipeLocationServer { get; set; }
         public string SnipeLocationServer { get; set; }
         public int SnipeLocationServerPort { get; set; }
         public bool GetSniperInfoFromPokezz { get; set; }
@@ -87,10 +91,10 @@ namespace ConfigSettings
         public int MaxTravelDistanceInMeters { get; set; }
         public int TotalAmountOfPokeballsToKeep { get; set; }
         public int TotalAmountOfPotionsToKeep { get; set; }
-        public int TotalAmountOfRevicesToKeep { get; set; }
+        public int TotalAmountOfRevivesToKeep { get; set; }
         public int TotalAmountOfBerriesToKeep { get; set; }
         public int UseGreatBallAboveCp { get; set; }
-        public int UseUltraBallAboceCp { get; set; }
+        public int UseUltraBallAboveCp { get; set; }
         public int UseMasterBallAboveCp { get; set; }
         public float UseGreatBallAboveIv { get; set; }
         public float UseUltraBallAboveIv { get; set; }
@@ -104,8 +108,8 @@ namespace ConfigSettings
         public int CurveThrowChance { get; set; }
         public float ForceGreatThrowOverIv { get; set; }
         public float ForceExcellentThrowOverIv { get; set; }
-        public float ForceGreatThrowOverCp { get; set; }
-        public float ForceExcellentThrowOverCp { get; set; }
+        public int ForceGreatThrowOverCp { get; set; }
+        public int ForceExcellentThrowOverCp { get; set; }
         public bool TransferWeakPokemon { get; set; }
         public bool TransferDuplicatePokemon { get; set; }
         public bool TransferDuplicatePokemonOnCapture { get; set; }
@@ -122,10 +126,9 @@ namespace ConfigSettings
         public PokemonToSnipe PokemonToSnipe { get; set; }
         public string[] PokemonToUseMasterball { get; set; }
 
-        public PokemonTransferT[] PokemonsTransferFilterT { get; set; }
-        public void ConvertTransferT()
+        public PokemonTransferT[] ConvertTransferT()
         {
-            PokemonsTransferFilterT = new PokemonTransferT[PokemonsTransferFilter.Count];
+            PokemonTransferT[] PokemonsTransferFilterT = new PokemonTransferT[PokemonsTransferFilter.Count];
             int i = 0;
             foreach (KeyValuePair<string, PokemonTransfer> pkm in PokemonsTransferFilter)
             {
@@ -135,17 +138,23 @@ namespace ConfigSettings
                                                                     pkm.Value.KeepMinOperator);
                 i++;
             }
+            return PokemonsTransferFilterT;
         }
-        public void ConvertTransfer()
+        public void ConvertTransfer(PokemonTransferT[] PokemonTransferFilterT)
         {
             PokemonsTransferFilter = new Dictionary<string, PokemonTransfer>();
-            //TODO: Add method convert transferT to transfer
-            //required method: string -> string[]
-        }
-        private string[] SplitMoves(string moves)
-        {
-            string[] _moves = null;
-            return _moves;
+            foreach (PokemonTransferT pkmT in PokemonTransferFilterT)
+            {
+                PokemonTransfer pkm = new PokemonTransfer();
+                pkm.KeepMinCp = pkmT.KeepMinCp;
+                pkm.KeepMinLvl = pkmT.KeepMinLvl;
+                pkm.UseKeepMinLvl = pkmT.UseKeepMinLvl;
+                pkm.KeepMinIvPercentage = pkmT.KeepMinIvPercentage;
+                pkm.KeepMinDuplicatePokemon = pkmT.KeepMinDuplicatePokemon;
+                pkm.Moves = pkmT.MovesToDisplay.Split(',');
+                pkm.KeepMinOperator = pkmT.KeepMinOperator;
+                PokemonsTransferFilter.Add(pkmT.Key, pkm);
+            }
         }
     }
 }

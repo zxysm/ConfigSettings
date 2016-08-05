@@ -28,9 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfig));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grboxAdvancedCatching = new System.Windows.Forms.GroupBox();
+            this.cboxTransferDuplicatePokemonOnCapture = new System.Windows.Forms.CheckBox();
+            this.cboxTransferWeakPokemon = new System.Windows.Forms.CheckBox();
+            this.txtCurveThrowChance = new System.Windows.Forms.TextBox();
+            this.lblCurveThrowChance = new System.Windows.Forms.Label();
+            this.txtForceExcellentThrowOverIv = new System.Windows.Forms.TextBox();
+            this.lblForceExcellentThrowOverIv = new System.Windows.Forms.Label();
+            this.txtForceExcellentThrowOverCp = new System.Windows.Forms.TextBox();
+            this.lblForceExcellentThrowOverCp = new System.Windows.Forms.Label();
+            this.txtForceGreatThrowOverCp = new System.Windows.Forms.TextBox();
+            this.lblForceGreatThrowOverCp = new System.Windows.Forms.Label();
+            this.txtForceGreatThrowOverIv = new System.Windows.Forms.TextBox();
+            this.lblForceGreatThrowOverIv = new System.Windows.Forms.Label();
+            this.txtExcellentThrowChance = new System.Windows.Forms.TextBox();
+            this.lblExcellentThrowChance = new System.Windows.Forms.Label();
+            this.txtGreatThrowChance = new System.Windows.Forms.TextBox();
+            this.lblGreatThrowChance = new System.Windows.Forms.Label();
+            this.txtNiceThrowChance = new System.Windows.Forms.TextBox();
+            this.lblNiceThrowChance = new System.Windows.Forms.Label();
+            this.cboxEnableHumanizedThrows = new System.Windows.Forms.CheckBox();
+            this.grboxCatching = new System.Windows.Forms.GroupBox();
+            this.cbxUseBerriesOperator = new System.Windows.Forms.ComboBox();
+            this.lblUseBerriesOperator = new System.Windows.Forms.Label();
+            this.txtUseBerriesBelowCatchProbability = new System.Windows.Forms.TextBox();
+            this.txtUseBerriesMinIv = new System.Windows.Forms.TextBox();
+            this.lblUseBerriesBelowCatchProbability = new System.Windows.Forms.Label();
+            this.txtUseBerriesMinCp = new System.Windows.Forms.TextBox();
+            this.lblUseBerriesMinIv = new System.Windows.Forms.Label();
+            this.txtUseMasterBallBelowCatchProbability = new System.Windows.Forms.TextBox();
+            this.lblUseBerriesMinCp = new System.Windows.Forms.Label();
+            this.txtUseUltraBallBelowCatchProbability = new System.Windows.Forms.TextBox();
+            this.lblUseMasterBallBelowCatchProbability = new System.Windows.Forms.Label();
+            this.txtUseGreatBallBelowCatchProbability = new System.Windows.Forms.TextBox();
+            this.lblUseUltraBallBelowCatchProbability = new System.Windows.Forms.Label();
+            this.txtUseUltraBallAboveIv = new System.Windows.Forms.TextBox();
+            this.lblUseGreatBallBelowCatchProbability = new System.Windows.Forms.Label();
+            this.txtUseGreatBallAboveIv = new System.Windows.Forms.TextBox();
+            this.lblUseUltraBallAboveIv = new System.Windows.Forms.Label();
+            this.lblUseGreatBallAboveIv = new System.Windows.Forms.Label();
+            this.txtUseMasterBallAboveCp = new System.Windows.Forms.TextBox();
+            this.lblUseMasterBallAboveCp = new System.Windows.Forms.Label();
+            this.txtUseUltraBallAboveCp = new System.Windows.Forms.TextBox();
+            this.lblUseUltraBallAboveCp = new System.Windows.Forms.Label();
+            this.txtUseGreatBallAboveCp = new System.Windows.Forms.TextBox();
+            this.lblUseGreatBallAboveCp = new System.Windows.Forms.Label();
+            this.lblPokemonToUseMasterball = new System.Windows.Forms.Label();
+            this.lblMaxPokeballsPerPokemon = new System.Windows.Forms.Label();
+            this.lstvwPokemonToUseMasterball = new System.Windows.Forms.ListView();
+            this.lstvwPokemonsToIgnore = new System.Windows.Forms.ListView();
+            this.txtMaxPokeballsPerPokemon = new System.Windows.Forms.TextBox();
+            this.lblPokemonsToIgnore = new System.Windows.Forms.Label();
+            this.cboxUsePokemonToNotCatchFilter = new System.Windows.Forms.CheckBox();
             this.grboxItem = new System.Windows.Forms.GroupBox();
             this.lblItemRecycleFilter = new System.Windows.Forms.Label();
             this.dtgrvwItemRecycleFilter = new System.Windows.Forms.DataGridView();
@@ -155,40 +213,50 @@
             this.lblOldConfigPath = new System.Windows.Forms.Label();
             this.btnOldConfigPath = new System.Windows.Forms.Button();
             this.btnUpdateSettings = new System.Windows.Forms.Button();
-            this.grboxCatching = new System.Windows.Forms.GroupBox();
-            this.cboxUsePokemonToNotCatchFilter = new System.Windows.Forms.CheckBox();
-            this.lblPokemonsToIgnore = new System.Windows.Forms.Label();
-            this.lstvwPokemonsToIgnore = new System.Windows.Forms.ListView();
-            this.lblMaxPokeballsPerPokemon = new System.Windows.Forms.Label();
-            this.txtMaxPokeballsPerPokemon = new System.Windows.Forms.TextBox();
-            this.lblPokemonToUseMasterball = new System.Windows.Forms.Label();
-            this.lstvwPokemonToUseMasterball = new System.Windows.Forms.ListView();
-            this.lblUseGreatBallAboveCp = new System.Windows.Forms.Label();
-            this.txtUseGreatBallAboveCp = new System.Windows.Forms.TextBox();
-            this.lblUseUltraBallAboveCp = new System.Windows.Forms.Label();
-            this.txtUseUltraBallAboveCp = new System.Windows.Forms.TextBox();
-            this.lblUseMasterBallAboveCp = new System.Windows.Forms.Label();
-            this.txtUseMasterBallAboveCp = new System.Windows.Forms.TextBox();
-            this.lblUseGreatBallAboveIv = new System.Windows.Forms.Label();
-            this.lblUseUltraBallAboveIv = new System.Windows.Forms.Label();
-            this.txtUseGreatBallAboveIv = new System.Windows.Forms.TextBox();
-            this.txtUseUltraBallAboveIv = new System.Windows.Forms.TextBox();
-            this.lblUseGreatBallBelowCatchProbability = new System.Windows.Forms.Label();
-            this.txtUseGreatBallBelowCatchProbability = new System.Windows.Forms.TextBox();
-            this.lblUseUltraBallBelowCatchProbability = new System.Windows.Forms.Label();
-            this.txtUseUltraBallBelowCatchProbability = new System.Windows.Forms.TextBox();
-            this.lblUseMasterBallBelowCatchProbability = new System.Windows.Forms.Label();
-            this.txtUseMasterBallBelowCatchProbability = new System.Windows.Forms.TextBox();
-            this.lblUseBerriesMinCp = new System.Windows.Forms.Label();
-            this.txtUseBerriesMinCp = new System.Windows.Forms.TextBox();
-            this.lblUseBerriesMinIv = new System.Windows.Forms.Label();
-            this.txtUseBerriesMinIv = new System.Windows.Forms.TextBox();
-            this.lblUseBerriesBelowCatchProbability = new System.Windows.Forms.Label();
-            this.txtUseBerriesBelowCatchProbability = new System.Windows.Forms.TextBox();
-            this.cbxUseBerriesOperator = new System.Windows.Forms.ComboBox();
-            this.lblUseBerriesOperator = new System.Windows.Forms.Label();
-            this.cboxEnableHumanizedThrows = new System.Windows.Forms.CheckBox();
+            this.cboxAutoFavoritePokemon = new System.Windows.Forms.CheckBox();
+            this.txtFavoriteMinIvPercentage = new System.Windows.Forms.TextBox();
+            this.lblFavoriteMinIvPercentage = new System.Windows.Forms.Label();
+            this.grSniping = new System.Windows.Forms.GroupBox();
+            this.cboxUseSnipeOnlineLocationServer = new System.Windows.Forms.CheckBox();
+            this.cboxGetSniperInfoFromPokezz = new System.Windows.Forms.CheckBox();
+            this.cboxSnipeAtPokestops = new System.Windows.Forms.CheckBox();
+            this.cboxUseTransferIvForSnipe = new System.Windows.Forms.CheckBox();
+            this.cboxUseSnipeLocationServer = new System.Windows.Forms.CheckBox();
+            this.cboxGetOnlyVerifiedSniperInfoFromPokezz = new System.Windows.Forms.CheckBox();
+            this.cboxSnipeIgnoreUnknownIv = new System.Windows.Forms.CheckBox();
+            this.cboxUsePokemonSniperFilterOnly = new System.Windows.Forms.CheckBox();
+            this.lblSnipeLocationServer = new System.Windows.Forms.Label();
+            this.txtSnipeLocationServer = new System.Windows.Forms.TextBox();
+            this.lblSnipeLocationServerPort = new System.Windows.Forms.Label();
+            this.txtSnipeLocationServerPort = new System.Windows.Forms.TextBox();
+            this.txtMinPokeballsToSnipe = new System.Windows.Forms.TextBox();
+            this.lblMinPokeballsToSnipe = new System.Windows.Forms.Label();
+            this.lblMinPokeballsWhileSnipe = new System.Windows.Forms.Label();
+            this.txtMinPokeballsWhileSnipe = new System.Windows.Forms.TextBox();
+            this.lblMinDelayBetweenSnipes = new System.Windows.Forms.Label();
+            this.txtMinDelayBetweenSnipes = new System.Windows.Forms.TextBox();
+            this.lblSnipingScanOffset = new System.Windows.Forms.Label();
+            this.txtSnipingScanOffset = new System.Windows.Forms.TextBox();
+            this.grboxPokemonToSnipe = new System.Windows.Forms.GroupBox();
+            this.lblLocations = new System.Windows.Forms.Label();
+            this.dtgrvwLocations = new System.Windows.Forms.DataGridView();
+            this.Latitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Longitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblPokemon = new System.Windows.Forms.Label();
+            this.lstvwPokemon = new System.Windows.Forms.ListView();
+            this.grboxSaving = new System.Windows.Forms.GroupBox();
+            this.cboxOverrideOldSettings = new System.Windows.Forms.CheckBox();
+            this.lblSavingPath = new System.Windows.Forms.Label();
+            this.txtSavingPath = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.cboxKeepOldConfigFiles = new System.Windows.Forms.CheckBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.bckgrwkrSaving = new System.ComponentModel.BackgroundWorker();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lblProgress = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.grboxAdvancedCatching.SuspendLayout();
+            this.grboxCatching.SuspendLayout();
             this.grboxItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvwItemRecycleFilter)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -199,7 +267,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvwPokemonTransferFilter)).BeginInit();
             this.grboxGeneralConfig.SuspendLayout();
             this.grboxOldSetting.SuspendLayout();
-            this.grboxCatching.SuspendLayout();
+            this.grSniping.SuspendLayout();
+            this.grboxPokemonToSnipe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvwLocations)).BeginInit();
+            this.grboxSaving.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -215,6 +286,9 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.grboxSaving);
+            this.panel1.Controls.Add(this.grSniping);
+            this.panel1.Controls.Add(this.grboxAdvancedCatching);
             this.panel1.Controls.Add(this.grboxCatching);
             this.panel1.Controls.Add(this.grboxItem);
             this.panel1.Controls.Add(this.groupBox2);
@@ -229,6 +303,592 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 669);
             this.panel1.TabIndex = 1;
+            // 
+            // grboxAdvancedCatching
+            // 
+            this.grboxAdvancedCatching.Controls.Add(this.cboxTransferDuplicatePokemonOnCapture);
+            this.grboxAdvancedCatching.Controls.Add(this.cboxTransferWeakPokemon);
+            this.grboxAdvancedCatching.Controls.Add(this.txtCurveThrowChance);
+            this.grboxAdvancedCatching.Controls.Add(this.lblCurveThrowChance);
+            this.grboxAdvancedCatching.Controls.Add(this.txtForceExcellentThrowOverIv);
+            this.grboxAdvancedCatching.Controls.Add(this.lblForceExcellentThrowOverIv);
+            this.grboxAdvancedCatching.Controls.Add(this.txtForceExcellentThrowOverCp);
+            this.grboxAdvancedCatching.Controls.Add(this.lblForceExcellentThrowOverCp);
+            this.grboxAdvancedCatching.Controls.Add(this.txtForceGreatThrowOverCp);
+            this.grboxAdvancedCatching.Controls.Add(this.lblForceGreatThrowOverCp);
+            this.grboxAdvancedCatching.Controls.Add(this.txtForceGreatThrowOverIv);
+            this.grboxAdvancedCatching.Controls.Add(this.lblForceGreatThrowOverIv);
+            this.grboxAdvancedCatching.Controls.Add(this.txtExcellentThrowChance);
+            this.grboxAdvancedCatching.Controls.Add(this.lblExcellentThrowChance);
+            this.grboxAdvancedCatching.Controls.Add(this.txtGreatThrowChance);
+            this.grboxAdvancedCatching.Controls.Add(this.lblGreatThrowChance);
+            this.grboxAdvancedCatching.Controls.Add(this.txtNiceThrowChance);
+            this.grboxAdvancedCatching.Controls.Add(this.lblNiceThrowChance);
+            this.grboxAdvancedCatching.Controls.Add(this.cboxEnableHumanizedThrows);
+            this.grboxAdvancedCatching.Location = new System.Drawing.Point(268, 1098);
+            this.grboxAdvancedCatching.Name = "grboxAdvancedCatching";
+            this.grboxAdvancedCatching.Size = new System.Drawing.Size(512, 168);
+            this.grboxAdvancedCatching.TabIndex = 16;
+            this.grboxAdvancedCatching.TabStop = false;
+            this.grboxAdvancedCatching.Text = "Advanced Catching";
+            // 
+            // cboxTransferDuplicatePokemonOnCapture
+            // 
+            this.cboxTransferDuplicatePokemonOnCapture.AutoSize = true;
+            this.cboxTransferDuplicatePokemonOnCapture.Location = new System.Drawing.Point(263, 146);
+            this.cboxTransferDuplicatePokemonOnCapture.Name = "cboxTransferDuplicatePokemonOnCapture";
+            this.cboxTransferDuplicatePokemonOnCapture.Size = new System.Drawing.Size(206, 17);
+            this.cboxTransferDuplicatePokemonOnCapture.TabIndex = 7;
+            this.cboxTransferDuplicatePokemonOnCapture.Text = "TransferDuplicatePokemonOnCapture";
+            this.cboxTransferDuplicatePokemonOnCapture.UseVisualStyleBackColor = true;
+            // 
+            // cboxTransferWeakPokemon
+            // 
+            this.cboxTransferWeakPokemon.AutoSize = true;
+            this.cboxTransferWeakPokemon.Location = new System.Drawing.Point(6, 146);
+            this.cboxTransferWeakPokemon.Name = "cboxTransferWeakPokemon";
+            this.cboxTransferWeakPokemon.Size = new System.Drawing.Size(139, 17);
+            this.cboxTransferWeakPokemon.TabIndex = 7;
+            this.cboxTransferWeakPokemon.Text = "TransferWeakPokemon";
+            this.cboxTransferWeakPokemon.UseVisualStyleBackColor = true;
+            // 
+            // txtCurveThrowChance
+            // 
+            this.txtCurveThrowChance.Enabled = false;
+            this.txtCurveThrowChance.Location = new System.Drawing.Point(409, 68);
+            this.txtCurveThrowChance.Name = "txtCurveThrowChance";
+            this.txtCurveThrowChance.Size = new System.Drawing.Size(97, 20);
+            this.txtCurveThrowChance.TabIndex = 6;
+            this.txtCurveThrowChance.Text = "90";
+            this.txtCurveThrowChance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCurveThrowChance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblCurveThrowChance
+            // 
+            this.lblCurveThrowChance.AutoSize = true;
+            this.lblCurveThrowChance.Enabled = false;
+            this.lblCurveThrowChance.Location = new System.Drawing.Point(260, 71);
+            this.lblCurveThrowChance.Name = "lblCurveThrowChance";
+            this.lblCurveThrowChance.Size = new System.Drawing.Size(102, 13);
+            this.lblCurveThrowChance.TabIndex = 5;
+            this.lblCurveThrowChance.Text = "CurveThrowChance";
+            // 
+            // txtForceExcellentThrowOverIv
+            // 
+            this.txtForceExcellentThrowOverIv.Enabled = false;
+            this.txtForceExcellentThrowOverIv.Location = new System.Drawing.Point(151, 120);
+            this.txtForceExcellentThrowOverIv.Name = "txtForceExcellentThrowOverIv";
+            this.txtForceExcellentThrowOverIv.Size = new System.Drawing.Size(97, 20);
+            this.txtForceExcellentThrowOverIv.TabIndex = 6;
+            this.txtForceExcellentThrowOverIv.Text = "95.0";
+            this.txtForceExcellentThrowOverIv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtForceExcellentThrowOverIv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblForceExcellentThrowOverIv
+            // 
+            this.lblForceExcellentThrowOverIv.AutoSize = true;
+            this.lblForceExcellentThrowOverIv.Enabled = false;
+            this.lblForceExcellentThrowOverIv.Location = new System.Drawing.Point(6, 123);
+            this.lblForceExcellentThrowOverIv.Name = "lblForceExcellentThrowOverIv";
+            this.lblForceExcellentThrowOverIv.Size = new System.Drawing.Size(139, 13);
+            this.lblForceExcellentThrowOverIv.TabIndex = 5;
+            this.lblForceExcellentThrowOverIv.Text = "ForceExcellentThrowOverIv";
+            // 
+            // txtForceExcellentThrowOverCp
+            // 
+            this.txtForceExcellentThrowOverCp.Enabled = false;
+            this.txtForceExcellentThrowOverCp.Location = new System.Drawing.Point(409, 120);
+            this.txtForceExcellentThrowOverCp.Name = "txtForceExcellentThrowOverCp";
+            this.txtForceExcellentThrowOverCp.Size = new System.Drawing.Size(97, 20);
+            this.txtForceExcellentThrowOverCp.TabIndex = 6;
+            this.txtForceExcellentThrowOverCp.Text = "1000";
+            this.txtForceExcellentThrowOverCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtForceExcellentThrowOverCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblForceExcellentThrowOverCp
+            // 
+            this.lblForceExcellentThrowOverCp.AutoSize = true;
+            this.lblForceExcellentThrowOverCp.Enabled = false;
+            this.lblForceExcellentThrowOverCp.Location = new System.Drawing.Point(259, 123);
+            this.lblForceExcellentThrowOverCp.Name = "lblForceExcellentThrowOverCp";
+            this.lblForceExcellentThrowOverCp.Size = new System.Drawing.Size(143, 13);
+            this.lblForceExcellentThrowOverCp.TabIndex = 5;
+            this.lblForceExcellentThrowOverCp.Text = "ForceExcellentThrowOverCp";
+            // 
+            // txtForceGreatThrowOverCp
+            // 
+            this.txtForceGreatThrowOverCp.Enabled = false;
+            this.txtForceGreatThrowOverCp.Location = new System.Drawing.Point(409, 94);
+            this.txtForceGreatThrowOverCp.Name = "txtForceGreatThrowOverCp";
+            this.txtForceGreatThrowOverCp.Size = new System.Drawing.Size(97, 20);
+            this.txtForceGreatThrowOverCp.TabIndex = 6;
+            this.txtForceGreatThrowOverCp.Text = "1000";
+            this.txtForceGreatThrowOverCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtForceGreatThrowOverCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblForceGreatThrowOverCp
+            // 
+            this.lblForceGreatThrowOverCp.AutoSize = true;
+            this.lblForceGreatThrowOverCp.Enabled = false;
+            this.lblForceGreatThrowOverCp.Location = new System.Drawing.Point(259, 97);
+            this.lblForceGreatThrowOverCp.Name = "lblForceGreatThrowOverCp";
+            this.lblForceGreatThrowOverCp.Size = new System.Drawing.Size(126, 13);
+            this.lblForceGreatThrowOverCp.TabIndex = 5;
+            this.lblForceGreatThrowOverCp.Text = "ForceGreatThrowOverCp";
+            // 
+            // txtForceGreatThrowOverIv
+            // 
+            this.txtForceGreatThrowOverIv.Enabled = false;
+            this.txtForceGreatThrowOverIv.Location = new System.Drawing.Point(151, 94);
+            this.txtForceGreatThrowOverIv.Name = "txtForceGreatThrowOverIv";
+            this.txtForceGreatThrowOverIv.Size = new System.Drawing.Size(97, 20);
+            this.txtForceGreatThrowOverIv.TabIndex = 6;
+            this.txtForceGreatThrowOverIv.Text = "90.0";
+            this.txtForceGreatThrowOverIv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtForceGreatThrowOverIv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblForceGreatThrowOverIv
+            // 
+            this.lblForceGreatThrowOverIv.AutoSize = true;
+            this.lblForceGreatThrowOverIv.Enabled = false;
+            this.lblForceGreatThrowOverIv.Location = new System.Drawing.Point(6, 97);
+            this.lblForceGreatThrowOverIv.Name = "lblForceGreatThrowOverIv";
+            this.lblForceGreatThrowOverIv.Size = new System.Drawing.Size(122, 13);
+            this.lblForceGreatThrowOverIv.TabIndex = 5;
+            this.lblForceGreatThrowOverIv.Text = "ForceGreatThrowOverIv";
+            // 
+            // txtExcellentThrowChance
+            // 
+            this.txtExcellentThrowChance.Enabled = false;
+            this.txtExcellentThrowChance.Location = new System.Drawing.Point(151, 68);
+            this.txtExcellentThrowChance.Name = "txtExcellentThrowChance";
+            this.txtExcellentThrowChance.Size = new System.Drawing.Size(97, 20);
+            this.txtExcellentThrowChance.TabIndex = 6;
+            this.txtExcellentThrowChance.Text = "20";
+            this.txtExcellentThrowChance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtExcellentThrowChance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblExcellentThrowChance
+            // 
+            this.lblExcellentThrowChance.AutoSize = true;
+            this.lblExcellentThrowChance.Enabled = false;
+            this.lblExcellentThrowChance.Location = new System.Drawing.Point(6, 71);
+            this.lblExcellentThrowChance.Name = "lblExcellentThrowChance";
+            this.lblExcellentThrowChance.Size = new System.Drawing.Size(117, 13);
+            this.lblExcellentThrowChance.TabIndex = 5;
+            this.lblExcellentThrowChance.Text = "ExcellentThrowChance";
+            // 
+            // txtGreatThrowChance
+            // 
+            this.txtGreatThrowChance.Enabled = false;
+            this.txtGreatThrowChance.Location = new System.Drawing.Point(409, 43);
+            this.txtGreatThrowChance.Name = "txtGreatThrowChance";
+            this.txtGreatThrowChance.Size = new System.Drawing.Size(97, 20);
+            this.txtGreatThrowChance.TabIndex = 4;
+            this.txtGreatThrowChance.Text = "30";
+            this.txtGreatThrowChance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGreatThrowChance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblGreatThrowChance
+            // 
+            this.lblGreatThrowChance.AutoSize = true;
+            this.lblGreatThrowChance.Enabled = false;
+            this.lblGreatThrowChance.Location = new System.Drawing.Point(260, 45);
+            this.lblGreatThrowChance.Name = "lblGreatThrowChance";
+            this.lblGreatThrowChance.Size = new System.Drawing.Size(100, 13);
+            this.lblGreatThrowChance.TabIndex = 3;
+            this.lblGreatThrowChance.Text = "GreatThrowChance";
+            // 
+            // txtNiceThrowChance
+            // 
+            this.txtNiceThrowChance.Enabled = false;
+            this.txtNiceThrowChance.Location = new System.Drawing.Point(151, 43);
+            this.txtNiceThrowChance.Name = "txtNiceThrowChance";
+            this.txtNiceThrowChance.Size = new System.Drawing.Size(97, 20);
+            this.txtNiceThrowChance.TabIndex = 2;
+            this.txtNiceThrowChance.Text = "40";
+            this.txtNiceThrowChance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNiceThrowChance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblNiceThrowChance
+            // 
+            this.lblNiceThrowChance.AutoSize = true;
+            this.lblNiceThrowChance.Enabled = false;
+            this.lblNiceThrowChance.Location = new System.Drawing.Point(6, 45);
+            this.lblNiceThrowChance.Name = "lblNiceThrowChance";
+            this.lblNiceThrowChance.Size = new System.Drawing.Size(96, 13);
+            this.lblNiceThrowChance.TabIndex = 1;
+            this.lblNiceThrowChance.Text = "NiceThrowChance";
+            // 
+            // cboxEnableHumanizedThrows
+            // 
+            this.cboxEnableHumanizedThrows.AutoSize = true;
+            this.cboxEnableHumanizedThrows.Location = new System.Drawing.Point(6, 19);
+            this.cboxEnableHumanizedThrows.Name = "cboxEnableHumanizedThrows";
+            this.cboxEnableHumanizedThrows.Size = new System.Drawing.Size(147, 17);
+            this.cboxEnableHumanizedThrows.TabIndex = 0;
+            this.cboxEnableHumanizedThrows.Text = "EnableHumanizedThrows";
+            this.cboxEnableHumanizedThrows.UseVisualStyleBackColor = true;
+            this.cboxEnableHumanizedThrows.CheckedChanged += new System.EventHandler(this.cboxEnableHumanizedThrows_CheckedChanged);
+            // 
+            // grboxCatching
+            // 
+            this.grboxCatching.Controls.Add(this.cbxUseBerriesOperator);
+            this.grboxCatching.Controls.Add(this.lblUseBerriesOperator);
+            this.grboxCatching.Controls.Add(this.txtUseBerriesBelowCatchProbability);
+            this.grboxCatching.Controls.Add(this.txtUseBerriesMinIv);
+            this.grboxCatching.Controls.Add(this.lblUseBerriesBelowCatchProbability);
+            this.grboxCatching.Controls.Add(this.txtUseBerriesMinCp);
+            this.grboxCatching.Controls.Add(this.lblUseBerriesMinIv);
+            this.grboxCatching.Controls.Add(this.txtUseMasterBallBelowCatchProbability);
+            this.grboxCatching.Controls.Add(this.lblUseBerriesMinCp);
+            this.grboxCatching.Controls.Add(this.txtUseUltraBallBelowCatchProbability);
+            this.grboxCatching.Controls.Add(this.lblUseMasterBallBelowCatchProbability);
+            this.grboxCatching.Controls.Add(this.txtUseGreatBallBelowCatchProbability);
+            this.grboxCatching.Controls.Add(this.lblUseUltraBallBelowCatchProbability);
+            this.grboxCatching.Controls.Add(this.txtUseUltraBallAboveIv);
+            this.grboxCatching.Controls.Add(this.lblUseGreatBallBelowCatchProbability);
+            this.grboxCatching.Controls.Add(this.txtUseGreatBallAboveIv);
+            this.grboxCatching.Controls.Add(this.lblUseUltraBallAboveIv);
+            this.grboxCatching.Controls.Add(this.lblUseGreatBallAboveIv);
+            this.grboxCatching.Controls.Add(this.txtUseMasterBallAboveCp);
+            this.grboxCatching.Controls.Add(this.lblUseMasterBallAboveCp);
+            this.grboxCatching.Controls.Add(this.txtUseUltraBallAboveCp);
+            this.grboxCatching.Controls.Add(this.lblUseUltraBallAboveCp);
+            this.grboxCatching.Controls.Add(this.txtUseGreatBallAboveCp);
+            this.grboxCatching.Controls.Add(this.lblUseGreatBallAboveCp);
+            this.grboxCatching.Controls.Add(this.lblPokemonToUseMasterball);
+            this.grboxCatching.Controls.Add(this.lblMaxPokeballsPerPokemon);
+            this.grboxCatching.Controls.Add(this.lstvwPokemonToUseMasterball);
+            this.grboxCatching.Controls.Add(this.lstvwPokemonsToIgnore);
+            this.grboxCatching.Controls.Add(this.txtMaxPokeballsPerPokemon);
+            this.grboxCatching.Controls.Add(this.lblPokemonsToIgnore);
+            this.grboxCatching.Controls.Add(this.cboxUsePokemonToNotCatchFilter);
+            this.grboxCatching.Location = new System.Drawing.Point(3, 1145);
+            this.grboxCatching.Name = "grboxCatching";
+            this.grboxCatching.Size = new System.Drawing.Size(259, 674);
+            this.grboxCatching.TabIndex = 15;
+            this.grboxCatching.TabStop = false;
+            this.grboxCatching.Text = "Catching";
+            // 
+            // cbxUseBerriesOperator
+            // 
+            this.cbxUseBerriesOperator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxUseBerriesOperator.FormattingEnabled = true;
+            this.cbxUseBerriesOperator.Location = new System.Drawing.Point(174, 643);
+            this.cbxUseBerriesOperator.Name = "cbxUseBerriesOperator";
+            this.cbxUseBerriesOperator.Size = new System.Drawing.Size(79, 21);
+            this.cbxUseBerriesOperator.TabIndex = 22;
+            // 
+            // lblUseBerriesOperator
+            // 
+            this.lblUseBerriesOperator.AutoSize = true;
+            this.lblUseBerriesOperator.Location = new System.Drawing.Point(6, 646);
+            this.lblUseBerriesOperator.Name = "lblUseBerriesOperator";
+            this.lblUseBerriesOperator.Size = new System.Drawing.Size(99, 13);
+            this.lblUseBerriesOperator.TabIndex = 21;
+            this.lblUseBerriesOperator.Text = "UseBerriesOperator";
+            // 
+            // txtUseBerriesBelowCatchProbability
+            // 
+            this.txtUseBerriesBelowCatchProbability.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseBerriesBelowCatchProbability.Location = new System.Drawing.Point(175, 617);
+            this.txtUseBerriesBelowCatchProbability.Name = "txtUseBerriesBelowCatchProbability";
+            this.txtUseBerriesBelowCatchProbability.Size = new System.Drawing.Size(78, 20);
+            this.txtUseBerriesBelowCatchProbability.TabIndex = 44;
+            this.txtUseBerriesBelowCatchProbability.Text = "75.0";
+            this.txtUseBerriesBelowCatchProbability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseBerriesBelowCatchProbability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // txtUseBerriesMinIv
+            // 
+            this.txtUseBerriesMinIv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseBerriesMinIv.Location = new System.Drawing.Point(175, 591);
+            this.txtUseBerriesMinIv.Name = "txtUseBerriesMinIv";
+            this.txtUseBerriesMinIv.Size = new System.Drawing.Size(78, 20);
+            this.txtUseBerriesMinIv.TabIndex = 44;
+            this.txtUseBerriesMinIv.Text = "75.0";
+            this.txtUseBerriesMinIv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseBerriesMinIv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblUseBerriesBelowCatchProbability
+            // 
+            this.lblUseBerriesBelowCatchProbability.AutoSize = true;
+            this.lblUseBerriesBelowCatchProbability.Location = new System.Drawing.Point(6, 619);
+            this.lblUseBerriesBelowCatchProbability.Name = "lblUseBerriesBelowCatchProbability";
+            this.lblUseBerriesBelowCatchProbability.Size = new System.Drawing.Size(163, 13);
+            this.lblUseBerriesBelowCatchProbability.TabIndex = 48;
+            this.lblUseBerriesBelowCatchProbability.Text = "UseBerriesBelowCatchProbability";
+            // 
+            // txtUseBerriesMinCp
+            // 
+            this.txtUseBerriesMinCp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseBerriesMinCp.Location = new System.Drawing.Point(175, 565);
+            this.txtUseBerriesMinCp.Name = "txtUseBerriesMinCp";
+            this.txtUseBerriesMinCp.Size = new System.Drawing.Size(78, 20);
+            this.txtUseBerriesMinCp.TabIndex = 44;
+            this.txtUseBerriesMinCp.Text = "75.0";
+            this.txtUseBerriesMinCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseBerriesMinCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblUseBerriesMinIv
+            // 
+            this.lblUseBerriesMinIv.AutoSize = true;
+            this.lblUseBerriesMinIv.Location = new System.Drawing.Point(6, 593);
+            this.lblUseBerriesMinIv.Name = "lblUseBerriesMinIv";
+            this.lblUseBerriesMinIv.Size = new System.Drawing.Size(84, 13);
+            this.lblUseBerriesMinIv.TabIndex = 48;
+            this.lblUseBerriesMinIv.Text = "UseBerriesMinIv";
+            // 
+            // txtUseMasterBallBelowCatchProbability
+            // 
+            this.txtUseMasterBallBelowCatchProbability.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseMasterBallBelowCatchProbability.Location = new System.Drawing.Point(192, 539);
+            this.txtUseMasterBallBelowCatchProbability.Name = "txtUseMasterBallBelowCatchProbability";
+            this.txtUseMasterBallBelowCatchProbability.Size = new System.Drawing.Size(61, 20);
+            this.txtUseMasterBallBelowCatchProbability.TabIndex = 44;
+            this.txtUseMasterBallBelowCatchProbability.Text = "75.0";
+            this.txtUseMasterBallBelowCatchProbability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseMasterBallBelowCatchProbability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblUseBerriesMinCp
+            // 
+            this.lblUseBerriesMinCp.AutoSize = true;
+            this.lblUseBerriesMinCp.Location = new System.Drawing.Point(6, 567);
+            this.lblUseBerriesMinCp.Name = "lblUseBerriesMinCp";
+            this.lblUseBerriesMinCp.Size = new System.Drawing.Size(88, 13);
+            this.lblUseBerriesMinCp.TabIndex = 48;
+            this.lblUseBerriesMinCp.Text = "UseBerriesMinCp";
+            // 
+            // txtUseUltraBallBelowCatchProbability
+            // 
+            this.txtUseUltraBallBelowCatchProbability.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseUltraBallBelowCatchProbability.Location = new System.Drawing.Point(192, 513);
+            this.txtUseUltraBallBelowCatchProbability.Name = "txtUseUltraBallBelowCatchProbability";
+            this.txtUseUltraBallBelowCatchProbability.Size = new System.Drawing.Size(61, 20);
+            this.txtUseUltraBallBelowCatchProbability.TabIndex = 44;
+            this.txtUseUltraBallBelowCatchProbability.Text = "75.0";
+            this.txtUseUltraBallBelowCatchProbability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseUltraBallBelowCatchProbability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblUseMasterBallBelowCatchProbability
+            // 
+            this.lblUseMasterBallBelowCatchProbability.AutoSize = true;
+            this.lblUseMasterBallBelowCatchProbability.Location = new System.Drawing.Point(6, 541);
+            this.lblUseMasterBallBelowCatchProbability.Name = "lblUseMasterBallBelowCatchProbability";
+            this.lblUseMasterBallBelowCatchProbability.Size = new System.Drawing.Size(180, 13);
+            this.lblUseMasterBallBelowCatchProbability.TabIndex = 48;
+            this.lblUseMasterBallBelowCatchProbability.Text = "UseMasterBallBelowCatchProbability";
+            // 
+            // txtUseGreatBallBelowCatchProbability
+            // 
+            this.txtUseGreatBallBelowCatchProbability.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseGreatBallBelowCatchProbability.Location = new System.Drawing.Point(192, 487);
+            this.txtUseGreatBallBelowCatchProbability.Name = "txtUseGreatBallBelowCatchProbability";
+            this.txtUseGreatBallBelowCatchProbability.Size = new System.Drawing.Size(61, 20);
+            this.txtUseGreatBallBelowCatchProbability.TabIndex = 44;
+            this.txtUseGreatBallBelowCatchProbability.Text = "75.0";
+            this.txtUseGreatBallBelowCatchProbability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseGreatBallBelowCatchProbability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblUseUltraBallBelowCatchProbability
+            // 
+            this.lblUseUltraBallBelowCatchProbability.AutoSize = true;
+            this.lblUseUltraBallBelowCatchProbability.Location = new System.Drawing.Point(6, 515);
+            this.lblUseUltraBallBelowCatchProbability.Name = "lblUseUltraBallBelowCatchProbability";
+            this.lblUseUltraBallBelowCatchProbability.Size = new System.Drawing.Size(170, 13);
+            this.lblUseUltraBallBelowCatchProbability.TabIndex = 48;
+            this.lblUseUltraBallBelowCatchProbability.Text = "UseUltraBallBelowCatchProbability";
+            // 
+            // txtUseUltraBallAboveIv
+            // 
+            this.txtUseUltraBallAboveIv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseUltraBallAboveIv.Location = new System.Drawing.Point(131, 461);
+            this.txtUseUltraBallAboveIv.Name = "txtUseUltraBallAboveIv";
+            this.txtUseUltraBallAboveIv.Size = new System.Drawing.Size(122, 20);
+            this.txtUseUltraBallAboveIv.TabIndex = 44;
+            this.txtUseUltraBallAboveIv.Text = "75.0";
+            this.txtUseUltraBallAboveIv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseUltraBallAboveIv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblUseGreatBallBelowCatchProbability
+            // 
+            this.lblUseGreatBallBelowCatchProbability.AutoSize = true;
+            this.lblUseGreatBallBelowCatchProbability.Location = new System.Drawing.Point(6, 489);
+            this.lblUseGreatBallBelowCatchProbability.Name = "lblUseGreatBallBelowCatchProbability";
+            this.lblUseGreatBallBelowCatchProbability.Size = new System.Drawing.Size(174, 13);
+            this.lblUseGreatBallBelowCatchProbability.TabIndex = 48;
+            this.lblUseGreatBallBelowCatchProbability.Text = "UseGreatBallBelowCatchProbability";
+            // 
+            // txtUseGreatBallAboveIv
+            // 
+            this.txtUseGreatBallAboveIv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseGreatBallAboveIv.Location = new System.Drawing.Point(131, 435);
+            this.txtUseGreatBallAboveIv.Name = "txtUseGreatBallAboveIv";
+            this.txtUseGreatBallAboveIv.Size = new System.Drawing.Size(122, 20);
+            this.txtUseGreatBallAboveIv.TabIndex = 44;
+            this.txtUseGreatBallAboveIv.Text = "75.0";
+            this.txtUseGreatBallAboveIv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseGreatBallAboveIv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // lblUseUltraBallAboveIv
+            // 
+            this.lblUseUltraBallAboveIv.AutoSize = true;
+            this.lblUseUltraBallAboveIv.Location = new System.Drawing.Point(6, 463);
+            this.lblUseUltraBallAboveIv.Name = "lblUseUltraBallAboveIv";
+            this.lblUseUltraBallAboveIv.Size = new System.Drawing.Size(105, 13);
+            this.lblUseUltraBallAboveIv.TabIndex = 48;
+            this.lblUseUltraBallAboveIv.Text = "UseUltraBallAboveIv";
+            // 
+            // lblUseGreatBallAboveIv
+            // 
+            this.lblUseGreatBallAboveIv.AutoSize = true;
+            this.lblUseGreatBallAboveIv.Location = new System.Drawing.Point(6, 437);
+            this.lblUseGreatBallAboveIv.Name = "lblUseGreatBallAboveIv";
+            this.lblUseGreatBallAboveIv.Size = new System.Drawing.Size(109, 13);
+            this.lblUseGreatBallAboveIv.TabIndex = 48;
+            this.lblUseGreatBallAboveIv.Text = "UseGreatBallAboveIv";
+            // 
+            // txtUseMasterBallAboveCp
+            // 
+            this.txtUseMasterBallAboveCp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseMasterBallAboveCp.Location = new System.Drawing.Point(131, 409);
+            this.txtUseMasterBallAboveCp.Name = "txtUseMasterBallAboveCp";
+            this.txtUseMasterBallAboveCp.Size = new System.Drawing.Size(122, 20);
+            this.txtUseMasterBallAboveCp.TabIndex = 47;
+            this.txtUseMasterBallAboveCp.Text = "10";
+            this.txtUseMasterBallAboveCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseMasterBallAboveCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblUseMasterBallAboveCp
+            // 
+            this.lblUseMasterBallAboveCp.AutoSize = true;
+            this.lblUseMasterBallAboveCp.Location = new System.Drawing.Point(6, 411);
+            this.lblUseMasterBallAboveCp.Name = "lblUseMasterBallAboveCp";
+            this.lblUseMasterBallAboveCp.Size = new System.Drawing.Size(119, 13);
+            this.lblUseMasterBallAboveCp.TabIndex = 46;
+            this.lblUseMasterBallAboveCp.Text = "UseMasterBallAboveCp";
+            // 
+            // txtUseUltraBallAboveCp
+            // 
+            this.txtUseUltraBallAboveCp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseUltraBallAboveCp.Location = new System.Drawing.Point(131, 383);
+            this.txtUseUltraBallAboveCp.Name = "txtUseUltraBallAboveCp";
+            this.txtUseUltraBallAboveCp.Size = new System.Drawing.Size(122, 20);
+            this.txtUseUltraBallAboveCp.TabIndex = 47;
+            this.txtUseUltraBallAboveCp.Text = "10";
+            this.txtUseUltraBallAboveCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseUltraBallAboveCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblUseUltraBallAboveCp
+            // 
+            this.lblUseUltraBallAboveCp.AutoSize = true;
+            this.lblUseUltraBallAboveCp.Location = new System.Drawing.Point(6, 385);
+            this.lblUseUltraBallAboveCp.Name = "lblUseUltraBallAboveCp";
+            this.lblUseUltraBallAboveCp.Size = new System.Drawing.Size(109, 13);
+            this.lblUseUltraBallAboveCp.TabIndex = 46;
+            this.lblUseUltraBallAboveCp.Text = "UseUltraBallAboveCp";
+            // 
+            // txtUseGreatBallAboveCp
+            // 
+            this.txtUseGreatBallAboveCp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUseGreatBallAboveCp.Location = new System.Drawing.Point(131, 357);
+            this.txtUseGreatBallAboveCp.Name = "txtUseGreatBallAboveCp";
+            this.txtUseGreatBallAboveCp.Size = new System.Drawing.Size(122, 20);
+            this.txtUseGreatBallAboveCp.TabIndex = 47;
+            this.txtUseGreatBallAboveCp.Text = "10";
+            this.txtUseGreatBallAboveCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseGreatBallAboveCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblUseGreatBallAboveCp
+            // 
+            this.lblUseGreatBallAboveCp.AutoSize = true;
+            this.lblUseGreatBallAboveCp.Location = new System.Drawing.Point(6, 359);
+            this.lblUseGreatBallAboveCp.Name = "lblUseGreatBallAboveCp";
+            this.lblUseGreatBallAboveCp.Size = new System.Drawing.Size(113, 13);
+            this.lblUseGreatBallAboveCp.TabIndex = 46;
+            this.lblUseGreatBallAboveCp.Text = "UseGreatBallAboveCp";
+            // 
+            // lblPokemonToUseMasterball
+            // 
+            this.lblPokemonToUseMasterball.AutoSize = true;
+            this.lblPokemonToUseMasterball.Location = new System.Drawing.Point(6, 214);
+            this.lblPokemonToUseMasterball.Name = "lblPokemonToUseMasterball";
+            this.lblPokemonToUseMasterball.Size = new System.Drawing.Size(132, 13);
+            this.lblPokemonToUseMasterball.TabIndex = 45;
+            this.lblPokemonToUseMasterball.Text = "PokemonToUseMasterball";
+            // 
+            // lblMaxPokeballsPerPokemon
+            // 
+            this.lblMaxPokeballsPerPokemon.AutoSize = true;
+            this.lblMaxPokeballsPerPokemon.Location = new System.Drawing.Point(6, 188);
+            this.lblMaxPokeballsPerPokemon.Name = "lblMaxPokeballsPerPokemon";
+            this.lblMaxPokeballsPerPokemon.Size = new System.Drawing.Size(134, 13);
+            this.lblMaxPokeballsPerPokemon.TabIndex = 45;
+            this.lblMaxPokeballsPerPokemon.Text = "MaxPokeballsPerPokemon";
+            // 
+            // lstvwPokemonToUseMasterball
+            // 
+            this.lstvwPokemonToUseMasterball.AllowDrop = true;
+            this.lstvwPokemonToUseMasterball.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstvwPokemonToUseMasterball.CheckBoxes = true;
+            this.lstvwPokemonToUseMasterball.FullRowSelect = true;
+            this.lstvwPokemonToUseMasterball.GridLines = true;
+            this.lstvwPokemonToUseMasterball.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lstvwPokemonToUseMasterball.Location = new System.Drawing.Point(9, 230);
+            this.lstvwPokemonToUseMasterball.Name = "lstvwPokemonToUseMasterball";
+            this.lstvwPokemonToUseMasterball.Size = new System.Drawing.Size(244, 121);
+            this.lstvwPokemonToUseMasterball.TabIndex = 16;
+            this.lstvwPokemonToUseMasterball.UseCompatibleStateImageBehavior = false;
+            this.lstvwPokemonToUseMasterball.View = System.Windows.Forms.View.List;
+            // 
+            // lstvwPokemonsToIgnore
+            // 
+            this.lstvwPokemonsToIgnore.AllowDrop = true;
+            this.lstvwPokemonsToIgnore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstvwPokemonsToIgnore.CheckBoxes = true;
+            this.lstvwPokemonsToIgnore.Enabled = false;
+            this.lstvwPokemonsToIgnore.FullRowSelect = true;
+            this.lstvwPokemonsToIgnore.GridLines = true;
+            this.lstvwPokemonsToIgnore.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lstvwPokemonsToIgnore.Location = new System.Drawing.Point(9, 59);
+            this.lstvwPokemonsToIgnore.Name = "lstvwPokemonsToIgnore";
+            this.lstvwPokemonsToIgnore.Size = new System.Drawing.Size(244, 121);
+            this.lstvwPokemonsToIgnore.TabIndex = 16;
+            this.lstvwPokemonsToIgnore.UseCompatibleStateImageBehavior = false;
+            this.lstvwPokemonsToIgnore.View = System.Windows.Forms.View.List;
+            // 
+            // txtMaxPokeballsPerPokemon
+            // 
+            this.txtMaxPokeballsPerPokemon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaxPokeballsPerPokemon.Location = new System.Drawing.Point(146, 186);
+            this.txtMaxPokeballsPerPokemon.Name = "txtMaxPokeballsPerPokemon";
+            this.txtMaxPokeballsPerPokemon.Size = new System.Drawing.Size(107, 20);
+            this.txtMaxPokeballsPerPokemon.TabIndex = 44;
+            this.txtMaxPokeballsPerPokemon.Text = "10";
+            this.txtMaxPokeballsPerPokemon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMaxPokeballsPerPokemon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblPokemonsToIgnore
+            // 
+            this.lblPokemonsToIgnore.AutoSize = true;
+            this.lblPokemonsToIgnore.Enabled = false;
+            this.lblPokemonsToIgnore.Location = new System.Drawing.Point(6, 43);
+            this.lblPokemonsToIgnore.Name = "lblPokemonsToIgnore";
+            this.lblPokemonsToIgnore.Size = new System.Drawing.Size(100, 13);
+            this.lblPokemonsToIgnore.TabIndex = 16;
+            this.lblPokemonsToIgnore.Text = "PokemonsToIgnore";
+            // 
+            // cboxUsePokemonToNotCatchFilter
+            // 
+            this.cboxUsePokemonToNotCatchFilter.AutoSize = true;
+            this.cboxUsePokemonToNotCatchFilter.Location = new System.Drawing.Point(9, 19);
+            this.cboxUsePokemonToNotCatchFilter.Name = "cboxUsePokemonToNotCatchFilter";
+            this.cboxUsePokemonToNotCatchFilter.Size = new System.Drawing.Size(170, 17);
+            this.cboxUsePokemonToNotCatchFilter.TabIndex = 16;
+            this.cboxUsePokemonToNotCatchFilter.Text = "UsePokemonToNotCatchFilter";
+            this.cboxUsePokemonToNotCatchFilter.UseVisualStyleBackColor = true;
+            this.cboxUsePokemonToNotCatchFilter.CheckedChanged += new System.EventHandler(this.cboxUsePokemonToNotCatchFilter_CheckedChanged);
             // 
             // grboxItem
             // 
@@ -251,7 +911,7 @@
             this.grboxItem.Controls.Add(this.lblUseLuckyEggsMinPokemonAmount);
             this.grboxItem.Controls.Add(this.cboxUseLuckyEggsWhileEvolving);
             this.grboxItem.Controls.Add(this.cboxUseEggIncubators);
-            this.grboxItem.Location = new System.Drawing.Point(3, 584);
+            this.grboxItem.Location = new System.Drawing.Point(3, 631);
             this.grboxItem.Name = "grboxItem";
             this.grboxItem.Size = new System.Drawing.Size(259, 508);
             this.grboxItem.TabIndex = 14;
@@ -271,13 +931,31 @@
             // 
             this.dtgrvwItemRecycleFilter.AllowDrop = true;
             this.dtgrvwItemRecycleFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwItemRecycleFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dtgrvwItemRecycleFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwItemRecycleFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Key,
             this.Value});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwItemRecycleFilter.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dtgrvwItemRecycleFilter.EnableHeadersVisualStyles = false;
             this.dtgrvwItemRecycleFilter.Location = new System.Drawing.Point(9, 322);
             this.dtgrvwItemRecycleFilter.Name = "dtgrvwItemRecycleFilter";
             this.dtgrvwItemRecycleFilter.RowHeadersVisible = false;
+            this.dtgrvwItemRecycleFilter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgrvwItemRecycleFilter.Size = new System.Drawing.Size(244, 174);
             this.dtgrvwItemRecycleFilter.TabIndex = 42;
             // 
@@ -905,6 +1583,8 @@
             this.txtGPXFile.Name = "txtGPXFile";
             this.txtGPXFile.Size = new System.Drawing.Size(303, 20);
             this.txtGPXFile.TabIndex = 8;
+            this.txtGPXFile.Text = "GPXPath.GPX";
+            this.txtGPXFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cboxUseGPXPathing
             // 
@@ -923,6 +1603,7 @@
             this.txtMaxTravelDistanceInMeters.Name = "txtMaxTravelDistanceInMeters";
             this.txtMaxTravelDistanceInMeters.Size = new System.Drawing.Size(351, 20);
             this.txtMaxTravelDistanceInMeters.TabIndex = 14;
+            this.txtMaxTravelDistanceInMeters.Text = "10000";
             this.txtMaxTravelDistanceInMeters.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMaxTravelDistanceInMeters.TextChanged += new System.EventHandler(this.txtMaxTravelDistanceInMeters_TextChanged);
             this.txtMaxTravelDistanceInMeters.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
@@ -942,6 +1623,7 @@
             this.txtMaxSpawnLocationOffset.Name = "txtMaxSpawnLocationOffset";
             this.txtMaxSpawnLocationOffset.Size = new System.Drawing.Size(351, 20);
             this.txtMaxSpawnLocationOffset.TabIndex = 12;
+            this.txtMaxSpawnLocationOffset.Text = "10";
             this.txtMaxSpawnLocationOffset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMaxSpawnLocationOffset.TextChanged += new System.EventHandler(this.txtMaxSpawnLocationOffset_TextChanged);
             this.txtMaxSpawnLocationOffset.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
@@ -952,6 +1634,7 @@
             this.txtWalkingSpeedInKilometerPerHour.Name = "txtWalkingSpeedInKilometerPerHour";
             this.txtWalkingSpeedInKilometerPerHour.Size = new System.Drawing.Size(180, 20);
             this.txtWalkingSpeedInKilometerPerHour.TabIndex = 12;
+            this.txtWalkingSpeedInKilometerPerHour.Text = "50";
             this.txtWalkingSpeedInKilometerPerHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWalkingSpeedInKilometerPerHour.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
             // 
@@ -970,6 +1653,7 @@
             this.txtDefaultLongitude.Name = "txtDefaultLongitude";
             this.txtDefaultLongitude.Size = new System.Drawing.Size(351, 20);
             this.txtDefaultLongitude.TabIndex = 12;
+            this.txtDefaultLongitude.Text = "139.480876";
             this.txtDefaultLongitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
@@ -996,6 +1680,7 @@
             this.txtDefaultLatitude.Name = "txtDefaultLatitude";
             this.txtDefaultLatitude.Size = new System.Drawing.Size(351, 20);
             this.txtDefaultLatitude.TabIndex = 10;
+            this.txtDefaultLatitude.Text = "35.299925";
             this.txtDefaultLatitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
@@ -1013,6 +1698,7 @@
             this.txtDefaultAltitude.Name = "txtDefaultAltitude";
             this.txtDefaultAltitude.Size = new System.Drawing.Size(351, 20);
             this.txtDefaultAltitude.TabIndex = 8;
+            this.txtDefaultAltitude.Text = "10.0";
             this.txtDefaultAltitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
@@ -1108,6 +1794,14 @@
             // 
             this.dtgrvwPokemonTransferFilter.AllowDrop = true;
             this.dtgrvwPokemonTransferFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwPokemonTransferFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dtgrvwPokemonTransferFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwPokemonTransferFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pokemon,
@@ -1118,7 +1812,16 @@
             this.KeepMinDuplicatePokemon,
             this.Moves,
             this.KeepMinOperator});
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwPokemonTransferFilter.DefaultCellStyle = dataGridViewCellStyle16;
             this.dtgrvwPokemonTransferFilter.Enabled = false;
+            this.dtgrvwPokemonTransferFilter.EnableHeadersVisualStyles = false;
             this.dtgrvwPokemonTransferFilter.Location = new System.Drawing.Point(6, 303);
             this.dtgrvwPokemonTransferFilter.Name = "dtgrvwPokemonTransferFilter";
             this.dtgrvwPokemonTransferFilter.RowHeadersVisible = false;
@@ -1131,21 +1834,21 @@
             this.Pokemon.DataPropertyName = "Key";
             this.Pokemon.HeaderText = "Pokemon";
             this.Pokemon.Name = "Pokemon";
-            this.Pokemon.Width = 77;
+            this.Pokemon.Width = 89;
             // 
             // KeepMinCp
             // 
             this.KeepMinCp.DataPropertyName = "KeepMinCp";
             this.KeepMinCp.HeaderText = "KeepMinCp";
             this.KeepMinCp.Name = "KeepMinCp";
-            this.KeepMinCp.Width = 87;
+            this.KeepMinCp.Width = 101;
             // 
             // KeepMinLvl
             // 
             this.KeepMinLvl.DataPropertyName = "KeepMinLvl";
             this.KeepMinLvl.HeaderText = "KeepMinLvl";
             this.KeepMinLvl.Name = "KeepMinLvl";
-            this.KeepMinLvl.Width = 88;
+            this.KeepMinLvl.Width = 101;
             // 
             // UseKeepMinLvl
             // 
@@ -1154,28 +1857,28 @@
             this.UseKeepMinLvl.Name = "UseKeepMinLvl";
             this.UseKeepMinLvl.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.UseKeepMinLvl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.UseKeepMinLvl.Width = 107;
+            this.UseKeepMinLvl.Width = 123;
             // 
             // KeepMinIvPercentage
             // 
             this.KeepMinIvPercentage.DataPropertyName = "KeepMinIvPercentage";
             this.KeepMinIvPercentage.HeaderText = "KeepMinIvPercentage";
             this.KeepMinIvPercentage.Name = "KeepMinIvPercentage";
-            this.KeepMinIvPercentage.Width = 138;
+            this.KeepMinIvPercentage.Width = 163;
             // 
             // KeepMinDuplicatePokemon
             // 
             this.KeepMinDuplicatePokemon.DataPropertyName = "KeepMinDuplicatePokemon";
             this.KeepMinDuplicatePokemon.HeaderText = "KeepMinDuplicatePokemon";
             this.KeepMinDuplicatePokemon.Name = "KeepMinDuplicatePokemon";
-            this.KeepMinDuplicatePokemon.Width = 164;
+            this.KeepMinDuplicatePokemon.Width = 198;
             // 
             // Moves
             // 
             this.Moves.DataPropertyName = "MovesToDisplay";
             this.Moves.HeaderText = "Moves";
             this.Moves.Name = "Moves";
-            this.Moves.Width = 64;
+            this.Moves.Width = 73;
             // 
             // KeepMinOperator
             // 
@@ -1183,7 +1886,7 @@
             this.KeepMinOperator.HeaderText = "KeepMinOperator";
             this.KeepMinOperator.Name = "KeepMinOperator";
             this.KeepMinOperator.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.KeepMinOperator.Width = 115;
+            this.KeepMinOperator.Width = 140;
             // 
             // lblPokemonTransferFilter
             // 
@@ -1312,6 +2015,9 @@
             // 
             // grboxGeneralConfig
             // 
+            this.grboxGeneralConfig.Controls.Add(this.lblFavoriteMinIvPercentage);
+            this.grboxGeneralConfig.Controls.Add(this.txtFavoriteMinIvPercentage);
+            this.grboxGeneralConfig.Controls.Add(this.cboxAutoFavoritePokemon);
             this.grboxGeneralConfig.Controls.Add(this.txtWebSocketPort);
             this.grboxGeneralConfig.Controls.Add(this.label18);
             this.grboxGeneralConfig.Controls.Add(this.txtRenameTemplate);
@@ -1333,7 +2039,7 @@
             this.grboxGeneralConfig.Controls.Add(this.label1);
             this.grboxGeneralConfig.Location = new System.Drawing.Point(3, 260);
             this.grboxGeneralConfig.Name = "grboxGeneralConfig";
-            this.grboxGeneralConfig.Size = new System.Drawing.Size(259, 318);
+            this.grboxGeneralConfig.Size = new System.Drawing.Size(259, 365);
             this.grboxGeneralConfig.TabIndex = 9;
             this.grboxGeneralConfig.TabStop = false;
             this.grboxGeneralConfig.Text = "General Config";
@@ -1406,6 +2112,7 @@
             this.txtDelayBetweenPokemonCatch.Name = "txtDelayBetweenPokemonCatch";
             this.txtDelayBetweenPokemonCatch.Size = new System.Drawing.Size(92, 20);
             this.txtDelayBetweenPokemonCatch.TabIndex = 22;
+            this.txtDelayBetweenPokemonCatch.Text = "2000";
             this.txtDelayBetweenPokemonCatch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDelayBetweenPokemonCatch.TextChanged += new System.EventHandler(this.txtDelayBetweenPokemonCatch_TextChanged);
             this.txtDelayBetweenPokemonCatch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
@@ -1445,6 +2152,7 @@
             this.txtDelayBetweenPlayerActions.Name = "txtDelayBetweenPlayerActions";
             this.txtDelayBetweenPlayerActions.Size = new System.Drawing.Size(92, 20);
             this.txtDelayBetweenPlayerActions.TabIndex = 14;
+            this.txtDelayBetweenPlayerActions.Text = "5000";
             this.txtDelayBetweenPlayerActions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDelayBetweenPlayerActions.TextChanged += new System.EventHandler(this.txtDelayBetweenPlayerActions_TextChanged);
             this.txtDelayBetweenPlayerActions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
@@ -1594,376 +2302,456 @@
             this.btnUpdateSettings.UseVisualStyleBackColor = true;
             this.btnUpdateSettings.Click += new System.EventHandler(this.btnUpdateSettings_Click);
             // 
-            // grboxCatching
-            // 
-            this.grboxCatching.Controls.Add(this.cboxEnableHumanizedThrows);
-            this.grboxCatching.Controls.Add(this.cbxUseBerriesOperator);
-            this.grboxCatching.Controls.Add(this.lblUseBerriesOperator);
-            this.grboxCatching.Controls.Add(this.txtUseBerriesBelowCatchProbability);
-            this.grboxCatching.Controls.Add(this.txtUseBerriesMinIv);
-            this.grboxCatching.Controls.Add(this.lblUseBerriesBelowCatchProbability);
-            this.grboxCatching.Controls.Add(this.txtUseBerriesMinCp);
-            this.grboxCatching.Controls.Add(this.lblUseBerriesMinIv);
-            this.grboxCatching.Controls.Add(this.txtUseMasterBallBelowCatchProbability);
-            this.grboxCatching.Controls.Add(this.lblUseBerriesMinCp);
-            this.grboxCatching.Controls.Add(this.txtUseUltraBallBelowCatchProbability);
-            this.grboxCatching.Controls.Add(this.lblUseMasterBallBelowCatchProbability);
-            this.grboxCatching.Controls.Add(this.txtUseGreatBallBelowCatchProbability);
-            this.grboxCatching.Controls.Add(this.lblUseUltraBallBelowCatchProbability);
-            this.grboxCatching.Controls.Add(this.txtUseUltraBallAboveIv);
-            this.grboxCatching.Controls.Add(this.lblUseGreatBallBelowCatchProbability);
-            this.grboxCatching.Controls.Add(this.txtUseGreatBallAboveIv);
-            this.grboxCatching.Controls.Add(this.lblUseUltraBallAboveIv);
-            this.grboxCatching.Controls.Add(this.lblUseGreatBallAboveIv);
-            this.grboxCatching.Controls.Add(this.txtUseMasterBallAboveCp);
-            this.grboxCatching.Controls.Add(this.lblUseMasterBallAboveCp);
-            this.grboxCatching.Controls.Add(this.txtUseUltraBallAboveCp);
-            this.grboxCatching.Controls.Add(this.lblUseUltraBallAboveCp);
-            this.grboxCatching.Controls.Add(this.txtUseGreatBallAboveCp);
-            this.grboxCatching.Controls.Add(this.lblUseGreatBallAboveCp);
-            this.grboxCatching.Controls.Add(this.lblPokemonToUseMasterball);
-            this.grboxCatching.Controls.Add(this.lblMaxPokeballsPerPokemon);
-            this.grboxCatching.Controls.Add(this.lstvwPokemonToUseMasterball);
-            this.grboxCatching.Controls.Add(this.lstvwPokemonsToIgnore);
-            this.grboxCatching.Controls.Add(this.txtMaxPokeballsPerPokemon);
-            this.grboxCatching.Controls.Add(this.lblPokemonsToIgnore);
-            this.grboxCatching.Controls.Add(this.cboxUsePokemonToNotCatchFilter);
-            this.grboxCatching.Location = new System.Drawing.Point(3, 1098);
-            this.grboxCatching.Name = "grboxCatching";
-            this.grboxCatching.Size = new System.Drawing.Size(259, 899);
-            this.grboxCatching.TabIndex = 15;
-            this.grboxCatching.TabStop = false;
-            this.grboxCatching.Text = "Catching";
-            // 
-            // cboxUsePokemonToNotCatchFilter
-            // 
-            this.cboxUsePokemonToNotCatchFilter.AutoSize = true;
-            this.cboxUsePokemonToNotCatchFilter.Location = new System.Drawing.Point(9, 19);
-            this.cboxUsePokemonToNotCatchFilter.Name = "cboxUsePokemonToNotCatchFilter";
-            this.cboxUsePokemonToNotCatchFilter.Size = new System.Drawing.Size(170, 17);
-            this.cboxUsePokemonToNotCatchFilter.TabIndex = 16;
-            this.cboxUsePokemonToNotCatchFilter.Text = "UsePokemonToNotCatchFilter";
-            this.cboxUsePokemonToNotCatchFilter.UseVisualStyleBackColor = true;
-            this.cboxUsePokemonToNotCatchFilter.CheckedChanged += new System.EventHandler(this.cboxUsePokemonToNotCatchFilter_CheckedChanged);
-            // 
-            // lblPokemonsToIgnore
-            // 
-            this.lblPokemonsToIgnore.AutoSize = true;
-            this.lblPokemonsToIgnore.Enabled = false;
-            this.lblPokemonsToIgnore.Location = new System.Drawing.Point(6, 43);
-            this.lblPokemonsToIgnore.Name = "lblPokemonsToIgnore";
-            this.lblPokemonsToIgnore.Size = new System.Drawing.Size(100, 13);
-            this.lblPokemonsToIgnore.TabIndex = 16;
-            this.lblPokemonsToIgnore.Text = "PokemonsToIgnore";
-            // 
-            // lstvwPokemonsToIgnore
-            // 
-            this.lstvwPokemonsToIgnore.AllowDrop = true;
-            this.lstvwPokemonsToIgnore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstvwPokemonsToIgnore.CheckBoxes = true;
-            this.lstvwPokemonsToIgnore.Enabled = false;
-            this.lstvwPokemonsToIgnore.FullRowSelect = true;
-            this.lstvwPokemonsToIgnore.GridLines = true;
-            this.lstvwPokemonsToIgnore.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstvwPokemonsToIgnore.Location = new System.Drawing.Point(9, 59);
-            this.lstvwPokemonsToIgnore.Name = "lstvwPokemonsToIgnore";
-            this.lstvwPokemonsToIgnore.Size = new System.Drawing.Size(244, 121);
-            this.lstvwPokemonsToIgnore.TabIndex = 16;
-            this.lstvwPokemonsToIgnore.UseCompatibleStateImageBehavior = false;
-            this.lstvwPokemonsToIgnore.View = System.Windows.Forms.View.List;
-            // 
-            // lblMaxPokeballsPerPokemon
-            // 
-            this.lblMaxPokeballsPerPokemon.AutoSize = true;
-            this.lblMaxPokeballsPerPokemon.Location = new System.Drawing.Point(6, 188);
-            this.lblMaxPokeballsPerPokemon.Name = "lblMaxPokeballsPerPokemon";
-            this.lblMaxPokeballsPerPokemon.Size = new System.Drawing.Size(134, 13);
-            this.lblMaxPokeballsPerPokemon.TabIndex = 45;
-            this.lblMaxPokeballsPerPokemon.Text = "MaxPokeballsPerPokemon";
-            // 
-            // txtMaxPokeballsPerPokemon
-            // 
-            this.txtMaxPokeballsPerPokemon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaxPokeballsPerPokemon.Location = new System.Drawing.Point(174, 186);
-            this.txtMaxPokeballsPerPokemon.Name = "txtMaxPokeballsPerPokemon";
-            this.txtMaxPokeballsPerPokemon.Size = new System.Drawing.Size(79, 20);
-            this.txtMaxPokeballsPerPokemon.TabIndex = 44;
-            this.txtMaxPokeballsPerPokemon.Text = "10";
-            this.txtMaxPokeballsPerPokemon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMaxPokeballsPerPokemon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
-            // 
-            // lblPokemonToUseMasterball
-            // 
-            this.lblPokemonToUseMasterball.AutoSize = true;
-            this.lblPokemonToUseMasterball.Location = new System.Drawing.Point(6, 214);
-            this.lblPokemonToUseMasterball.Name = "lblPokemonToUseMasterball";
-            this.lblPokemonToUseMasterball.Size = new System.Drawing.Size(132, 13);
-            this.lblPokemonToUseMasterball.TabIndex = 45;
-            this.lblPokemonToUseMasterball.Text = "PokemonToUseMasterball";
-            // 
-            // lstvwPokemonToUseMasterball
-            // 
-            this.lstvwPokemonToUseMasterball.AllowDrop = true;
-            this.lstvwPokemonToUseMasterball.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstvwPokemonToUseMasterball.CheckBoxes = true;
-            this.lstvwPokemonToUseMasterball.Enabled = false;
-            this.lstvwPokemonToUseMasterball.FullRowSelect = true;
-            this.lstvwPokemonToUseMasterball.GridLines = true;
-            this.lstvwPokemonToUseMasterball.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstvwPokemonToUseMasterball.Location = new System.Drawing.Point(9, 230);
-            this.lstvwPokemonToUseMasterball.Name = "lstvwPokemonToUseMasterball";
-            this.lstvwPokemonToUseMasterball.Size = new System.Drawing.Size(244, 121);
-            this.lstvwPokemonToUseMasterball.TabIndex = 16;
-            this.lstvwPokemonToUseMasterball.UseCompatibleStateImageBehavior = false;
-            this.lstvwPokemonToUseMasterball.View = System.Windows.Forms.View.List;
-            // 
-            // lblUseGreatBallAboveCp
-            // 
-            this.lblUseGreatBallAboveCp.AutoSize = true;
-            this.lblUseGreatBallAboveCp.Location = new System.Drawing.Point(6, 359);
-            this.lblUseGreatBallAboveCp.Name = "lblUseGreatBallAboveCp";
-            this.lblUseGreatBallAboveCp.Size = new System.Drawing.Size(113, 13);
-            this.lblUseGreatBallAboveCp.TabIndex = 46;
-            this.lblUseGreatBallAboveCp.Text = "UseGreatBallAboveCp";
-            // 
-            // txtUseGreatBallAboveCp
-            // 
-            this.txtUseGreatBallAboveCp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseGreatBallAboveCp.Location = new System.Drawing.Point(131, 357);
-            this.txtUseGreatBallAboveCp.Name = "txtUseGreatBallAboveCp";
-            this.txtUseGreatBallAboveCp.Size = new System.Drawing.Size(122, 20);
-            this.txtUseGreatBallAboveCp.TabIndex = 47;
-            this.txtUseGreatBallAboveCp.Text = "10";
-            this.txtUseGreatBallAboveCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseGreatBallAboveCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
-            // 
-            // lblUseUltraBallAboveCp
-            // 
-            this.lblUseUltraBallAboveCp.AutoSize = true;
-            this.lblUseUltraBallAboveCp.Location = new System.Drawing.Point(6, 385);
-            this.lblUseUltraBallAboveCp.Name = "lblUseUltraBallAboveCp";
-            this.lblUseUltraBallAboveCp.Size = new System.Drawing.Size(109, 13);
-            this.lblUseUltraBallAboveCp.TabIndex = 46;
-            this.lblUseUltraBallAboveCp.Text = "UseUltraBallAboveCp";
-            // 
-            // txtUseUltraBallAboveCp
-            // 
-            this.txtUseUltraBallAboveCp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseUltraBallAboveCp.Location = new System.Drawing.Point(131, 383);
-            this.txtUseUltraBallAboveCp.Name = "txtUseUltraBallAboveCp";
-            this.txtUseUltraBallAboveCp.Size = new System.Drawing.Size(122, 20);
-            this.txtUseUltraBallAboveCp.TabIndex = 47;
-            this.txtUseUltraBallAboveCp.Text = "10";
-            this.txtUseUltraBallAboveCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseUltraBallAboveCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
-            // 
-            // lblUseMasterBallAboveCp
-            // 
-            this.lblUseMasterBallAboveCp.AutoSize = true;
-            this.lblUseMasterBallAboveCp.Location = new System.Drawing.Point(6, 411);
-            this.lblUseMasterBallAboveCp.Name = "lblUseMasterBallAboveCp";
-            this.lblUseMasterBallAboveCp.Size = new System.Drawing.Size(119, 13);
-            this.lblUseMasterBallAboveCp.TabIndex = 46;
-            this.lblUseMasterBallAboveCp.Text = "UseMasterBallAboveCp";
-            // 
-            // txtUseMasterBallAboveCp
-            // 
-            this.txtUseMasterBallAboveCp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseMasterBallAboveCp.Location = new System.Drawing.Point(131, 409);
-            this.txtUseMasterBallAboveCp.Name = "txtUseMasterBallAboveCp";
-            this.txtUseMasterBallAboveCp.Size = new System.Drawing.Size(122, 20);
-            this.txtUseMasterBallAboveCp.TabIndex = 47;
-            this.txtUseMasterBallAboveCp.Text = "10";
-            this.txtUseMasterBallAboveCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseMasterBallAboveCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
-            // 
-            // lblUseGreatBallAboveIv
-            // 
-            this.lblUseGreatBallAboveIv.AutoSize = true;
-            this.lblUseGreatBallAboveIv.Location = new System.Drawing.Point(6, 437);
-            this.lblUseGreatBallAboveIv.Name = "lblUseGreatBallAboveIv";
-            this.lblUseGreatBallAboveIv.Size = new System.Drawing.Size(109, 13);
-            this.lblUseGreatBallAboveIv.TabIndex = 48;
-            this.lblUseGreatBallAboveIv.Text = "UseGreatBallAboveIv";
-            // 
-            // lblUseUltraBallAboveIv
-            // 
-            this.lblUseUltraBallAboveIv.AutoSize = true;
-            this.lblUseUltraBallAboveIv.Location = new System.Drawing.Point(6, 463);
-            this.lblUseUltraBallAboveIv.Name = "lblUseUltraBallAboveIv";
-            this.lblUseUltraBallAboveIv.Size = new System.Drawing.Size(105, 13);
-            this.lblUseUltraBallAboveIv.TabIndex = 48;
-            this.lblUseUltraBallAboveIv.Text = "UseUltraBallAboveIv";
-            // 
-            // txtUseGreatBallAboveIv
-            // 
-            this.txtUseGreatBallAboveIv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseGreatBallAboveIv.Location = new System.Drawing.Point(131, 435);
-            this.txtUseGreatBallAboveIv.Name = "txtUseGreatBallAboveIv";
-            this.txtUseGreatBallAboveIv.Size = new System.Drawing.Size(122, 20);
-            this.txtUseGreatBallAboveIv.TabIndex = 44;
-            this.txtUseGreatBallAboveIv.Text = "75.0";
-            this.txtUseGreatBallAboveIv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseGreatBallAboveIv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
-            // 
-            // txtUseUltraBallAboveIv
-            // 
-            this.txtUseUltraBallAboveIv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseUltraBallAboveIv.Location = new System.Drawing.Point(131, 461);
-            this.txtUseUltraBallAboveIv.Name = "txtUseUltraBallAboveIv";
-            this.txtUseUltraBallAboveIv.Size = new System.Drawing.Size(122, 20);
-            this.txtUseUltraBallAboveIv.TabIndex = 44;
-            this.txtUseUltraBallAboveIv.Text = "75.0";
-            this.txtUseUltraBallAboveIv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseUltraBallAboveIv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
-            // 
-            // lblUseGreatBallBelowCatchProbability
-            // 
-            this.lblUseGreatBallBelowCatchProbability.AutoSize = true;
-            this.lblUseGreatBallBelowCatchProbability.Location = new System.Drawing.Point(6, 489);
-            this.lblUseGreatBallBelowCatchProbability.Name = "lblUseGreatBallBelowCatchProbability";
-            this.lblUseGreatBallBelowCatchProbability.Size = new System.Drawing.Size(174, 13);
-            this.lblUseGreatBallBelowCatchProbability.TabIndex = 48;
-            this.lblUseGreatBallBelowCatchProbability.Text = "UseGreatBallBelowCatchProbability";
-            // 
-            // txtUseGreatBallBelowCatchProbability
-            // 
-            this.txtUseGreatBallBelowCatchProbability.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseGreatBallBelowCatchProbability.Location = new System.Drawing.Point(192, 487);
-            this.txtUseGreatBallBelowCatchProbability.Name = "txtUseGreatBallBelowCatchProbability";
-            this.txtUseGreatBallBelowCatchProbability.Size = new System.Drawing.Size(61, 20);
-            this.txtUseGreatBallBelowCatchProbability.TabIndex = 44;
-            this.txtUseGreatBallBelowCatchProbability.Text = "75.0";
-            this.txtUseGreatBallBelowCatchProbability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseGreatBallBelowCatchProbability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
-            // 
-            // lblUseUltraBallBelowCatchProbability
-            // 
-            this.lblUseUltraBallBelowCatchProbability.AutoSize = true;
-            this.lblUseUltraBallBelowCatchProbability.Location = new System.Drawing.Point(6, 515);
-            this.lblUseUltraBallBelowCatchProbability.Name = "lblUseUltraBallBelowCatchProbability";
-            this.lblUseUltraBallBelowCatchProbability.Size = new System.Drawing.Size(170, 13);
-            this.lblUseUltraBallBelowCatchProbability.TabIndex = 48;
-            this.lblUseUltraBallBelowCatchProbability.Text = "UseUltraBallBelowCatchProbability";
-            // 
-            // txtUseUltraBallBelowCatchProbability
-            // 
-            this.txtUseUltraBallBelowCatchProbability.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseUltraBallBelowCatchProbability.Location = new System.Drawing.Point(192, 513);
-            this.txtUseUltraBallBelowCatchProbability.Name = "txtUseUltraBallBelowCatchProbability";
-            this.txtUseUltraBallBelowCatchProbability.Size = new System.Drawing.Size(61, 20);
-            this.txtUseUltraBallBelowCatchProbability.TabIndex = 44;
-            this.txtUseUltraBallBelowCatchProbability.Text = "75.0";
-            this.txtUseUltraBallBelowCatchProbability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseUltraBallBelowCatchProbability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
-            // 
-            // lblUseMasterBallBelowCatchProbability
-            // 
-            this.lblUseMasterBallBelowCatchProbability.AutoSize = true;
-            this.lblUseMasterBallBelowCatchProbability.Location = new System.Drawing.Point(6, 541);
-            this.lblUseMasterBallBelowCatchProbability.Name = "lblUseMasterBallBelowCatchProbability";
-            this.lblUseMasterBallBelowCatchProbability.Size = new System.Drawing.Size(180, 13);
-            this.lblUseMasterBallBelowCatchProbability.TabIndex = 48;
-            this.lblUseMasterBallBelowCatchProbability.Text = "UseMasterBallBelowCatchProbability";
-            // 
-            // txtUseMasterBallBelowCatchProbability
-            // 
-            this.txtUseMasterBallBelowCatchProbability.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseMasterBallBelowCatchProbability.Location = new System.Drawing.Point(192, 539);
-            this.txtUseMasterBallBelowCatchProbability.Name = "txtUseMasterBallBelowCatchProbability";
-            this.txtUseMasterBallBelowCatchProbability.Size = new System.Drawing.Size(61, 20);
-            this.txtUseMasterBallBelowCatchProbability.TabIndex = 44;
-            this.txtUseMasterBallBelowCatchProbability.Text = "75.0";
-            this.txtUseMasterBallBelowCatchProbability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseMasterBallBelowCatchProbability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
-            // 
-            // lblUseBerriesMinCp
-            // 
-            this.lblUseBerriesMinCp.AutoSize = true;
-            this.lblUseBerriesMinCp.Location = new System.Drawing.Point(6, 567);
-            this.lblUseBerriesMinCp.Name = "lblUseBerriesMinCp";
-            this.lblUseBerriesMinCp.Size = new System.Drawing.Size(88, 13);
-            this.lblUseBerriesMinCp.TabIndex = 48;
-            this.lblUseBerriesMinCp.Text = "UseBerriesMinCp";
-            // 
-            // txtUseBerriesMinCp
-            // 
-            this.txtUseBerriesMinCp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseBerriesMinCp.Location = new System.Drawing.Point(175, 565);
-            this.txtUseBerriesMinCp.Name = "txtUseBerriesMinCp";
-            this.txtUseBerriesMinCp.Size = new System.Drawing.Size(78, 20);
-            this.txtUseBerriesMinCp.TabIndex = 44;
-            this.txtUseBerriesMinCp.Text = "75.0";
-            this.txtUseBerriesMinCp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseBerriesMinCp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
-            // 
-            // lblUseBerriesMinIv
-            // 
-            this.lblUseBerriesMinIv.AutoSize = true;
-            this.lblUseBerriesMinIv.Location = new System.Drawing.Point(6, 593);
-            this.lblUseBerriesMinIv.Name = "lblUseBerriesMinIv";
-            this.lblUseBerriesMinIv.Size = new System.Drawing.Size(84, 13);
-            this.lblUseBerriesMinIv.TabIndex = 48;
-            this.lblUseBerriesMinIv.Text = "UseBerriesMinIv";
-            // 
-            // txtUseBerriesMinIv
-            // 
-            this.txtUseBerriesMinIv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseBerriesMinIv.Location = new System.Drawing.Point(175, 591);
-            this.txtUseBerriesMinIv.Name = "txtUseBerriesMinIv";
-            this.txtUseBerriesMinIv.Size = new System.Drawing.Size(78, 20);
-            this.txtUseBerriesMinIv.TabIndex = 44;
-            this.txtUseBerriesMinIv.Text = "75.0";
-            this.txtUseBerriesMinIv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseBerriesMinIv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
-            // 
-            // lblUseBerriesBelowCatchProbability
-            // 
-            this.lblUseBerriesBelowCatchProbability.AutoSize = true;
-            this.lblUseBerriesBelowCatchProbability.Location = new System.Drawing.Point(6, 619);
-            this.lblUseBerriesBelowCatchProbability.Name = "lblUseBerriesBelowCatchProbability";
-            this.lblUseBerriesBelowCatchProbability.Size = new System.Drawing.Size(163, 13);
-            this.lblUseBerriesBelowCatchProbability.TabIndex = 48;
-            this.lblUseBerriesBelowCatchProbability.Text = "UseBerriesBelowCatchProbability";
-            // 
-            // txtUseBerriesBelowCatchProbability
-            // 
-            this.txtUseBerriesBelowCatchProbability.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUseBerriesBelowCatchProbability.Location = new System.Drawing.Point(175, 617);
-            this.txtUseBerriesBelowCatchProbability.Name = "txtUseBerriesBelowCatchProbability";
-            this.txtUseBerriesBelowCatchProbability.Size = new System.Drawing.Size(78, 20);
-            this.txtUseBerriesBelowCatchProbability.TabIndex = 44;
-            this.txtUseBerriesBelowCatchProbability.Text = "75.0";
-            this.txtUseBerriesBelowCatchProbability.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUseBerriesBelowCatchProbability.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
-            // 
-            // cbxUseBerriesOperator
-            // 
-            this.cbxUseBerriesOperator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxUseBerriesOperator.FormattingEnabled = true;
-            this.cbxUseBerriesOperator.Location = new System.Drawing.Point(174, 643);
-            this.cbxUseBerriesOperator.Name = "cbxUseBerriesOperator";
-            this.cbxUseBerriesOperator.Size = new System.Drawing.Size(79, 21);
-            this.cbxUseBerriesOperator.TabIndex = 22;
-            // 
-            // lblUseBerriesOperator
-            // 
-            this.lblUseBerriesOperator.AutoSize = true;
-            this.lblUseBerriesOperator.Location = new System.Drawing.Point(6, 646);
-            this.lblUseBerriesOperator.Name = "lblUseBerriesOperator";
-            this.lblUseBerriesOperator.Size = new System.Drawing.Size(99, 13);
-            this.lblUseBerriesOperator.TabIndex = 21;
-            this.lblUseBerriesOperator.Text = "UseBerriesOperator";
-            // 
-            // cboxEnableHumanizedThrows
-            // 
-            this.cboxEnableHumanizedThrows.AutoSize = true;
-            this.cboxEnableHumanizedThrows.Location = new System.Drawing.Point(9, 670);
-            this.cboxEnableHumanizedThrows.Name = "cboxEnableHumanizedThrows";
-            this.cboxEnableHumanizedThrows.Size = new System.Drawing.Size(147, 17);
-            this.cboxEnableHumanizedThrows.TabIndex = 49;
-            this.cboxEnableHumanizedThrows.Text = "EnableHumanizedThrows";
-            this.cboxEnableHumanizedThrows.UseVisualStyleBackColor = true;
+            // cboxAutoFavoritePokemon
+            // 
+            this.cboxAutoFavoritePokemon.AutoSize = true;
+            this.cboxAutoFavoritePokemon.Location = new System.Drawing.Point(9, 313);
+            this.cboxAutoFavoritePokemon.Name = "cboxAutoFavoritePokemon";
+            this.cboxAutoFavoritePokemon.Size = new System.Drawing.Size(131, 17);
+            this.cboxAutoFavoritePokemon.TabIndex = 29;
+            this.cboxAutoFavoritePokemon.Text = "AutoFavoritePokemon";
+            this.cboxAutoFavoritePokemon.UseVisualStyleBackColor = true;
+            this.cboxAutoFavoritePokemon.CheckedChanged += new System.EventHandler(this.cboxAutoFavoritePokemon_CheckedChanged);
+            // 
+            // txtFavoriteMinIvPercentage
+            // 
+            this.txtFavoriteMinIvPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFavoriteMinIvPercentage.Enabled = false;
+            this.txtFavoriteMinIvPercentage.Location = new System.Drawing.Point(138, 336);
+            this.txtFavoriteMinIvPercentage.Name = "txtFavoriteMinIvPercentage";
+            this.txtFavoriteMinIvPercentage.Size = new System.Drawing.Size(115, 20);
+            this.txtFavoriteMinIvPercentage.TabIndex = 41;
+            this.txtFavoriteMinIvPercentage.Text = "95.0";
+            this.txtFavoriteMinIvPercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFavoriteMinIvPercentage
+            // 
+            this.lblFavoriteMinIvPercentage.AutoSize = true;
+            this.lblFavoriteMinIvPercentage.Enabled = false;
+            this.lblFavoriteMinIvPercentage.Location = new System.Drawing.Point(6, 338);
+            this.lblFavoriteMinIvPercentage.Name = "lblFavoriteMinIvPercentage";
+            this.lblFavoriteMinIvPercentage.Size = new System.Drawing.Size(126, 13);
+            this.lblFavoriteMinIvPercentage.TabIndex = 42;
+            this.lblFavoriteMinIvPercentage.Text = "FavoriteMinIvPercentage";
+            // 
+            // grSniping
+            // 
+            this.grSniping.Controls.Add(this.lstvwPokemon);
+            this.grSniping.Controls.Add(this.grboxPokemonToSnipe);
+            this.grSniping.Controls.Add(this.txtSnipingScanOffset);
+            this.grSniping.Controls.Add(this.lblSnipingScanOffset);
+            this.grSniping.Controls.Add(this.txtMinPokeballsWhileSnipe);
+            this.grSniping.Controls.Add(this.lblMinPokeballsWhileSnipe);
+            this.grSniping.Controls.Add(this.txtMinDelayBetweenSnipes);
+            this.grSniping.Controls.Add(this.lblMinDelayBetweenSnipes);
+            this.grSniping.Controls.Add(this.txtMinPokeballsToSnipe);
+            this.grSniping.Controls.Add(this.lblMinPokeballsToSnipe);
+            this.grSniping.Controls.Add(this.txtSnipeLocationServerPort);
+            this.grSniping.Controls.Add(this.lblSnipeLocationServerPort);
+            this.grSniping.Controls.Add(this.txtSnipeLocationServer);
+            this.grSniping.Controls.Add(this.lblSnipeLocationServer);
+            this.grSniping.Controls.Add(this.cboxUsePokemonSniperFilterOnly);
+            this.grSniping.Controls.Add(this.cboxSnipeIgnoreUnknownIv);
+            this.grSniping.Controls.Add(this.cboxGetOnlyVerifiedSniperInfoFromPokezz);
+            this.grSniping.Controls.Add(this.cboxUseSnipeLocationServer);
+            this.grSniping.Controls.Add(this.cboxUseTransferIvForSnipe);
+            this.grSniping.Controls.Add(this.cboxSnipeAtPokestops);
+            this.grSniping.Controls.Add(this.cboxGetSniperInfoFromPokezz);
+            this.grSniping.Controls.Add(this.cboxUseSnipeOnlineLocationServer);
+            this.grSniping.Location = new System.Drawing.Point(268, 1272);
+            this.grSniping.Name = "grSniping";
+            this.grSniping.Size = new System.Drawing.Size(512, 453);
+            this.grSniping.TabIndex = 17;
+            this.grSniping.TabStop = false;
+            this.grSniping.Text = "Sniping";
+            // 
+            // cboxUseSnipeOnlineLocationServer
+            // 
+            this.cboxUseSnipeOnlineLocationServer.AutoSize = true;
+            this.cboxUseSnipeOnlineLocationServer.Location = new System.Drawing.Point(6, 19);
+            this.cboxUseSnipeOnlineLocationServer.Name = "cboxUseSnipeOnlineLocationServer";
+            this.cboxUseSnipeOnlineLocationServer.Size = new System.Drawing.Size(174, 17);
+            this.cboxUseSnipeOnlineLocationServer.TabIndex = 0;
+            this.cboxUseSnipeOnlineLocationServer.Text = "UseSnipeOnlineLocationServer";
+            this.cboxUseSnipeOnlineLocationServer.UseVisualStyleBackColor = true;
+            // 
+            // cboxGetSniperInfoFromPokezz
+            // 
+            this.cboxGetSniperInfoFromPokezz.AutoSize = true;
+            this.cboxGetSniperInfoFromPokezz.Location = new System.Drawing.Point(6, 42);
+            this.cboxGetSniperInfoFromPokezz.Name = "cboxGetSniperInfoFromPokezz";
+            this.cboxGetSniperInfoFromPokezz.Size = new System.Drawing.Size(149, 17);
+            this.cboxGetSniperInfoFromPokezz.TabIndex = 0;
+            this.cboxGetSniperInfoFromPokezz.Text = "GetSniperInfoFromPokezz";
+            this.cboxGetSniperInfoFromPokezz.UseVisualStyleBackColor = true;
+            // 
+            // cboxSnipeAtPokestops
+            // 
+            this.cboxSnipeAtPokestops.AutoSize = true;
+            this.cboxSnipeAtPokestops.Location = new System.Drawing.Point(6, 65);
+            this.cboxSnipeAtPokestops.Name = "cboxSnipeAtPokestops";
+            this.cboxSnipeAtPokestops.Size = new System.Drawing.Size(113, 17);
+            this.cboxSnipeAtPokestops.TabIndex = 0;
+            this.cboxSnipeAtPokestops.Text = "SnipeAtPokestops";
+            this.cboxSnipeAtPokestops.UseVisualStyleBackColor = true;
+            // 
+            // cboxUseTransferIvForSnipe
+            // 
+            this.cboxUseTransferIvForSnipe.AutoSize = true;
+            this.cboxUseTransferIvForSnipe.Location = new System.Drawing.Point(6, 88);
+            this.cboxUseTransferIvForSnipe.Name = "cboxUseTransferIvForSnipe";
+            this.cboxUseTransferIvForSnipe.Size = new System.Drawing.Size(135, 17);
+            this.cboxUseTransferIvForSnipe.TabIndex = 0;
+            this.cboxUseTransferIvForSnipe.Text = "UseTransferIvForSnipe";
+            this.cboxUseTransferIvForSnipe.UseVisualStyleBackColor = true;
+            // 
+            // cboxUseSnipeLocationServer
+            // 
+            this.cboxUseSnipeLocationServer.AutoSize = true;
+            this.cboxUseSnipeLocationServer.Location = new System.Drawing.Point(263, 88);
+            this.cboxUseSnipeLocationServer.Name = "cboxUseSnipeLocationServer";
+            this.cboxUseSnipeLocationServer.Size = new System.Drawing.Size(144, 17);
+            this.cboxUseSnipeLocationServer.TabIndex = 0;
+            this.cboxUseSnipeLocationServer.Text = "UseSnipeLocationServer";
+            this.cboxUseSnipeLocationServer.UseVisualStyleBackColor = true;
+            this.cboxUseSnipeLocationServer.CheckedChanged += new System.EventHandler(this.cboxUseSnipeLocationServer_CheckedChanged);
+            // 
+            // cboxGetOnlyVerifiedSniperInfoFromPokezz
+            // 
+            this.cboxGetOnlyVerifiedSniperInfoFromPokezz.AutoSize = true;
+            this.cboxGetOnlyVerifiedSniperInfoFromPokezz.Location = new System.Drawing.Point(263, 42);
+            this.cboxGetOnlyVerifiedSniperInfoFromPokezz.Name = "cboxGetOnlyVerifiedSniperInfoFromPokezz";
+            this.cboxGetOnlyVerifiedSniperInfoFromPokezz.Size = new System.Drawing.Size(205, 17);
+            this.cboxGetOnlyVerifiedSniperInfoFromPokezz.TabIndex = 0;
+            this.cboxGetOnlyVerifiedSniperInfoFromPokezz.Text = "GetOnlyVerifiedSniperInfoFromPokezz";
+            this.cboxGetOnlyVerifiedSniperInfoFromPokezz.UseVisualStyleBackColor = true;
+            // 
+            // cboxSnipeIgnoreUnknownIv
+            // 
+            this.cboxSnipeIgnoreUnknownIv.AutoSize = true;
+            this.cboxSnipeIgnoreUnknownIv.Location = new System.Drawing.Point(263, 65);
+            this.cboxSnipeIgnoreUnknownIv.Name = "cboxSnipeIgnoreUnknownIv";
+            this.cboxSnipeIgnoreUnknownIv.Size = new System.Drawing.Size(138, 17);
+            this.cboxSnipeIgnoreUnknownIv.TabIndex = 0;
+            this.cboxSnipeIgnoreUnknownIv.Text = "SnipeIgnoreUnknownIv";
+            this.cboxSnipeIgnoreUnknownIv.UseVisualStyleBackColor = true;
+            // 
+            // cboxUsePokemonSniperFilterOnly
+            // 
+            this.cboxUsePokemonSniperFilterOnly.AutoSize = true;
+            this.cboxUsePokemonSniperFilterOnly.Location = new System.Drawing.Point(263, 19);
+            this.cboxUsePokemonSniperFilterOnly.Name = "cboxUsePokemonSniperFilterOnly";
+            this.cboxUsePokemonSniperFilterOnly.Size = new System.Drawing.Size(163, 17);
+            this.cboxUsePokemonSniperFilterOnly.TabIndex = 0;
+            this.cboxUsePokemonSniperFilterOnly.Text = "UsePokemonSniperFilterOnly";
+            this.cboxUsePokemonSniperFilterOnly.UseVisualStyleBackColor = true;
+            // 
+            // lblSnipeLocationServer
+            // 
+            this.lblSnipeLocationServer.AutoSize = true;
+            this.lblSnipeLocationServer.Enabled = false;
+            this.lblSnipeLocationServer.Location = new System.Drawing.Point(6, 114);
+            this.lblSnipeLocationServer.Name = "lblSnipeLocationServer";
+            this.lblSnipeLocationServer.Size = new System.Drawing.Size(106, 13);
+            this.lblSnipeLocationServer.TabIndex = 1;
+            this.lblSnipeLocationServer.Text = "SnipeLocationServer";
+            // 
+            // txtSnipeLocationServer
+            // 
+            this.txtSnipeLocationServer.Enabled = false;
+            this.txtSnipeLocationServer.Location = new System.Drawing.Point(137, 111);
+            this.txtSnipeLocationServer.Name = "txtSnipeLocationServer";
+            this.txtSnipeLocationServer.Size = new System.Drawing.Size(111, 20);
+            this.txtSnipeLocationServer.TabIndex = 2;
+            this.txtSnipeLocationServer.Text = "localhost";
+            this.txtSnipeLocationServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblSnipeLocationServerPort
+            // 
+            this.lblSnipeLocationServerPort.AutoSize = true;
+            this.lblSnipeLocationServerPort.Enabled = false;
+            this.lblSnipeLocationServerPort.Location = new System.Drawing.Point(260, 114);
+            this.lblSnipeLocationServerPort.Name = "lblSnipeLocationServerPort";
+            this.lblSnipeLocationServerPort.Size = new System.Drawing.Size(125, 13);
+            this.lblSnipeLocationServerPort.TabIndex = 1;
+            this.lblSnipeLocationServerPort.Text = "SnipeLocationServerPort";
+            // 
+            // txtSnipeLocationServerPort
+            // 
+            this.txtSnipeLocationServerPort.Enabled = false;
+            this.txtSnipeLocationServerPort.Location = new System.Drawing.Point(391, 111);
+            this.txtSnipeLocationServerPort.Name = "txtSnipeLocationServerPort";
+            this.txtSnipeLocationServerPort.Size = new System.Drawing.Size(115, 20);
+            this.txtSnipeLocationServerPort.TabIndex = 2;
+            this.txtSnipeLocationServerPort.Text = "16969";
+            this.txtSnipeLocationServerPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSnipeLocationServerPort.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // txtMinPokeballsToSnipe
+            // 
+            this.txtMinPokeballsToSnipe.Location = new System.Drawing.Point(137, 137);
+            this.txtMinPokeballsToSnipe.Name = "txtMinPokeballsToSnipe";
+            this.txtMinPokeballsToSnipe.Size = new System.Drawing.Size(111, 20);
+            this.txtMinPokeballsToSnipe.TabIndex = 9;
+            this.txtMinPokeballsToSnipe.Text = "20";
+            this.txtMinPokeballsToSnipe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMinPokeballsToSnipe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblMinPokeballsToSnipe
+            // 
+            this.lblMinPokeballsToSnipe.AutoSize = true;
+            this.lblMinPokeballsToSnipe.Location = new System.Drawing.Point(6, 140);
+            this.lblMinPokeballsToSnipe.Name = "lblMinPokeballsToSnipe";
+            this.lblMinPokeballsToSnipe.Size = new System.Drawing.Size(110, 13);
+            this.lblMinPokeballsToSnipe.TabIndex = 8;
+            this.lblMinPokeballsToSnipe.Text = "MinPokeballsToSnipe";
+            // 
+            // lblMinPokeballsWhileSnipe
+            // 
+            this.lblMinPokeballsWhileSnipe.AutoSize = true;
+            this.lblMinPokeballsWhileSnipe.Location = new System.Drawing.Point(260, 140);
+            this.lblMinPokeballsWhileSnipe.Name = "lblMinPokeballsWhileSnipe";
+            this.lblMinPokeballsWhileSnipe.Size = new System.Drawing.Size(124, 13);
+            this.lblMinPokeballsWhileSnipe.TabIndex = 8;
+            this.lblMinPokeballsWhileSnipe.Text = "MinPokeballsWhileSnipe";
+            // 
+            // txtMinPokeballsWhileSnipe
+            // 
+            this.txtMinPokeballsWhileSnipe.Location = new System.Drawing.Point(391, 137);
+            this.txtMinPokeballsWhileSnipe.Name = "txtMinPokeballsWhileSnipe";
+            this.txtMinPokeballsWhileSnipe.Size = new System.Drawing.Size(115, 20);
+            this.txtMinPokeballsWhileSnipe.TabIndex = 9;
+            this.txtMinPokeballsWhileSnipe.Text = "1";
+            this.txtMinPokeballsWhileSnipe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMinPokeballsWhileSnipe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblMinDelayBetweenSnipes
+            // 
+            this.lblMinDelayBetweenSnipes.AutoSize = true;
+            this.lblMinDelayBetweenSnipes.Location = new System.Drawing.Point(6, 166);
+            this.lblMinDelayBetweenSnipes.Name = "lblMinDelayBetweenSnipes";
+            this.lblMinDelayBetweenSnipes.Size = new System.Drawing.Size(125, 13);
+            this.lblMinDelayBetweenSnipes.TabIndex = 8;
+            this.lblMinDelayBetweenSnipes.Text = "MinDelayBetweenSnipes";
+            // 
+            // txtMinDelayBetweenSnipes
+            // 
+            this.txtMinDelayBetweenSnipes.Location = new System.Drawing.Point(137, 163);
+            this.txtMinDelayBetweenSnipes.Name = "txtMinDelayBetweenSnipes";
+            this.txtMinDelayBetweenSnipes.Size = new System.Drawing.Size(111, 20);
+            this.txtMinDelayBetweenSnipes.TabIndex = 9;
+            this.txtMinDelayBetweenSnipes.Text = "60000";
+            this.txtMinDelayBetweenSnipes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMinDelayBetweenSnipes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountOfPokemonToDisplayOnStart_KeyPress);
+            // 
+            // lblSnipingScanOffset
+            // 
+            this.lblSnipingScanOffset.AutoSize = true;
+            this.lblSnipingScanOffset.Location = new System.Drawing.Point(260, 166);
+            this.lblSnipingScanOffset.Name = "lblSnipingScanOffset";
+            this.lblSnipingScanOffset.Size = new System.Drawing.Size(95, 13);
+            this.lblSnipingScanOffset.TabIndex = 8;
+            this.lblSnipingScanOffset.Text = "SnipingScanOffset";
+            // 
+            // txtSnipingScanOffset
+            // 
+            this.txtSnipingScanOffset.Location = new System.Drawing.Point(391, 163);
+            this.txtSnipingScanOffset.Name = "txtSnipingScanOffset";
+            this.txtSnipingScanOffset.Size = new System.Drawing.Size(115, 20);
+            this.txtSnipingScanOffset.TabIndex = 9;
+            this.txtSnipingScanOffset.Text = "0.003";
+            this.txtSnipingScanOffset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSnipingScanOffset.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpgradePokemonCpMinimum_KeyPress);
+            // 
+            // grboxPokemonToSnipe
+            // 
+            this.grboxPokemonToSnipe.Controls.Add(this.lblPokemon);
+            this.grboxPokemonToSnipe.Controls.Add(this.dtgrvwLocations);
+            this.grboxPokemonToSnipe.Controls.Add(this.lblLocations);
+            this.grboxPokemonToSnipe.Location = new System.Drawing.Point(6, 189);
+            this.grboxPokemonToSnipe.Name = "grboxPokemonToSnipe";
+            this.grboxPokemonToSnipe.Size = new System.Drawing.Size(500, 258);
+            this.grboxPokemonToSnipe.TabIndex = 10;
+            this.grboxPokemonToSnipe.TabStop = false;
+            this.grboxPokemonToSnipe.Text = "PokemonToSnipe";
+            // 
+            // lblLocations
+            // 
+            this.lblLocations.AutoSize = true;
+            this.lblLocations.Location = new System.Drawing.Point(6, 16);
+            this.lblLocations.Name = "lblLocations";
+            this.lblLocations.Size = new System.Drawing.Size(53, 13);
+            this.lblLocations.TabIndex = 0;
+            this.lblLocations.Text = "Locations";
+            // 
+            // dtgrvwLocations
+            // 
+            this.dtgrvwLocations.AllowDrop = true;
+            this.dtgrvwLocations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwLocations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dtgrvwLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvwLocations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Latitude,
+            this.Longitude});
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwLocations.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dtgrvwLocations.EnableHeadersVisualStyles = false;
+            this.dtgrvwLocations.Location = new System.Drawing.Point(6, 32);
+            this.dtgrvwLocations.Name = "dtgrvwLocations";
+            this.dtgrvwLocations.RowHeadersVisible = false;
+            this.dtgrvwLocations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgrvwLocations.Size = new System.Drawing.Size(488, 107);
+            this.dtgrvwLocations.TabIndex = 1;
+            // 
+            // Latitude
+            // 
+            this.Latitude.DataPropertyName = "Latitude";
+            this.Latitude.HeaderText = "Latitude";
+            this.Latitude.Name = "Latitude";
+            // 
+            // Longitude
+            // 
+            this.Longitude.DataPropertyName = "Longitude";
+            this.Longitude.HeaderText = "Longitude";
+            this.Longitude.Name = "Longitude";
+            // 
+            // lblPokemon
+            // 
+            this.lblPokemon.AutoSize = true;
+            this.lblPokemon.Location = new System.Drawing.Point(6, 142);
+            this.lblPokemon.Name = "lblPokemon";
+            this.lblPokemon.Size = new System.Drawing.Size(52, 13);
+            this.lblPokemon.TabIndex = 2;
+            this.lblPokemon.Text = "Pokemon";
+            // 
+            // lstvwPokemon
+            // 
+            this.lstvwPokemon.AllowDrop = true;
+            this.lstvwPokemon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstvwPokemon.CheckBoxes = true;
+            this.lstvwPokemon.FullRowSelect = true;
+            this.lstvwPokemon.GridLines = true;
+            this.lstvwPokemon.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lstvwPokemon.Location = new System.Drawing.Point(12, 347);
+            this.lstvwPokemon.Name = "lstvwPokemon";
+            this.lstvwPokemon.Size = new System.Drawing.Size(488, 94);
+            this.lstvwPokemon.TabIndex = 41;
+            this.lstvwPokemon.UseCompatibleStateImageBehavior = false;
+            this.lstvwPokemon.View = System.Windows.Forms.View.List;
+            // 
+            // grboxSaving
+            // 
+            this.grboxSaving.Controls.Add(this.lblProgress);
+            this.grboxSaving.Controls.Add(this.progressBar1);
+            this.grboxSaving.Controls.Add(this.btnBrowse);
+            this.grboxSaving.Controls.Add(this.cboxKeepOldConfigFiles);
+            this.grboxSaving.Controls.Add(this.btnSave);
+            this.grboxSaving.Controls.Add(this.txtSavingPath);
+            this.grboxSaving.Controls.Add(this.lblSavingPath);
+            this.grboxSaving.Controls.Add(this.cboxOverrideOldSettings);
+            this.grboxSaving.Location = new System.Drawing.Point(268, 1731);
+            this.grboxSaving.Name = "grboxSaving";
+            this.grboxSaving.Size = new System.Drawing.Size(512, 88);
+            this.grboxSaving.TabIndex = 18;
+            this.grboxSaving.TabStop = false;
+            this.grboxSaving.Text = "Saving";
+            // 
+            // cboxOverrideOldSettings
+            // 
+            this.cboxOverrideOldSettings.AutoSize = true;
+            this.cboxOverrideOldSettings.Location = new System.Drawing.Point(6, 19);
+            this.cboxOverrideOldSettings.Name = "cboxOverrideOldSettings";
+            this.cboxOverrideOldSettings.Size = new System.Drawing.Size(132, 17);
+            this.cboxOverrideOldSettings.TabIndex = 0;
+            this.cboxOverrideOldSettings.Text = "Override Old Settings?";
+            this.cboxOverrideOldSettings.UseVisualStyleBackColor = true;
+            this.cboxOverrideOldSettings.CheckedChanged += new System.EventHandler(this.cboxOverrideOldSettings_CheckedChanged);
+            // 
+            // lblSavingPath
+            // 
+            this.lblSavingPath.AutoSize = true;
+            this.lblSavingPath.Location = new System.Drawing.Point(6, 45);
+            this.lblSavingPath.Name = "lblSavingPath";
+            this.lblSavingPath.Size = new System.Drawing.Size(86, 13);
+            this.lblSavingPath.TabIndex = 1;
+            this.lblSavingPath.Text = "New Config path";
+            // 
+            // txtSavingPath
+            // 
+            this.txtSavingPath.Location = new System.Drawing.Point(98, 42);
+            this.txtSavingPath.Name = "txtSavingPath";
+            this.txtSavingPath.Size = new System.Drawing.Size(344, 20);
+            this.txtSavingPath.TabIndex = 2;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(477, 40);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(23, 23);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // cboxKeepOldConfigFiles
+            // 
+            this.cboxKeepOldConfigFiles.AutoSize = true;
+            this.cboxKeepOldConfigFiles.Checked = true;
+            this.cboxKeepOldConfigFiles.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cboxKeepOldConfigFiles.Enabled = false;
+            this.cboxKeepOldConfigFiles.Location = new System.Drawing.Point(246, 19);
+            this.cboxKeepOldConfigFiles.Name = "cboxKeepOldConfigFiles";
+            this.cboxKeepOldConfigFiles.Size = new System.Drawing.Size(127, 17);
+            this.cboxKeepOldConfigFiles.TabIndex = 4;
+            this.cboxKeepOldConfigFiles.Text = "Keep Old Config Files";
+            this.cboxKeepOldConfigFiles.UseVisualStyleBackColor = true;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Image = ((System.Drawing.Image)(resources.GetObject("btnBrowse.Image")));
+            this.btnBrowse.Location = new System.Drawing.Point(448, 40);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(23, 23);
+            this.btnBrowse.TabIndex = 5;
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // bckgrwkrSaving
+            // 
+            this.bckgrwkrSaving.WorkerReportsProgress = true;
+            this.bckgrwkrSaving.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bckgrwkrSaving_DoWork);
+            this.bckgrwkrSaving.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bckgrwkrSaving_ProgressChanged);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(6, 68);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(451, 14);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 6;
+            // 
+            // lblProgress
+            // 
+            this.lblProgress.AutoSize = true;
+            this.lblProgress.Location = new System.Drawing.Point(463, 69);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(21, 13);
+            this.lblProgress.TabIndex = 7;
+            this.lblProgress.Text = "0%";
             // 
             // frmConfig
             // 
@@ -1980,6 +2768,10 @@
             this.Text = "Configuration";
             this.Load += new System.EventHandler(this.frmConfig_Load);
             this.panel1.ResumeLayout(false);
+            this.grboxAdvancedCatching.ResumeLayout(false);
+            this.grboxAdvancedCatching.PerformLayout();
+            this.grboxCatching.ResumeLayout(false);
+            this.grboxCatching.PerformLayout();
             this.grboxItem.ResumeLayout(false);
             this.grboxItem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvwItemRecycleFilter)).EndInit();
@@ -1998,8 +2790,13 @@
             this.grboxGeneralConfig.PerformLayout();
             this.grboxOldSetting.ResumeLayout(false);
             this.grboxOldSetting.PerformLayout();
-            this.grboxCatching.ResumeLayout(false);
-            this.grboxCatching.PerformLayout();
+            this.grSniping.ResumeLayout(false);
+            this.grSniping.PerformLayout();
+            this.grboxPokemonToSnipe.ResumeLayout(false);
+            this.grboxPokemonToSnipe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvwLocations)).EndInit();
+            this.grboxSaving.ResumeLayout(false);
+            this.grboxSaving.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2144,8 +2941,6 @@
         private System.Windows.Forms.Label lblUseGreatBallAboveCp;
         private System.Windows.Forms.TextBox txtUseMasterBallAboveCp;
         private System.Windows.Forms.Label lblUseMasterBallAboveCp;
-        private System.Windows.Forms.TextBox txtUseUltraBallAboveCp;
-        private System.Windows.Forms.Label lblUseUltraBallAboveCp;
         private System.Windows.Forms.TextBox txtUseMasterBallBelowCatchProbability;
         private System.Windows.Forms.TextBox txtUseUltraBallBelowCatchProbability;
         private System.Windows.Forms.Label lblUseMasterBallBelowCatchProbability;
@@ -2164,7 +2959,69 @@
         private System.Windows.Forms.Label lblUseBerriesMinCp;
         private System.Windows.Forms.ComboBox cbxUseBerriesOperator;
         private System.Windows.Forms.Label lblUseBerriesOperator;
+        private System.Windows.Forms.GroupBox grboxAdvancedCatching;
+        private System.Windows.Forms.TextBox txtNiceThrowChance;
+        private System.Windows.Forms.Label lblNiceThrowChance;
         private System.Windows.Forms.CheckBox cboxEnableHumanizedThrows;
+        private System.Windows.Forms.TextBox txtUseUltraBallAboveCp;
+        private System.Windows.Forms.Label lblUseUltraBallAboveCp;
+        private System.Windows.Forms.TextBox txtCurveThrowChance;
+        private System.Windows.Forms.Label lblCurveThrowChance;
+        private System.Windows.Forms.TextBox txtExcellentThrowChance;
+        private System.Windows.Forms.Label lblExcellentThrowChance;
+        private System.Windows.Forms.TextBox txtGreatThrowChance;
+        private System.Windows.Forms.Label lblGreatThrowChance;
+        private System.Windows.Forms.TextBox txtForceExcellentThrowOverIv;
+        private System.Windows.Forms.Label lblForceExcellentThrowOverIv;
+        private System.Windows.Forms.TextBox txtForceGreatThrowOverCp;
+        private System.Windows.Forms.Label lblForceGreatThrowOverCp;
+        private System.Windows.Forms.TextBox txtForceGreatThrowOverIv;
+        private System.Windows.Forms.Label lblForceGreatThrowOverIv;
+        private System.Windows.Forms.CheckBox cboxTransferDuplicatePokemonOnCapture;
+        private System.Windows.Forms.CheckBox cboxTransferWeakPokemon;
+        private System.Windows.Forms.TextBox txtForceExcellentThrowOverCp;
+        private System.Windows.Forms.Label lblForceExcellentThrowOverCp;
+        private System.Windows.Forms.Label lblFavoriteMinIvPercentage;
+        private System.Windows.Forms.TextBox txtFavoriteMinIvPercentage;
+        private System.Windows.Forms.CheckBox cboxAutoFavoritePokemon;
+        private System.Windows.Forms.GroupBox grSniping;
+        private System.Windows.Forms.CheckBox cboxUsePokemonSniperFilterOnly;
+        private System.Windows.Forms.CheckBox cboxSnipeIgnoreUnknownIv;
+        private System.Windows.Forms.CheckBox cboxGetOnlyVerifiedSniperInfoFromPokezz;
+        private System.Windows.Forms.CheckBox cboxUseSnipeLocationServer;
+        private System.Windows.Forms.CheckBox cboxUseTransferIvForSnipe;
+        private System.Windows.Forms.CheckBox cboxSnipeAtPokestops;
+        private System.Windows.Forms.CheckBox cboxGetSniperInfoFromPokezz;
+        private System.Windows.Forms.CheckBox cboxUseSnipeOnlineLocationServer;
+        private System.Windows.Forms.TextBox txtSnipeLocationServerPort;
+        private System.Windows.Forms.Label lblSnipeLocationServerPort;
+        private System.Windows.Forms.TextBox txtSnipeLocationServer;
+        private System.Windows.Forms.Label lblSnipeLocationServer;
+        private System.Windows.Forms.TextBox txtMinPokeballsToSnipe;
+        private System.Windows.Forms.Label lblMinPokeballsToSnipe;
+        private System.Windows.Forms.TextBox txtMinPokeballsWhileSnipe;
+        private System.Windows.Forms.Label lblMinPokeballsWhileSnipe;
+        private System.Windows.Forms.TextBox txtMinDelayBetweenSnipes;
+        private System.Windows.Forms.Label lblMinDelayBetweenSnipes;
+        private System.Windows.Forms.TextBox txtSnipingScanOffset;
+        private System.Windows.Forms.Label lblSnipingScanOffset;
+        private System.Windows.Forms.GroupBox grboxPokemonToSnipe;
+        private System.Windows.Forms.DataGridView dtgrvwLocations;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Latitude;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Longitude;
+        private System.Windows.Forms.Label lblLocations;
+        private System.Windows.Forms.ListView lstvwPokemon;
+        private System.Windows.Forms.Label lblPokemon;
+        private System.Windows.Forms.GroupBox grboxSaving;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TextBox txtSavingPath;
+        private System.Windows.Forms.Label lblSavingPath;
+        private System.Windows.Forms.CheckBox cboxOverrideOldSettings;
+        private System.Windows.Forms.CheckBox cboxKeepOldConfigFiles;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.ComponentModel.BackgroundWorker bckgrwkrSaving;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label lblProgress;
     }
 }
 

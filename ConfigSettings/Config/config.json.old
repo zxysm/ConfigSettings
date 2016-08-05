@@ -216,7 +216,6 @@
     }
   ],
   "PokemonsNotToTransfer": [
-    "aerodactyl",
     "venusaur",
     "charizard",
     "blastoise",
@@ -244,6 +243,7 @@
     "jolteon",
     "flareon",
     "porygon",
+    "aerodactyl",
     "snorlax",
     "articuno",
     "zapdos",
@@ -258,15 +258,15 @@
     "pidgey",
     "rattata",
     "spearow",
-    "zubat",
-    "doduo",
-    "goldeen",
-    "paras",
     "ekans",
-    "staryu",
+    "zubat",
+    "paras",
+    "venonat",
     "psyduck",
+    "doduo",
     "krabby",
-    "venonat"
+    "goldeen",
+    "staryu"
   ],
   "PokemonsToIgnore": [
     "caterpie",
@@ -284,7 +284,10 @@
       "UseKeepMinLvl": false,
       "KeepMinIvPercentage": 95.0,
       "KeepMinDuplicatePokemon": 1,
-      "Moves": ["ia chay", "nhuc dau"],
+      "Moves": [
+        "ia chay",
+        "nhuc dau"
+      ],
       "KeepMinOperator": "or"
     },
     "Farfetchd": {
@@ -539,11 +542,11 @@
     ]
   },
   "PokemonToUseMasterball": [
+    "ditto",
     "articuno",
     "zapdos",
     "moltres",
-    "mew",
     "mewtwo",
-    "ditto"
+    "mew"
   ]
 }

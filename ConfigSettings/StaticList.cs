@@ -195,7 +195,7 @@ namespace ConfigSettings
                                                             "151",
                                                     };
         public static readonly string[] PokemonNames = {
-                                           "bulbasaur",
+                                            "bulbasaur",
                                             "ivysaur",
                                             "venusaur",
                                             "charmander",
