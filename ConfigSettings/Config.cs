@@ -40,7 +40,6 @@ namespace ConfigSettings
         public float UpgradePokemonIvMinimum { get; set; }
         public Operator UpgradePokemonMinimumStatsOperator { get; set; }
         public bool DisableHumanWalking { get; set; }
-        public decimal DefaultAltitude { get; set; }
         public decimal DefaultLatitude { get; set; }
         public decimal DefaultLongitude { get; set; }
         public float WalkingSpeedInKilometerPerHour { get; set; }
@@ -86,6 +85,7 @@ namespace ConfigSettings
         public bool SnipeAtPokestops { get; set; }
         public bool SnipeIgnoreUnknownIv { get; set; }
         public bool UseTransferIvForSnipe { get; set; }
+        public bool SnipePokemonNotInPokedex { get; set; }
         public bool RenamePokemon { get; set; }
         public bool RenameOnlyAboveIv { get; set; }
         public string RenameTemplate { get; set; }

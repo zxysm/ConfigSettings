@@ -131,6 +131,7 @@ namespace ConfigSettings
             txtMinPokeballsWhileSnipe.Text = config.MinPokeballsWhileSnipe.ToString();
             txtMinDelayBetweenSnipes.Text = config.MinDelayBetweenSnipes.ToString();
             txtSnipingScanOffset.Text = config.SnipingScanOffset.ToString();
+            cboxSnipePokemonNotInPokedex.Checked = config.SnipePokemonNotInPokedex;
             BindingSource bs = new BindingSource();
             bs.DataSource = config.PokemonToSnipe.Locations.ToList();
             dtgrvwLocations.DataSource = null;
@@ -314,6 +315,30 @@ namespace ConfigSettings
             cboxUseProxyAuthentication.Checked = auth.UseProxyAuthentication;
             txtUseProxyUsername.Text = auth.UseProxyUsername;
             txtUseProxyPassword.Text = auth.UseProxyPassword;
+            ParseDevice();
+        }
+
+        private void ParseDevice()
+        {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(ParseDevice);
+                Invoke(method);
+                return;
+            }
+            txtDeviceId.Text = auth.DeviceId;
+            txtAndroidBoardName.Text = auth.AndroidBoardName;
+            txtAndroidBootloader.Text = auth.AndroidBootloader;
+            txtDeviceBrand.Text = auth.DeviceBrand;
+            txtDeviceModel.Text = auth.DeviceModel;
+            txtDeviceModelIdentifier.Text = auth.DeviceModelIdentifier;
+            txtDeviceModelBoot.Text = auth.DeviceModelBoot;
+            txtHardwareManufacturer.Text = auth.HardwareManufacturer;
+            txtHardwareModel.Text = auth.HardwareModel;
+            txtFirmwareBrand.Text = auth.FirmwareBrand;
+            txtFirmwareTags.Text = auth.FirmwareTags;
+            txtFirmwareType.Text = auth.FirmwareType;
+            txtFirmwareFingerprint.Text = auth.FirmwareFingerprint;
         }
 
         private void ParseLocationSettings()
@@ -324,7 +349,6 @@ namespace ConfigSettings
                 Invoke(method);
                 return;
             }
-            txtDefaultAltitude.Text = config.DefaultAltitude.ToString();
             txtDefaultLatitude.Text = config.DefaultLatitude.ToString();
             txtDefaultLongitude.Text = config.DefaultLongitude.ToString();
             cboxDisableHumanWalking.Checked = config.DisableHumanWalking;
@@ -715,6 +739,7 @@ namespace ConfigSettings
             config.MinPokeballsWhileSnipe = int.Parse(txtMinPokeballsWhileSnipe.Text);
             config.MinDelayBetweenSnipes = int.Parse(txtMinDelayBetweenSnipes.Text);
             config.SnipingScanOffset = float.Parse(txtSnipingScanOffset.Text);
+            config.SnipePokemonNotInPokedex = cboxSnipePokemonNotInPokedex.Checked;
             List<Location> locations = new List<Location>();
             for (int i = 0; i < dtgrvwLocations.Rows.Count - 1; i++)
             {
@@ -907,7 +932,6 @@ namespace ConfigSettings
                 Invoke(method);
                 return;
             }
-            config.DefaultAltitude = decimal.Parse(txtDefaultAltitude.Text);
             config.DefaultLatitude = decimal.Parse(txtDefaultLatitude.Text);
             config.DefaultLongitude = decimal.Parse(txtDefaultLongitude.Text);
             config.DisableHumanWalking = cboxDisableHumanWalking.Checked;
@@ -961,6 +985,30 @@ namespace ConfigSettings
             auth.UseProxyAuthentication = cboxUseProxyAuthentication.Checked;
             auth.UseProxyUsername = txtUseProxyUsername.Text;
             auth.UseProxyPassword = txtUseProxyPassword.Text;
+            GetDevice();
+        }
+
+        private void GetDevice()
+        {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(GetDevice);
+                Invoke(method);
+                return;
+            }
+            auth.DeviceId = txtDeviceId.Text;
+            auth.AndroidBoardName = txtAndroidBoardName.Text;
+            auth.AndroidBootloader = txtAndroidBootloader.Text;
+            auth.DeviceBrand = txtDeviceBrand.Text;
+            auth.DeviceModel = txtDeviceModel.Text;
+            auth.DeviceModelIdentifier = txtDeviceModelIdentifier.Text;
+            auth.DeviceModelBoot = txtDeviceModelBoot.Text;
+            auth.HardwareManufacturer = txtHardwareManufacturer.Text;
+            auth.HardwareModel = txtHardwareModel.Text;
+            auth.FirmwareBrand = txtFirmwareBrand.Text;
+            auth.FirmwareTags = txtFirmwareTags.Text;
+            auth.FirmwareType = txtFirmwareType.Text;
+            auth.FirmwareFingerprint = txtFirmwareFingerprint.Text;
         }
 
         private void bckgrwkrSaving_DoWork(object sender, DoWorkEventArgs e)
@@ -1085,6 +1133,11 @@ namespace ConfigSettings
             txtUseProxyUsername.Enabled = cboxUseProxyAuthentication.Checked;
             lblUseProxyPassword.Enabled = cboxUseProxyAuthentication.Checked;
             txtUseProxyPassword.Enabled = cboxUseProxyAuthentication.Checked;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

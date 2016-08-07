@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfig));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grboxSaving = new System.Windows.Forms.GroupBox();
@@ -200,8 +200,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtDefaultLatitude = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtDefaultAltitude = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.grboxTransfer = new System.Windows.Forms.GroupBox();
             this.cboxUseKeepMinLvl = new System.Windows.Forms.CheckBox();
             this.cbxKeepMinOperator = new System.Windows.Forms.ComboBox();
@@ -271,6 +269,34 @@
             this.lblUseProxyPassword = new System.Windows.Forms.Label();
             this.cboxUseProxy = new System.Windows.Forms.CheckBox();
             this.cboxUseProxyAuthentication = new System.Windows.Forms.CheckBox();
+            this.cboxSnipePokemonNotInPokedex = new System.Windows.Forms.CheckBox();
+            this.grboxDevice = new System.Windows.Forms.GroupBox();
+            this.lblDeviceId = new System.Windows.Forms.Label();
+            this.txtDeviceId = new System.Windows.Forms.TextBox();
+            this.lblAndroidBoardName = new System.Windows.Forms.Label();
+            this.txtAndroidBoardName = new System.Windows.Forms.TextBox();
+            this.lblAndroidBootloader = new System.Windows.Forms.Label();
+            this.txtAndroidBootloader = new System.Windows.Forms.TextBox();
+            this.lblDeviceBrand = new System.Windows.Forms.Label();
+            this.txtDeviceBrand = new System.Windows.Forms.TextBox();
+            this.lblDeviceModel = new System.Windows.Forms.Label();
+            this.txtDeviceModel = new System.Windows.Forms.TextBox();
+            this.lblDeviceModelIdentifier = new System.Windows.Forms.Label();
+            this.txtDeviceModelIdentifier = new System.Windows.Forms.TextBox();
+            this.lblDeviceModelBoot = new System.Windows.Forms.Label();
+            this.txtDeviceModelBoot = new System.Windows.Forms.TextBox();
+            this.lblHardwareManufacturer = new System.Windows.Forms.Label();
+            this.txtHardwareManufacturer = new System.Windows.Forms.TextBox();
+            this.lblHardwareModel = new System.Windows.Forms.Label();
+            this.txtHardwareModel = new System.Windows.Forms.TextBox();
+            this.lblFirmwareBrand = new System.Windows.Forms.Label();
+            this.txtFirmwareBrand = new System.Windows.Forms.TextBox();
+            this.lblFirmwareTags = new System.Windows.Forms.Label();
+            this.txtFirmwareTags = new System.Windows.Forms.TextBox();
+            this.lblFirmwareType = new System.Windows.Forms.Label();
+            this.txtFirmwareType = new System.Windows.Forms.TextBox();
+            this.lblFirmwareFingerprint = new System.Windows.Forms.Label();
+            this.txtFirmwareFingerprint = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.grboxSaving.SuspendLayout();
             this.grSniping.SuspendLayout();
@@ -288,6 +314,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvwPokemonTransferFilter)).BeginInit();
             this.grboxGeneralConfig.SuspendLayout();
             this.grboxOldSetting.SuspendLayout();
+            this.grboxDevice.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -303,6 +330,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.grboxDevice);
             this.panel1.Controls.Add(this.grboxSaving);
             this.panel1.Controls.Add(this.grSniping);
             this.panel1.Controls.Add(this.grboxAdvancedCatching);
@@ -333,9 +361,9 @@
             this.grboxSaving.Controls.Add(this.txtSavingPath);
             this.grboxSaving.Controls.Add(this.lblSavingPath);
             this.grboxSaving.Controls.Add(this.cboxOverrideOldSettings);
-            this.grboxSaving.Location = new System.Drawing.Point(268, 1731);
+            this.grboxSaving.Location = new System.Drawing.Point(269, 1942);
             this.grboxSaving.Name = "grboxSaving";
-            this.grboxSaving.Size = new System.Drawing.Size(512, 116);
+            this.grboxSaving.Size = new System.Drawing.Size(512, 120);
             this.grboxSaving.TabIndex = 18;
             this.grboxSaving.TabStop = false;
             this.grboxSaving.Text = "Saving";
@@ -434,7 +462,7 @@
             // 
             // grSniping
             // 
-            this.grSniping.Controls.Add(this.lstvwPokemon);
+            this.grSniping.Controls.Add(this.cboxSnipePokemonNotInPokedex);
             this.grSniping.Controls.Add(this.grboxPokemonToSnipe);
             this.grSniping.Controls.Add(this.txtSnipingScanOffset);
             this.grSniping.Controls.Add(this.lblSnipingScanOffset);
@@ -456,9 +484,9 @@
             this.grSniping.Controls.Add(this.cboxSnipeAtPokestops);
             this.grSniping.Controls.Add(this.cboxGetSniperInfoFromPokezz);
             this.grSniping.Controls.Add(this.cboxUseSnipeOnlineLocationServer);
-            this.grSniping.Location = new System.Drawing.Point(268, 1272);
+            this.grSniping.Location = new System.Drawing.Point(269, 1246);
             this.grSniping.Name = "grSniping";
-            this.grSniping.Size = new System.Drawing.Size(512, 453);
+            this.grSniping.Size = new System.Drawing.Size(512, 479);
             this.grSniping.TabIndex = 17;
             this.grSniping.TabStop = false;
             this.grSniping.Text = "Sniping";
@@ -471,7 +499,7 @@
             this.lstvwPokemon.FullRowSelect = true;
             this.lstvwPokemon.GridLines = true;
             this.lstvwPokemon.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstvwPokemon.Location = new System.Drawing.Point(12, 347);
+            this.lstvwPokemon.Location = new System.Drawing.Point(6, 158);
             this.lstvwPokemon.Name = "lstvwPokemon";
             this.lstvwPokemon.Size = new System.Drawing.Size(488, 94);
             this.lstvwPokemon.TabIndex = 41;
@@ -481,9 +509,10 @@
             // grboxPokemonToSnipe
             // 
             this.grboxPokemonToSnipe.Controls.Add(this.lblPokemon);
+            this.grboxPokemonToSnipe.Controls.Add(this.lstvwPokemon);
             this.grboxPokemonToSnipe.Controls.Add(this.dtgrvwLocations);
             this.grboxPokemonToSnipe.Controls.Add(this.lblLocations);
-            this.grboxPokemonToSnipe.Location = new System.Drawing.Point(6, 189);
+            this.grboxPokemonToSnipe.Location = new System.Drawing.Point(6, 212);
             this.grboxPokemonToSnipe.Name = "grboxPokemonToSnipe";
             this.grboxPokemonToSnipe.Size = new System.Drawing.Size(500, 258);
             this.grboxPokemonToSnipe.TabIndex = 10;
@@ -503,26 +532,26 @@
             // 
             this.dtgrvwLocations.AllowDrop = true;
             this.dtgrvwLocations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwLocations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwLocations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dtgrvwLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwLocations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Latitude,
             this.Longitude});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwLocations.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwLocations.DefaultCellStyle = dataGridViewCellStyle14;
             this.dtgrvwLocations.EnableHeadersVisualStyles = false;
             this.dtgrvwLocations.Location = new System.Drawing.Point(6, 32);
             this.dtgrvwLocations.Name = "dtgrvwLocations";
@@ -771,7 +800,7 @@
             this.grboxAdvancedCatching.Controls.Add(this.txtNiceThrowChance);
             this.grboxAdvancedCatching.Controls.Add(this.lblNiceThrowChance);
             this.grboxAdvancedCatching.Controls.Add(this.cboxEnableHumanizedThrows);
-            this.grboxAdvancedCatching.Location = new System.Drawing.Point(268, 1098);
+            this.grboxAdvancedCatching.Location = new System.Drawing.Point(269, 1072);
             this.grboxAdvancedCatching.Name = "grboxAdvancedCatching";
             this.grboxAdvancedCatching.Size = new System.Drawing.Size(512, 168);
             this.grboxAdvancedCatching.TabIndex = 16;
@@ -1407,26 +1436,26 @@
             // 
             this.dtgrvwItemRecycleFilter.AllowDrop = true;
             this.dtgrvwItemRecycleFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwItemRecycleFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwItemRecycleFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dtgrvwItemRecycleFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwItemRecycleFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Key,
             this.Value});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwItemRecycleFilter.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwItemRecycleFilter.DefaultCellStyle = dataGridViewCellStyle16;
             this.dtgrvwItemRecycleFilter.EnableHeadersVisualStyles = false;
             this.dtgrvwItemRecycleFilter.Location = new System.Drawing.Point(9, 322);
             this.dtgrvwItemRecycleFilter.Name = "dtgrvwItemRecycleFilter";
@@ -1633,7 +1662,7 @@
             this.groupBox2.Controls.Add(this.lblUpgradePokemonIvMinimum);
             this.groupBox2.Controls.Add(this.lblUpgradePokemonCpMinimum);
             this.groupBox2.Controls.Add(this.txtUpgradePokemonCpMinimum);
-            this.groupBox2.Location = new System.Drawing.Point(268, 468);
+            this.groupBox2.Location = new System.Drawing.Point(269, 442);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(512, 154);
             this.groupBox2.TabIndex = 13;
@@ -1792,7 +1821,7 @@
             this.grboxEvolution.Controls.Add(this.cboxEvolveAllPokemonAboveIV);
             this.grboxEvolution.Controls.Add(this.txtEvolveAboveIVValue);
             this.grboxEvolution.Controls.Add(this.lblEvolveAboveIVValue);
-            this.grboxEvolution.Location = new System.Drawing.Point(268, 225);
+            this.grboxEvolution.Location = new System.Drawing.Point(269, 199);
             this.grboxEvolution.Name = "grboxEvolution";
             this.grboxEvolution.Size = new System.Drawing.Size(512, 237);
             this.grboxEvolution.TabIndex = 12;
@@ -2034,11 +2063,9 @@
             this.grboxLocation.Controls.Add(this.label11);
             this.grboxLocation.Controls.Add(this.txtDefaultLatitude);
             this.grboxLocation.Controls.Add(this.label10);
-            this.grboxLocation.Controls.Add(this.txtDefaultAltitude);
-            this.grboxLocation.Controls.Add(this.label9);
             this.grboxLocation.Location = new System.Drawing.Point(268, 12);
             this.grboxLocation.Name = "grboxLocation";
-            this.grboxLocation.Size = new System.Drawing.Size(512, 207);
+            this.grboxLocation.Size = new System.Drawing.Size(512, 181);
             this.grboxLocation.TabIndex = 10;
             this.grboxLocation.TabStop = false;
             this.grboxLocation.Text = "Location";
@@ -2046,7 +2073,7 @@
             // cboxDisableHumanWalking
             // 
             this.cboxDisableHumanWalking.AutoSize = true;
-            this.cboxDisableHumanWalking.Location = new System.Drawing.Point(6, 102);
+            this.cboxDisableHumanWalking.Location = new System.Drawing.Point(10, 76);
             this.cboxDisableHumanWalking.Name = "cboxDisableHumanWalking";
             this.cboxDisableHumanWalking.Size = new System.Drawing.Size(134, 17);
             this.cboxDisableHumanWalking.TabIndex = 21;
@@ -2056,7 +2083,7 @@
             // lblGPXFile
             // 
             this.lblGPXFile.AutoSize = true;
-            this.lblGPXFile.Location = new System.Drawing.Point(152, 155);
+            this.lblGPXFile.Location = new System.Drawing.Point(156, 129);
             this.lblGPXFile.Name = "lblGPXFile";
             this.lblGPXFile.Size = new System.Drawing.Size(45, 13);
             this.lblGPXFile.TabIndex = 25;
@@ -2065,7 +2092,7 @@
             // txtGPXFile
             // 
             this.txtGPXFile.Enabled = false;
-            this.txtGPXFile.Location = new System.Drawing.Point(203, 152);
+            this.txtGPXFile.Location = new System.Drawing.Point(207, 126);
             this.txtGPXFile.Name = "txtGPXFile";
             this.txtGPXFile.Size = new System.Drawing.Size(303, 20);
             this.txtGPXFile.TabIndex = 8;
@@ -2075,7 +2102,7 @@
             // cboxUseGPXPathing
             // 
             this.cboxUseGPXPathing.AutoSize = true;
-            this.cboxUseGPXPathing.Location = new System.Drawing.Point(6, 154);
+            this.cboxUseGPXPathing.Location = new System.Drawing.Point(10, 128);
             this.cboxUseGPXPathing.Name = "cboxUseGPXPathing";
             this.cboxUseGPXPathing.Size = new System.Drawing.Size(103, 17);
             this.cboxUseGPXPathing.TabIndex = 24;
@@ -2085,7 +2112,7 @@
             // 
             // txtMaxTravelDistanceInMeters
             // 
-            this.txtMaxTravelDistanceInMeters.Location = new System.Drawing.Point(155, 126);
+            this.txtMaxTravelDistanceInMeters.Location = new System.Drawing.Point(159, 100);
             this.txtMaxTravelDistanceInMeters.Name = "txtMaxTravelDistanceInMeters";
             this.txtMaxTravelDistanceInMeters.Size = new System.Drawing.Size(351, 20);
             this.txtMaxTravelDistanceInMeters.TabIndex = 14;
@@ -2097,7 +2124,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 129);
+            this.label17.Location = new System.Drawing.Point(10, 103);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(143, 13);
             this.label17.TabIndex = 15;
@@ -2105,7 +2132,7 @@
             // 
             // txtMaxSpawnLocationOffset
             // 
-            this.txtMaxSpawnLocationOffset.Location = new System.Drawing.Point(155, 178);
+            this.txtMaxSpawnLocationOffset.Location = new System.Drawing.Point(159, 152);
             this.txtMaxSpawnLocationOffset.Name = "txtMaxSpawnLocationOffset";
             this.txtMaxSpawnLocationOffset.Size = new System.Drawing.Size(351, 20);
             this.txtMaxSpawnLocationOffset.TabIndex = 12;
@@ -2127,7 +2154,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 181);
+            this.label13.Location = new System.Drawing.Point(10, 155);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(129, 13);
             this.label13.TabIndex = 13;
@@ -2135,7 +2162,7 @@
             // 
             // txtDefaultLongitude
             // 
-            this.txtDefaultLongitude.Location = new System.Drawing.Point(155, 74);
+            this.txtDefaultLongitude.Location = new System.Drawing.Point(159, 48);
             this.txtDefaultLongitude.Name = "txtDefaultLongitude";
             this.txtDefaultLongitude.Size = new System.Drawing.Size(351, 20);
             this.txtDefaultLongitude.TabIndex = 12;
@@ -2145,7 +2172,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(152, 103);
+            this.label12.Location = new System.Drawing.Point(156, 77);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(168, 13);
             this.label12.TabIndex = 13;
@@ -2154,7 +2181,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 77);
+            this.label11.Location = new System.Drawing.Point(10, 51);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 13);
             this.label11.TabIndex = 13;
@@ -2162,7 +2189,7 @@
             // 
             // txtDefaultLatitude
             // 
-            this.txtDefaultLatitude.Location = new System.Drawing.Point(155, 48);
+            this.txtDefaultLatitude.Location = new System.Drawing.Point(159, 22);
             this.txtDefaultLatitude.Name = "txtDefaultLatitude";
             this.txtDefaultLatitude.Size = new System.Drawing.Size(351, 20);
             this.txtDefaultLatitude.TabIndex = 10;
@@ -2172,29 +2199,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 51);
+            this.label10.Location = new System.Drawing.Point(10, 25);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 13);
             this.label10.TabIndex = 11;
             this.label10.Text = "DefaultLatitude";
-            // 
-            // txtDefaultAltitude
-            // 
-            this.txtDefaultAltitude.Location = new System.Drawing.Point(155, 22);
-            this.txtDefaultAltitude.Name = "txtDefaultAltitude";
-            this.txtDefaultAltitude.Size = new System.Drawing.Size(351, 20);
-            this.txtDefaultAltitude.TabIndex = 8;
-            this.txtDefaultAltitude.Text = "10.0";
-            this.txtDefaultAltitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "DefaultAltitude";
             // 
             // grboxTransfer
             // 
@@ -2215,7 +2224,7 @@
             this.grboxTransfer.Controls.Add(this.cboxTransferDuplicatePokemon);
             this.grboxTransfer.Controls.Add(this.cboxPrioritizeIVOverCP);
             this.grboxTransfer.Controls.Add(this.txtKeepMinIVPercentage);
-            this.grboxTransfer.Location = new System.Drawing.Point(268, 628);
+            this.grboxTransfer.Location = new System.Drawing.Point(269, 602);
             this.grboxTransfer.Name = "grboxTransfer";
             this.grboxTransfer.Size = new System.Drawing.Size(512, 464);
             this.grboxTransfer.TabIndex = 9;
@@ -2280,14 +2289,14 @@
             // 
             this.dtgrvwPokemonTransferFilter.AllowDrop = true;
             this.dtgrvwPokemonTransferFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwPokemonTransferFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwPokemonTransferFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dtgrvwPokemonTransferFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwPokemonTransferFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pokemon,
@@ -2299,14 +2308,14 @@
             this.Moves,
             this.KeepMinOperator,
             this.MovesOperator});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwPokemonTransferFilter.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwPokemonTransferFilter.DefaultCellStyle = dataGridViewCellStyle18;
             this.dtgrvwPokemonTransferFilter.Enabled = false;
             this.dtgrvwPokemonTransferFilter.EnableHeadersVisualStyles = false;
             this.dtgrvwPokemonTransferFilter.Location = new System.Drawing.Point(6, 303);
@@ -2973,6 +2982,288 @@
             this.cboxUseProxyAuthentication.UseVisualStyleBackColor = true;
             this.cboxUseProxyAuthentication.CheckedChanged += new System.EventHandler(this.UseProxyAuthentication_CheckedChanged);
             // 
+            // cboxSnipePokemonNotInPokedex
+            // 
+            this.cboxSnipePokemonNotInPokedex.AutoSize = true;
+            this.cboxSnipePokemonNotInPokedex.Location = new System.Drawing.Point(6, 189);
+            this.cboxSnipePokemonNotInPokedex.Name = "cboxSnipePokemonNotInPokedex";
+            this.cboxSnipePokemonNotInPokedex.Size = new System.Drawing.Size(166, 17);
+            this.cboxSnipePokemonNotInPokedex.TabIndex = 42;
+            this.cboxSnipePokemonNotInPokedex.Text = "SnipePokemonNotInPokedex";
+            this.cboxSnipePokemonNotInPokedex.UseVisualStyleBackColor = true;
+            // 
+            // grboxDevice
+            // 
+            this.grboxDevice.Controls.Add(this.txtDeviceModelIdentifier);
+            this.grboxDevice.Controls.Add(this.lblDeviceModelIdentifier);
+            this.grboxDevice.Controls.Add(this.txtDeviceModel);
+            this.grboxDevice.Controls.Add(this.lblDeviceModel);
+            this.grboxDevice.Controls.Add(this.txtDeviceBrand);
+            this.grboxDevice.Controls.Add(this.lblDeviceBrand);
+            this.grboxDevice.Controls.Add(this.txtFirmwareFingerprint);
+            this.grboxDevice.Controls.Add(this.lblFirmwareFingerprint);
+            this.grboxDevice.Controls.Add(this.txtFirmwareType);
+            this.grboxDevice.Controls.Add(this.lblFirmwareType);
+            this.grboxDevice.Controls.Add(this.txtFirmwareTags);
+            this.grboxDevice.Controls.Add(this.lblFirmwareTags);
+            this.grboxDevice.Controls.Add(this.txtFirmwareBrand);
+            this.grboxDevice.Controls.Add(this.lblFirmwareBrand);
+            this.grboxDevice.Controls.Add(this.txtHardwareModel);
+            this.grboxDevice.Controls.Add(this.lblHardwareModel);
+            this.grboxDevice.Controls.Add(this.txtHardwareManufacturer);
+            this.grboxDevice.Controls.Add(this.lblHardwareManufacturer);
+            this.grboxDevice.Controls.Add(this.txtDeviceModelBoot);
+            this.grboxDevice.Controls.Add(this.lblDeviceModelBoot);
+            this.grboxDevice.Controls.Add(this.txtAndroidBootloader);
+            this.grboxDevice.Controls.Add(this.lblAndroidBootloader);
+            this.grboxDevice.Controls.Add(this.txtAndroidBoardName);
+            this.grboxDevice.Controls.Add(this.lblAndroidBoardName);
+            this.grboxDevice.Controls.Add(this.txtDeviceId);
+            this.grboxDevice.Controls.Add(this.lblDeviceId);
+            this.grboxDevice.Location = new System.Drawing.Point(269, 1731);
+            this.grboxDevice.Name = "grboxDevice";
+            this.grboxDevice.Size = new System.Drawing.Size(512, 205);
+            this.grboxDevice.TabIndex = 19;
+            this.grboxDevice.TabStop = false;
+            this.grboxDevice.Text = "Device";
+            // 
+            // lblDeviceId
+            // 
+            this.lblDeviceId.AutoSize = true;
+            this.lblDeviceId.Location = new System.Drawing.Point(3, 22);
+            this.lblDeviceId.Name = "lblDeviceId";
+            this.lblDeviceId.Size = new System.Drawing.Size(50, 13);
+            this.lblDeviceId.TabIndex = 0;
+            this.lblDeviceId.Text = "DeviceId";
+            // 
+            // txtDeviceId
+            // 
+            this.txtDeviceId.Location = new System.Drawing.Point(125, 19);
+            this.txtDeviceId.Name = "txtDeviceId";
+            this.txtDeviceId.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceId.TabIndex = 1;
+            this.txtDeviceId.Text = "1by3269r3gh7t4a9";
+            this.txtDeviceId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblAndroidBoardName
+            // 
+            this.lblAndroidBoardName.AutoSize = true;
+            this.lblAndroidBoardName.Location = new System.Drawing.Point(3, 48);
+            this.lblAndroidBoardName.Name = "lblAndroidBoardName";
+            this.lblAndroidBoardName.Size = new System.Drawing.Size(99, 13);
+            this.lblAndroidBoardName.TabIndex = 0;
+            this.lblAndroidBoardName.Text = "AndroidBoardName";
+            // 
+            // txtAndroidBoardName
+            // 
+            this.txtAndroidBoardName.Location = new System.Drawing.Point(125, 45);
+            this.txtAndroidBoardName.Name = "txtAndroidBoardName";
+            this.txtAndroidBoardName.Size = new System.Drawing.Size(120, 20);
+            this.txtAndroidBoardName.TabIndex = 1;
+            this.txtAndroidBoardName.Text = "msm8994";
+            this.txtAndroidBoardName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblAndroidBootloader
+            // 
+            this.lblAndroidBootloader.AutoSize = true;
+            this.lblAndroidBootloader.Location = new System.Drawing.Point(3, 74);
+            this.lblAndroidBootloader.Name = "lblAndroidBootloader";
+            this.lblAndroidBootloader.Size = new System.Drawing.Size(94, 13);
+            this.lblAndroidBootloader.TabIndex = 0;
+            this.lblAndroidBootloader.Text = "AndroidBootloader";
+            // 
+            // txtAndroidBootloader
+            // 
+            this.txtAndroidBootloader.Location = new System.Drawing.Point(125, 71);
+            this.txtAndroidBootloader.Name = "txtAndroidBootloader";
+            this.txtAndroidBootloader.Size = new System.Drawing.Size(120, 20);
+            this.txtAndroidBootloader.TabIndex = 1;
+            this.txtAndroidBootloader.Text = "unknown";
+            this.txtAndroidBootloader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceBrand
+            // 
+            this.lblDeviceBrand.AutoSize = true;
+            this.lblDeviceBrand.Location = new System.Drawing.Point(270, 22);
+            this.lblDeviceBrand.Name = "lblDeviceBrand";
+            this.lblDeviceBrand.Size = new System.Drawing.Size(69, 13);
+            this.lblDeviceBrand.TabIndex = 0;
+            this.lblDeviceBrand.Text = "DeviceBrand";
+            this.lblDeviceBrand.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txtDeviceBrand
+            // 
+            this.txtDeviceBrand.Location = new System.Drawing.Point(386, 19);
+            this.txtDeviceBrand.Name = "txtDeviceBrand";
+            this.txtDeviceBrand.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceBrand.TabIndex = 1;
+            this.txtDeviceBrand.Text = "OnePlus";
+            this.txtDeviceBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceModel
+            // 
+            this.lblDeviceModel.AutoSize = true;
+            this.lblDeviceModel.Location = new System.Drawing.Point(270, 48);
+            this.lblDeviceModel.Name = "lblDeviceModel";
+            this.lblDeviceModel.Size = new System.Drawing.Size(70, 13);
+            this.lblDeviceModel.TabIndex = 0;
+            this.lblDeviceModel.Text = "DeviceModel";
+            this.lblDeviceModel.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txtDeviceModel
+            // 
+            this.txtDeviceModel.Location = new System.Drawing.Point(386, 45);
+            this.txtDeviceModel.Name = "txtDeviceModel";
+            this.txtDeviceModel.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceModel.TabIndex = 1;
+            this.txtDeviceModel.Text = "OnePlus2";
+            this.txtDeviceModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceModelIdentifier
+            // 
+            this.lblDeviceModelIdentifier.AutoSize = true;
+            this.lblDeviceModelIdentifier.Location = new System.Drawing.Point(270, 74);
+            this.lblDeviceModelIdentifier.Name = "lblDeviceModelIdentifier";
+            this.lblDeviceModelIdentifier.Size = new System.Drawing.Size(110, 13);
+            this.lblDeviceModelIdentifier.TabIndex = 0;
+            this.lblDeviceModelIdentifier.Text = "DeviceModelIdentifier";
+            this.lblDeviceModelIdentifier.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txtDeviceModelIdentifier
+            // 
+            this.txtDeviceModelIdentifier.Location = new System.Drawing.Point(386, 71);
+            this.txtDeviceModelIdentifier.Name = "txtDeviceModelIdentifier";
+            this.txtDeviceModelIdentifier.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceModelIdentifier.TabIndex = 1;
+            this.txtDeviceModelIdentifier.Text = "ONE A2003_24_160604";
+            this.txtDeviceModelIdentifier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceModelBoot
+            // 
+            this.lblDeviceModelBoot.AutoSize = true;
+            this.lblDeviceModelBoot.Location = new System.Drawing.Point(270, 100);
+            this.lblDeviceModelBoot.Name = "lblDeviceModelBoot";
+            this.lblDeviceModelBoot.Size = new System.Drawing.Size(92, 13);
+            this.lblDeviceModelBoot.TabIndex = 0;
+            this.lblDeviceModelBoot.Text = "DeviceModelBoot";
+            // 
+            // txtDeviceModelBoot
+            // 
+            this.txtDeviceModelBoot.Location = new System.Drawing.Point(386, 97);
+            this.txtDeviceModelBoot.Name = "txtDeviceModelBoot";
+            this.txtDeviceModelBoot.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceModelBoot.TabIndex = 1;
+            this.txtDeviceModelBoot.Text = "qcom";
+            this.txtDeviceModelBoot.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblHardwareManufacturer
+            // 
+            this.lblHardwareManufacturer.AutoSize = true;
+            this.lblHardwareManufacturer.Location = new System.Drawing.Point(3, 100);
+            this.lblHardwareManufacturer.Name = "lblHardwareManufacturer";
+            this.lblHardwareManufacturer.Size = new System.Drawing.Size(116, 13);
+            this.lblHardwareManufacturer.TabIndex = 0;
+            this.lblHardwareManufacturer.Text = "HardwareManufacturer";
+            // 
+            // txtHardwareManufacturer
+            // 
+            this.txtHardwareManufacturer.Location = new System.Drawing.Point(125, 97);
+            this.txtHardwareManufacturer.Name = "txtHardwareManufacturer";
+            this.txtHardwareManufacturer.Size = new System.Drawing.Size(120, 20);
+            this.txtHardwareManufacturer.TabIndex = 1;
+            this.txtHardwareManufacturer.Text = "OnePlus";
+            this.txtHardwareManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblHardwareModel
+            // 
+            this.lblHardwareModel.AutoSize = true;
+            this.lblHardwareModel.Location = new System.Drawing.Point(3, 126);
+            this.lblHardwareModel.Name = "lblHardwareModel";
+            this.lblHardwareModel.Size = new System.Drawing.Size(82, 13);
+            this.lblHardwareModel.TabIndex = 0;
+            this.lblHardwareModel.Text = "HardwareModel";
+            // 
+            // txtHardwareModel
+            // 
+            this.txtHardwareModel.Location = new System.Drawing.Point(125, 123);
+            this.txtHardwareModel.Name = "txtHardwareModel";
+            this.txtHardwareModel.Size = new System.Drawing.Size(120, 20);
+            this.txtHardwareModel.TabIndex = 1;
+            this.txtHardwareModel.Text = "ONE A2003";
+            this.txtHardwareModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirmwareBrand
+            // 
+            this.lblFirmwareBrand.AutoSize = true;
+            this.lblFirmwareBrand.Location = new System.Drawing.Point(3, 152);
+            this.lblFirmwareBrand.Name = "lblFirmwareBrand";
+            this.lblFirmwareBrand.Size = new System.Drawing.Size(77, 13);
+            this.lblFirmwareBrand.TabIndex = 0;
+            this.lblFirmwareBrand.Text = "FirmwareBrand";
+            // 
+            // txtFirmwareBrand
+            // 
+            this.txtFirmwareBrand.Location = new System.Drawing.Point(125, 149);
+            this.txtFirmwareBrand.Name = "txtFirmwareBrand";
+            this.txtFirmwareBrand.Size = new System.Drawing.Size(120, 20);
+            this.txtFirmwareBrand.TabIndex = 1;
+            this.txtFirmwareBrand.Text = "OnePlus2";
+            this.txtFirmwareBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirmwareTags
+            // 
+            this.lblFirmwareTags.AutoSize = true;
+            this.lblFirmwareTags.Location = new System.Drawing.Point(270, 126);
+            this.lblFirmwareTags.Name = "lblFirmwareTags";
+            this.lblFirmwareTags.Size = new System.Drawing.Size(73, 13);
+            this.lblFirmwareTags.TabIndex = 0;
+            this.lblFirmwareTags.Text = "FirmwareTags";
+            // 
+            // txtFirmwareTags
+            // 
+            this.txtFirmwareTags.Location = new System.Drawing.Point(386, 123);
+            this.txtFirmwareTags.Name = "txtFirmwareTags";
+            this.txtFirmwareTags.Size = new System.Drawing.Size(120, 20);
+            this.txtFirmwareTags.TabIndex = 1;
+            this.txtFirmwareTags.Text = "dev-keys";
+            this.txtFirmwareTags.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirmwareType
+            // 
+            this.lblFirmwareType.AutoSize = true;
+            this.lblFirmwareType.Location = new System.Drawing.Point(270, 152);
+            this.lblFirmwareType.Name = "lblFirmwareType";
+            this.lblFirmwareType.Size = new System.Drawing.Size(73, 13);
+            this.lblFirmwareType.TabIndex = 0;
+            this.lblFirmwareType.Text = "FirmwareType";
+            // 
+            // txtFirmwareType
+            // 
+            this.txtFirmwareType.Location = new System.Drawing.Point(386, 149);
+            this.txtFirmwareType.Name = "txtFirmwareType";
+            this.txtFirmwareType.Size = new System.Drawing.Size(120, 20);
+            this.txtFirmwareType.TabIndex = 1;
+            this.txtFirmwareType.Text = "user";
+            this.txtFirmwareType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirmwareFingerprint
+            // 
+            this.lblFirmwareFingerprint.AutoSize = true;
+            this.lblFirmwareFingerprint.Location = new System.Drawing.Point(3, 178);
+            this.lblFirmwareFingerprint.Name = "lblFirmwareFingerprint";
+            this.lblFirmwareFingerprint.Size = new System.Drawing.Size(98, 13);
+            this.lblFirmwareFingerprint.TabIndex = 0;
+            this.lblFirmwareFingerprint.Text = "FirmwareFingerprint";
+            // 
+            // txtFirmwareFingerprint
+            // 
+            this.txtFirmwareFingerprint.Location = new System.Drawing.Point(125, 176);
+            this.txtFirmwareFingerprint.Name = "txtFirmwareFingerprint";
+            this.txtFirmwareFingerprint.Size = new System.Drawing.Size(381, 20);
+            this.txtFirmwareFingerprint.TabIndex = 1;
+            this.txtFirmwareFingerprint.Text = "OnePlus/OnePlus2/OnePlus2:6.0.1/MMB29M/1447840820:user/release-keys";
+            this.txtFirmwareFingerprint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3017,6 +3308,8 @@
             this.grboxGeneralConfig.PerformLayout();
             this.grboxOldSetting.ResumeLayout(false);
             this.grboxOldSetting.PerformLayout();
+            this.grboxDevice.ResumeLayout(false);
+            this.grboxDevice.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3055,8 +3348,6 @@
         private System.Windows.Forms.CheckBox cboxDisableHumanWalking;
         private System.Windows.Forms.CheckBox cboxDumpPokemonStats;
         private System.Windows.Forms.GroupBox grboxLocation;
-        private System.Windows.Forms.TextBox txtDefaultAltitude;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtDefaultLongitude;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtDefaultLatitude;
@@ -3259,6 +3550,34 @@
         private System.Windows.Forms.TextBox txtUseProxyUsername;
         private System.Windows.Forms.TextBox txtUseProxyPort;
         private System.Windows.Forms.TextBox txtUseProxyHost;
+        private System.Windows.Forms.CheckBox cboxSnipePokemonNotInPokedex;
+        private System.Windows.Forms.GroupBox grboxDevice;
+        private System.Windows.Forms.TextBox txtDeviceModelIdentifier;
+        private System.Windows.Forms.Label lblDeviceModelIdentifier;
+        private System.Windows.Forms.TextBox txtDeviceModel;
+        private System.Windows.Forms.Label lblDeviceModel;
+        private System.Windows.Forms.TextBox txtDeviceBrand;
+        private System.Windows.Forms.Label lblDeviceBrand;
+        private System.Windows.Forms.TextBox txtAndroidBootloader;
+        private System.Windows.Forms.Label lblAndroidBootloader;
+        private System.Windows.Forms.TextBox txtAndroidBoardName;
+        private System.Windows.Forms.Label lblAndroidBoardName;
+        private System.Windows.Forms.TextBox txtDeviceId;
+        private System.Windows.Forms.Label lblDeviceId;
+        private System.Windows.Forms.TextBox txtFirmwareFingerprint;
+        private System.Windows.Forms.Label lblFirmwareFingerprint;
+        private System.Windows.Forms.TextBox txtFirmwareType;
+        private System.Windows.Forms.Label lblFirmwareType;
+        private System.Windows.Forms.TextBox txtFirmwareTags;
+        private System.Windows.Forms.Label lblFirmwareTags;
+        private System.Windows.Forms.TextBox txtFirmwareBrand;
+        private System.Windows.Forms.Label lblFirmwareBrand;
+        private System.Windows.Forms.TextBox txtHardwareModel;
+        private System.Windows.Forms.Label lblHardwareModel;
+        private System.Windows.Forms.TextBox txtHardwareManufacturer;
+        private System.Windows.Forms.Label lblHardwareManufacturer;
+        private System.Windows.Forms.TextBox txtDeviceModelBoot;
+        private System.Windows.Forms.Label lblDeviceModelBoot;
     }
 }
 
