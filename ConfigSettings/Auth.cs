@@ -21,5 +21,11 @@ namespace ConfigSettings
         public string GooglePassword { get; set; }
         public string PtcUsername { get; set; }
         public string PtcPassword { get; set; }
+        public bool UseProxy { get; set; }
+        public string UseProxyHost { get; set; }
+        public string UseProxyPort { get; set; }
+        public bool UseProxyAuthentication { get; set; }
+        public string UseProxyUsername { get; set; }
+        public string UseProxyPassword { get; set; }
     }
 }

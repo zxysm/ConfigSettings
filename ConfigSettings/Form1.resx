@@ -144,17 +144,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnBrowse.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIdSURBVDhPjZBbSNNhGId3U1FBB7up264KpG4KISSCroQi
-        KrR14ZCK6ERhHjChMxUR6HRWUIyUXJZOt8qSPNHa1rb+c5Urx6Yz3GyH5hrGWEHz/7QNHdH+g37wXHzf
-        977P936fbCGifiu/NIXM6vYS7q9hfvv/Q7wX0VCKONuDGG5D9N9hznWJpHCCH85GvtlVBJza/GLiLxBj
-        nfx+WkzScw0SfZLEbq+RlpBqTiOGW4l3bCIxVJZZ/8vXhoI8gvADFphLjR9UFkBInYP7xuo8Ar+KqEeD
-        3TrIy75+OrU69N1teG0qmFJmES6skhZEx9SY3loZ8/oIRWP4p/2MON00NrXgGr4K7isZBmtWSgts5gEm
-        pgIEZyJMBoKMeyeYnA5hc4xy/XIdjFZn0J5cIS1Ijx2OficYieDxBzDZP+BwpSQ+H3X1F0E4mmH84U70
-        tw7mStJvDs9E8QUDOL1fGHhjxiJYcLvsKBQVYDyQ5Wbp8lxBl+YeHz+7Ujd6sYw4sL0z8smmo6tDzbGK
-        /TBQkqW2ZFmuwKs/TIOyBYPZitEqIFiH6Xl0l9IyOe2t90n0y6F3W4ZDxUtzBT+HynnfJuf8uWoqq2o5
-        daaKcvk+jh9R0K55jGAxkHi+C7SF7N68RPojk8+2g34Le4rW0tzUnC2qPFs9L3lNonsHResXSwvS4ckG
-        yYIFidUm5G9OJ/rqNBvXLZIsSktMJvNfZzLZH+ns5sss6e+HAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAh1JREFUOE+NkFtI02EYh3dTUUEHu6nbrgqkbgohJIKuhCIqtHXhkIroRGEeMKEz
+        FRHodFZQjJRclk63ypI80drWtv5zlSvHpjPcbIfmGsZYQfP/tA0d0f6DfvBcfN/3vs/3fp9sIaJ+K780
+        hczq9hLur2F++/9DvBfRUIo424MYbkP032HOdYmkcIIfzka+2VUEnNr8YuIvEGOd/H5aTNJzDRJ9ksRu
+        r5GWkGpOI4ZbiXdsIjFUlln/y9eGgjyC8AMWmEuNH1QWQEidg/vG6jwCv4qoR4PdOsjLvn46tTr03W14
+        bSqYUmYRLqySFkTH1JjeWhnz+ghFY/in/Yw43TQ2teAavgruKxkGa1ZKC2zmASamAgRnIkwGgox7J5ic
+        DmFzjHL9ch2MVmfQnlwhLUiPHY5+JxiJ4PEHMNk/4HClJD4fdfUXQTiaYfzhTvS3DuZK0m8Oz0TxBQM4
+        vV8YeGPGIlhwu+woFBVgPJDlZunyXEGX5h4fP7tSN3qxjDiwvTPyyaajq0PNsYr9MFCSpbZkWa7Aqz9M
+        g7IFg9mK0SogWIfpeXSX0jI57a33SfTLoXdbhkPFS3MFP4fKed8m5/y5aiqrajl1popy+T6OH1HQrnmM
+        YDGQeL4LtIXs3rxE+iOTz7aDfgt7itbS3NScLao8Wz0veU2iewdF6xdLC9LhyQbJggWJ1Sbkb04n+uo0
+        G9ctkixKS0wm819nMtkf6ezmyyzp74cAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="btnSave.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -162,17 +162,16 @@
   </metadata>
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH3SURBVDhPpdNdSFNhHAbw964u+riILrox+yRBhUpMq9Ey
-        pmv2sanLPkR3UwldeBJCFkEpHHIx02N4YpWj0mRtGgoaclYERkeIidAgdjN2sbHorku7enrPf2d7k7mb
-        euDHGDz/58AZY/8dT2gFeQfaJbj8YWSz2Q1dnVzZbZ6JXHv1Bc++/SLGwNmhWZTKleDSqjsQ3W6e5nIp
-        8BHuia/EGGh5PI1UKoVMJkOftXfHUXPnKSKRCNzjn9GmautHXMo8Wl8uczoNtA7PIJ1Ok3g8jsPSCKpv
-        +RAMBtHCO64xDReG5lbNc8bO+abh5MsGY6CNDxhPTyQS0HUdldcHUOG5B0VR4HyxRJofhmGeM9bUP4Hz
-        gU+EBkbeIZlMIhaLQdM0hEIhqKoKWZYLvcb7r8VAg/c5mtUPJP8yS3GoUTjGojjdFxADFmkU9ieLpY0W
-        O9mjiIG67kewDS+Q372NnC3ntg1rf5NsvDNPjt0cFANHPf04458jPzvrzV+8OD866tDgnyVHuh6IgerL
-        Xlh9MyThqMq1vY71eL7bK2Ed5D2uqr1PDFQ4JfpikcNYrt1D5Y2i15TDIr+l7qGLPWJgv70bJwamyPu9
-        O4ufbloo34HjvGPY13RDDJRZu5A3tW0z3hi2CpNbNhWUneosMM8pxj/s4D/YxRhjfwAIfgjvQdIDWwAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAfdJREFUOE+l011IU2EcBvD3ri76uIguujH7JEGFSkyr0TKma/axqcs+RHdTCV14
+        EkIWQSkccjHTY3hilaPSZG0aChpyVgRGR4iJ0CB2M3axseiuS7t6es9/Z3uTuZt64McYPP/nwBlj/x1P
+        aAV5B9oluPxhZLPZDV2dXNltnolce/UFz779IsbA2aFZlMqV4NKqOxDdbp7mcinwEe6Jr8QYaHk8jVQq
+        hUwmQ5+1d8dRc+cpIpEI3OOf0aZq60dcyjxaXy5zOg20Ds8gnU6TeDyOw9IIqm/5EAwG0cI7rjENF4bm
+        Vs1zxs75puHkywZjoI0PGE9PJBLQdR2V1wdQ4bkHRVHgfLFEmh+GYZ4z1tQ/gfOBT4QGRt4hmUwiFotB
+        0zSEQiGoqgpZlgu9xvuvxUCD9zma1Q8k/zJLcahROMaiON0XEAMWaRT2J4uljRY72aOIgbruR7ANL5Df
+        vY2cLee2DWt/k2y8M0+O3RwUA0c9/TjjnyM/O+vNX7w4Pzrq0OCfJUe6HoiB6steWH0zJOGoyrW9jvV4
+        vtsrYR3kPa6qvU8MVDgl+mKRw1iu3UPljaLXlMMiv6XuoYs9YmC/vRsnBqbI+707i59uWijfgeO8Y9jX
+        dEMMlFm7kDe1bTPeGLYKk1s2FZSd6iwwzynGP+zgP9jFGGN/AAh+CO9B0gNbAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="txtSavingPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -326,6 +325,9 @@
     <value>True</value>
   </metadata>
   <metadata name="grboxCatching.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cboxCatchPokemon.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="cbxUseBerriesOperator.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -562,7 +564,37 @@
   <metadata name="grboxAuthentication.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="cboxUseProxyAuthentication.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cboxUseProxy.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblUseProxyPassword.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblUseProxyUsername.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblUseProxyPort.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblUseProxyHost.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="lblPtcPassword.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="txtUseProxyPassword.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="txtUseProxyUsername.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="txtUseProxyPort.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="txtUseProxyHost.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="txtPtcPassword.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -688,6 +720,9 @@
   <metadata name="KeepMinOperator.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="MovesOperator.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="lblPokemonTransferFilter.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -724,6 +759,9 @@
   <metadata name="grboxGeneralConfig.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="cboxUseWebsocket.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="lblFavoriteMinIvPercentage.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -736,7 +774,7 @@
   <metadata name="txtWebSocketPort.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="label18.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="lblWebSocketPort.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="txtRenameTemplate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

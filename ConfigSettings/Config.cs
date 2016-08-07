@@ -27,9 +27,11 @@ namespace ConfigSettings
         public string TranslationLanguageCode { get; set; }
         public bool AutoUpdate { get; set; }
         public bool TransferConfigAndAuthOnUpdate { get; set; }
+        public bool UseWebsocket { get; set; }
         public bool StartupWelcomeDelay { get; set; }
         public int AmountOfPokemonToDisplayOnStart { get; set; }
         public bool ShowPokeballCountsBeforeRecycle { get; set; }
+        public bool CatchPokemon { get; set; }
         public bool AutomaticallyLevelUpPokemon { get; set; }
         public int AmountOfTimesToUpgradeLoop { get; set; }
         public int GetMinStarDustForLevelUp { get; set; }
@@ -135,7 +137,7 @@ namespace ConfigSettings
                 PokemonsTransferFilterT[i] = new PokemonTransferT(pkm.Key, pkm.Value.KeepMinCp, pkm.Value.KeepMinLvl,
                                                                     pkm.Value.UseKeepMinLvl, pkm.Value.KeepMinIvPercentage,
                                                                     pkm.Value.KeepMinDuplicatePokemon, pkm.Value.Moves,
-                                                                    pkm.Value.KeepMinOperator);
+                                                                    pkm.Value.KeepMinOperator, pkm.Value.MovesOperator);
                 i++;
             }
             return PokemonsTransferFilterT;
@@ -154,6 +156,7 @@ namespace ConfigSettings
                 pkm.KeepMinDuplicatePokemon = pkmT.KeepMinDuplicatePokemon;
                 pkm.Moves = pkmT.MovesToDisplay.Split(charSep,StringSplitOptions.RemoveEmptyEntries);
                 pkm.KeepMinOperator = pkmT.KeepMinOperator;
+                pkm.MovesOperator = pkmT.MovesOperator;
                 PokemonsTransferFilter.Add(pkmT.Key, pkm);
             }
         }

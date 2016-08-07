@@ -60,6 +60,8 @@ namespace ConfigSettings
             cbxUseBerriesOperator.DataSource = Enum.GetValues(typeof(ConfigSettings.Config.Operator));
             cbxUseBerriesOperator.SelectedIndex = 0;
             txtSavingPath.Text = newSettingPath;
+            cboxUseWebsocket.Checked = false;
+            cboxCatchPokemon.Checked = true;
         }
 
         private void btnUpdateSettings_Click(object sender, EventArgs e)
@@ -168,6 +170,7 @@ namespace ConfigSettings
                 Invoke(method);
                 return;
             }
+            cboxCatchPokemon.Checked = config.CatchPokemon;
             cboxUsePokemonToNotCatchFilter.Checked = config.UsePokemonToNotCatchFilter;
             foreach (string pokemonName in config.PokemonsToIgnore)
             {
@@ -251,6 +254,7 @@ namespace ConfigSettings
                                  KeepMinDuplicatePokemon = pokemon.KeepMinDuplicatePokemon,
                                  MovesToDisplay = pokemon.MovesToDisplay,
                                  KeepMinOperator = pokemon.KeepMinOperator,
+                                 MovesOperator = pokemon.MovesOperator
                              }).Distinct<PokemonTransferT>().ToList();
             dtgrvwPokemonTransferFilter.DataSource = bs;
         }
@@ -304,6 +308,12 @@ namespace ConfigSettings
             txtGooglePassword.Text = auth.GooglePassword;
             txtPtcUsername.Text = auth.PtcUsername;
             txtPtcPassword.Text = auth.PtcPassword;
+            cboxUseProxy.Checked = auth.UseProxy;
+            txtUseProxyHost.Text = auth.UseProxyHost;
+            txtUseProxyPort.Text = auth.UseProxyPort;
+            cboxUseProxyAuthentication.Checked = auth.UseProxyAuthentication;
+            txtUseProxyUsername.Text = auth.UseProxyUsername;
+            txtUseProxyPassword.Text = auth.UseProxyPassword;
         }
 
         private void ParseLocationSettings()
@@ -345,6 +355,7 @@ namespace ConfigSettings
             cboxRenamePokemon.Checked = config.RenamePokemon;
             cboxRenameOnlyAboveIv.Checked = config.RenameOnlyAboveIv;
             txtRenameTemplate.Text = config.RenameTemplate;
+            cboxUseWebsocket.Checked = config.UseWebsocket;
             txtWebSocketPort.Text = config.WebSocketPort.ToString();
             cboxAutoFavoritePokemon.Checked = config.AutoFavoritePokemon;
             txtFavoriteMinIvPercentage.Text = config.FavoriteMinIvPercentage.ToString();
@@ -750,6 +761,7 @@ namespace ConfigSettings
                 Invoke(method);
                 return;
             }
+            config.CatchPokemon = cboxCatchPokemon.Checked;
             config.UsePokemonToNotCatchFilter = cboxUsePokemonToNotCatchFilter.Checked;
             List<string> pkm = new List<string>();
             foreach (ListViewItem item in lstvwPokemonsToIgnore.CheckedItems)
@@ -843,6 +855,7 @@ namespace ConfigSettings
                 _pkmT.MovesToDisplay
                     = dtgrvwPokemonTransferFilter.Rows[i].Cells[6].Value == null ? "" : dtgrvwPokemonTransferFilter.Rows[i].Cells[6].Value.ToString();
                 _pkmT.KeepMinOperator = (ConfigSettings.Config.Operator)dtgrvwPokemonTransferFilter.Rows[i].Cells[7].Value;
+                _pkmT.MovesOperator = (ConfigSettings.Config.Operator)dtgrvwPokemonTransferFilter.Rows[i].Cells[8].Value;
                 pkmT.Add(_pkmT);
             }
             config.ConvertTransfer(pkmT.ToArray());
@@ -923,6 +936,7 @@ namespace ConfigSettings
             config.RenamePokemon = cboxRenamePokemon.Checked;
             config.RenameOnlyAboveIv = cboxRenameOnlyAboveIv.Checked;
             config.RenameTemplate = txtRenameTemplate.Text;
+            config.UseWebsocket = cboxUseWebsocket.Checked;
             config.WebSocketPort = int.Parse(txtWebSocketPort.Text);
             config.AutoFavoritePokemon = cboxAutoFavoritePokemon.Checked;
             config.FavoriteMinIvPercentage = float.Parse(txtFavoriteMinIvPercentage.Text);
@@ -941,6 +955,12 @@ namespace ConfigSettings
             auth.GooglePassword = txtGooglePassword.Text;
             auth.PtcUsername = txtPtcUsername.Text;
             auth.PtcPassword = txtPtcPassword.Text;
+            auth.UseProxy = cboxUseProxy.Checked;
+            auth.UseProxyHost = txtUseProxyHost.Text;
+            auth.UseProxyPort = txtUseProxyPort.Text;
+            auth.UseProxyAuthentication = cboxUseProxyAuthentication.Checked;
+            auth.UseProxyUsername = txtUseProxyUsername.Text;
+            auth.UseProxyPassword = txtUseProxyPassword.Text;
         }
 
         private void bckgrwkrSaving_DoWork(object sender, DoWorkEventArgs e)
@@ -1003,6 +1023,68 @@ namespace ConfigSettings
         private void btnStartBot_Click(object sender, EventArgs e)
         {
             Process.Start(txtBotLocation.Text);
+        }
+
+        private void cboxUseWebsocket_CheckedChanged(object sender, EventArgs e)
+        {
+            lblWebSocketPort.Enabled = cboxUseWebsocket.Checked;
+            txtWebSocketPort.Enabled = cboxUseWebsocket.Checked;
+        }
+
+        private void cboxCatchPokemon_CheckedChanged(object sender, EventArgs e)
+        {
+            cboxUsePokemonToNotCatchFilter.Enabled = cboxCatchPokemon.Checked;
+            lblPokemonsToIgnore.Enabled = cboxCatchPokemon.Checked;
+            lstvwPokemonsToIgnore.Enabled = cboxCatchPokemon.Checked;
+            lblMaxPokeballsPerPokemon.Enabled = cboxCatchPokemon.Checked;
+            txtMaxPokeballsPerPokemon.Enabled = cboxCatchPokemon.Checked;
+            lblPokemonToUseMasterball.Enabled = cboxCatchPokemon.Checked;
+            lstvwPokemonToUseMasterball.Enabled = cboxCatchPokemon.Checked;
+            lblUseGreatBallAboveCp.Enabled = cboxCatchPokemon.Checked;
+            txtUseGreatBallAboveCp.Enabled = cboxCatchPokemon.Checked;
+            lblUseUltraBallAboveCp.Enabled = cboxCatchPokemon.Checked;
+            txtUseUltraBallAboveCp.Enabled = cboxCatchPokemon.Checked;
+            lblUseMasterBallAboveCp.Enabled = cboxCatchPokemon.Checked;
+            txtUseMasterBallAboveCp.Enabled = cboxCatchPokemon.Checked;
+            lblUseGreatBallAboveIv.Enabled = cboxCatchPokemon.Checked;
+            txtUseGreatBallAboveIv.Enabled = cboxCatchPokemon.Checked;
+            lblUseUltraBallAboveIv.Enabled = cboxCatchPokemon.Checked;
+            txtUseUltraBallAboveIv.Enabled = cboxCatchPokemon.Checked;
+            lblUseGreatBallBelowCatchProbability.Enabled = cboxCatchPokemon.Checked;
+            txtUseGreatBallBelowCatchProbability.Enabled = cboxCatchPokemon.Checked;
+            lblUseUltraBallBelowCatchProbability.Enabled = cboxCatchPokemon.Checked;
+            txtUseUltraBallBelowCatchProbability.Enabled = cboxCatchPokemon.Checked;
+            lblUseMasterBallBelowCatchProbability.Enabled = cboxCatchPokemon.Checked;
+            txtUseMasterBallBelowCatchProbability.Enabled = cboxCatchPokemon.Checked;
+            lblUseBerriesMinCp.Enabled = cboxCatchPokemon.Checked;
+            txtUseBerriesMinCp.Enabled = cboxCatchPokemon.Checked;
+            lblUseBerriesMinIv.Enabled = cboxCatchPokemon.Checked;
+            txtUseBerriesMinIv.Enabled = cboxCatchPokemon.Checked;
+            lblUseBerriesBelowCatchProbability.Enabled = cboxCatchPokemon.Checked;
+            txtUseBerriesBelowCatchProbability.Enabled = cboxCatchPokemon.Checked;
+            lblUseBerriesOperator.Enabled = cboxCatchPokemon.Checked;
+            cbxUseBerriesOperator.Enabled = cboxCatchPokemon.Checked;
+        }
+
+        private void cboxUseProxy_CheckedChanged(object sender, EventArgs e)
+        {
+            lblUseProxyHost.Enabled = cboxUseProxy.Checked;
+            txtUseProxyHost.Enabled = cboxUseProxy.Checked;
+            lblUseProxyPort.Enabled = cboxUseProxy.Checked;
+            txtUseProxyPort.Enabled = cboxUseProxy.Checked;
+            cboxUseProxyAuthentication.Enabled = cboxUseProxy.Checked;
+            lblUseProxyUsername.Enabled = cboxUseProxy.Checked & cboxUseProxyAuthentication.Checked;
+            txtUseProxyUsername.Enabled = cboxUseProxy.Checked & cboxUseProxyAuthentication.Checked;
+            lblUseProxyPassword.Enabled = cboxUseProxy.Checked & cboxUseProxyAuthentication.Checked;
+            txtUseProxyPassword.Enabled = cboxUseProxy.Checked & cboxUseProxyAuthentication.Checked;
+        }
+
+        private void UseProxyAuthentication_CheckedChanged(object sender, EventArgs e)
+        {
+            lblUseProxyUsername.Enabled = cboxUseProxyAuthentication.Checked;
+            txtUseProxyUsername.Enabled = cboxUseProxyAuthentication.Checked;
+            lblUseProxyPassword.Enabled = cboxUseProxyAuthentication.Checked;
+            txtUseProxyPassword.Enabled = cboxUseProxyAuthentication.Checked;
         }
     }
 }
