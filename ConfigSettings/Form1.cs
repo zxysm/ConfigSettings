@@ -1134,10 +1134,5 @@ namespace ConfigSettings
             lblUseProxyPassword.Enabled = cboxUseProxyAuthentication.Checked;
             txtUseProxyPassword.Enabled = cboxUseProxyAuthentication.Checked;
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

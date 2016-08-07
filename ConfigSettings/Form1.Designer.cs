@@ -29,14 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfig));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grboxDevice = new System.Windows.Forms.GroupBox();
+            this.txtDeviceModelIdentifier = new System.Windows.Forms.TextBox();
+            this.lblDeviceModelIdentifier = new System.Windows.Forms.Label();
+            this.txtDeviceModel = new System.Windows.Forms.TextBox();
+            this.lblDeviceModel = new System.Windows.Forms.Label();
+            this.txtDeviceBrand = new System.Windows.Forms.TextBox();
+            this.lblDeviceBrand = new System.Windows.Forms.Label();
+            this.txtFirmwareFingerprint = new System.Windows.Forms.TextBox();
+            this.lblFirmwareFingerprint = new System.Windows.Forms.Label();
+            this.txtFirmwareType = new System.Windows.Forms.TextBox();
+            this.lblFirmwareType = new System.Windows.Forms.Label();
+            this.txtFirmwareTags = new System.Windows.Forms.TextBox();
+            this.lblFirmwareTags = new System.Windows.Forms.Label();
+            this.txtFirmwareBrand = new System.Windows.Forms.TextBox();
+            this.lblFirmwareBrand = new System.Windows.Forms.Label();
+            this.txtHardwareModel = new System.Windows.Forms.TextBox();
+            this.lblHardwareModel = new System.Windows.Forms.Label();
+            this.txtHardwareManufacturer = new System.Windows.Forms.TextBox();
+            this.lblHardwareManufacturer = new System.Windows.Forms.Label();
+            this.txtDeviceModelBoot = new System.Windows.Forms.TextBox();
+            this.lblDeviceModelBoot = new System.Windows.Forms.Label();
+            this.txtAndroidBootloader = new System.Windows.Forms.TextBox();
+            this.lblAndroidBootloader = new System.Windows.Forms.Label();
+            this.txtAndroidBoardName = new System.Windows.Forms.TextBox();
+            this.lblAndroidBoardName = new System.Windows.Forms.Label();
+            this.txtDeviceId = new System.Windows.Forms.TextBox();
+            this.lblDeviceId = new System.Windows.Forms.Label();
             this.grboxSaving = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBotLocation = new System.Windows.Forms.TextBox();
@@ -49,9 +76,10 @@
             this.lblSavingPath = new System.Windows.Forms.Label();
             this.cboxOverrideOldSettings = new System.Windows.Forms.CheckBox();
             this.grSniping = new System.Windows.Forms.GroupBox();
-            this.lstvwPokemon = new System.Windows.Forms.ListView();
+            this.cboxSnipePokemonNotInPokedex = new System.Windows.Forms.CheckBox();
             this.grboxPokemonToSnipe = new System.Windows.Forms.GroupBox();
             this.lblPokemon = new System.Windows.Forms.Label();
+            this.lstvwPokemon = new System.Windows.Forms.ListView();
             this.dtgrvwLocations = new System.Windows.Forms.DataGridView();
             this.Latitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Longitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +125,7 @@
             this.lblNiceThrowChance = new System.Windows.Forms.Label();
             this.cboxEnableHumanizedThrows = new System.Windows.Forms.CheckBox();
             this.grboxCatching = new System.Windows.Forms.GroupBox();
+            this.cboxCatchPokemon = new System.Windows.Forms.CheckBox();
             this.cbxUseBerriesOperator = new System.Windows.Forms.ComboBox();
             this.lblUseBerriesOperator = new System.Windows.Forms.Label();
             this.txtUseBerriesBelowCatchProbability = new System.Windows.Forms.TextBox();
@@ -175,7 +204,17 @@
             this.txtEvolveAboveIVValue = new System.Windows.Forms.TextBox();
             this.lblEvolveAboveIVValue = new System.Windows.Forms.Label();
             this.grboxAuthentication = new System.Windows.Forms.GroupBox();
+            this.cboxUseProxyAuthentication = new System.Windows.Forms.CheckBox();
+            this.cboxUseProxy = new System.Windows.Forms.CheckBox();
+            this.lblUseProxyPassword = new System.Windows.Forms.Label();
+            this.lblUseProxyUsername = new System.Windows.Forms.Label();
+            this.lblUseProxyPort = new System.Windows.Forms.Label();
+            this.lblUseProxyHost = new System.Windows.Forms.Label();
             this.lblPtcPassword = new System.Windows.Forms.Label();
+            this.txtUseProxyPassword = new System.Windows.Forms.TextBox();
+            this.txtUseProxyUsername = new System.Windows.Forms.TextBox();
+            this.txtUseProxyPort = new System.Windows.Forms.TextBox();
+            this.txtUseProxyHost = new System.Windows.Forms.TextBox();
             this.txtPtcPassword = new System.Windows.Forms.TextBox();
             this.lblPtcUsername = new System.Windows.Forms.Label();
             this.txtPtcUsername = new System.Windows.Forms.TextBox();
@@ -207,6 +246,15 @@
             this.txtKeepMinLvl = new System.Windows.Forms.TextBox();
             this.lblKeepMinLvl = new System.Windows.Forms.Label();
             this.dtgrvwPokemonTransferFilter = new System.Windows.Forms.DataGridView();
+            this.Pokemon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KeepMinCp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KeepMinLvl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UseKeepMinLvl = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.KeepMinIvPercentage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KeepMinDuplicatePokemon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moves = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KeepMinOperator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovesOperator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPokemonTransferFilter = new System.Windows.Forms.Label();
             this.lstvwPokemonsNotToTransfer = new System.Windows.Forms.ListView();
             this.lblPokemonsNotToTransfer = new System.Windows.Forms.Label();
@@ -219,6 +267,7 @@
             this.cboxPrioritizeIVOverCP = new System.Windows.Forms.CheckBox();
             this.txtKeepMinIVPercentage = new System.Windows.Forms.TextBox();
             this.grboxGeneralConfig = new System.Windows.Forms.GroupBox();
+            this.cboxUseWebsocket = new System.Windows.Forms.CheckBox();
             this.lblFavoriteMinIvPercentage = new System.Windows.Forms.Label();
             this.txtFavoriteMinIvPercentage = new System.Windows.Forms.TextBox();
             this.cboxAutoFavoritePokemon = new System.Windows.Forms.CheckBox();
@@ -248,56 +297,8 @@
             this.btnUpdateSettings = new System.Windows.Forms.Button();
             this.bckgrwkrSaving = new System.ComponentModel.BackgroundWorker();
             this.bckgrwkrLoading = new System.ComponentModel.BackgroundWorker();
-            this.cboxCatchPokemon = new System.Windows.Forms.CheckBox();
-            this.cboxUseWebsocket = new System.Windows.Forms.CheckBox();
-            this.Pokemon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KeepMinCp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KeepMinLvl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UseKeepMinLvl = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.KeepMinIvPercentage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KeepMinDuplicatePokemon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moves = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KeepMinOperator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MovesOperator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtUseProxyHost = new System.Windows.Forms.TextBox();
-            this.lblUseProxyHost = new System.Windows.Forms.Label();
-            this.txtUseProxyPort = new System.Windows.Forms.TextBox();
-            this.lblUseProxyPort = new System.Windows.Forms.Label();
-            this.txtUseProxyUsername = new System.Windows.Forms.TextBox();
-            this.lblUseProxyUsername = new System.Windows.Forms.Label();
-            this.txtUseProxyPassword = new System.Windows.Forms.TextBox();
-            this.lblUseProxyPassword = new System.Windows.Forms.Label();
-            this.cboxUseProxy = new System.Windows.Forms.CheckBox();
-            this.cboxUseProxyAuthentication = new System.Windows.Forms.CheckBox();
-            this.cboxSnipePokemonNotInPokedex = new System.Windows.Forms.CheckBox();
-            this.grboxDevice = new System.Windows.Forms.GroupBox();
-            this.lblDeviceId = new System.Windows.Forms.Label();
-            this.txtDeviceId = new System.Windows.Forms.TextBox();
-            this.lblAndroidBoardName = new System.Windows.Forms.Label();
-            this.txtAndroidBoardName = new System.Windows.Forms.TextBox();
-            this.lblAndroidBootloader = new System.Windows.Forms.Label();
-            this.txtAndroidBootloader = new System.Windows.Forms.TextBox();
-            this.lblDeviceBrand = new System.Windows.Forms.Label();
-            this.txtDeviceBrand = new System.Windows.Forms.TextBox();
-            this.lblDeviceModel = new System.Windows.Forms.Label();
-            this.txtDeviceModel = new System.Windows.Forms.TextBox();
-            this.lblDeviceModelIdentifier = new System.Windows.Forms.Label();
-            this.txtDeviceModelIdentifier = new System.Windows.Forms.TextBox();
-            this.lblDeviceModelBoot = new System.Windows.Forms.Label();
-            this.txtDeviceModelBoot = new System.Windows.Forms.TextBox();
-            this.lblHardwareManufacturer = new System.Windows.Forms.Label();
-            this.txtHardwareManufacturer = new System.Windows.Forms.TextBox();
-            this.lblHardwareModel = new System.Windows.Forms.Label();
-            this.txtHardwareModel = new System.Windows.Forms.TextBox();
-            this.lblFirmwareBrand = new System.Windows.Forms.Label();
-            this.txtFirmwareBrand = new System.Windows.Forms.TextBox();
-            this.lblFirmwareTags = new System.Windows.Forms.Label();
-            this.txtFirmwareTags = new System.Windows.Forms.TextBox();
-            this.lblFirmwareType = new System.Windows.Forms.Label();
-            this.txtFirmwareType = new System.Windows.Forms.TextBox();
-            this.lblFirmwareFingerprint = new System.Windows.Forms.Label();
-            this.txtFirmwareFingerprint = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.grboxDevice.SuspendLayout();
             this.grboxSaving.SuspendLayout();
             this.grSniping.SuspendLayout();
             this.grboxPokemonToSnipe.SuspendLayout();
@@ -314,7 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvwPokemonTransferFilter)).BeginInit();
             this.grboxGeneralConfig.SuspendLayout();
             this.grboxOldSetting.SuspendLayout();
-            this.grboxDevice.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -348,6 +348,275 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 651);
             this.panel1.TabIndex = 1;
+            // 
+            // grboxDevice
+            // 
+            this.grboxDevice.Controls.Add(this.txtDeviceModelIdentifier);
+            this.grboxDevice.Controls.Add(this.lblDeviceModelIdentifier);
+            this.grboxDevice.Controls.Add(this.txtDeviceModel);
+            this.grboxDevice.Controls.Add(this.lblDeviceModel);
+            this.grboxDevice.Controls.Add(this.txtDeviceBrand);
+            this.grboxDevice.Controls.Add(this.lblDeviceBrand);
+            this.grboxDevice.Controls.Add(this.txtFirmwareFingerprint);
+            this.grboxDevice.Controls.Add(this.lblFirmwareFingerprint);
+            this.grboxDevice.Controls.Add(this.txtFirmwareType);
+            this.grboxDevice.Controls.Add(this.lblFirmwareType);
+            this.grboxDevice.Controls.Add(this.txtFirmwareTags);
+            this.grboxDevice.Controls.Add(this.lblFirmwareTags);
+            this.grboxDevice.Controls.Add(this.txtFirmwareBrand);
+            this.grboxDevice.Controls.Add(this.lblFirmwareBrand);
+            this.grboxDevice.Controls.Add(this.txtHardwareModel);
+            this.grboxDevice.Controls.Add(this.lblHardwareModel);
+            this.grboxDevice.Controls.Add(this.txtHardwareManufacturer);
+            this.grboxDevice.Controls.Add(this.lblHardwareManufacturer);
+            this.grboxDevice.Controls.Add(this.txtDeviceModelBoot);
+            this.grboxDevice.Controls.Add(this.lblDeviceModelBoot);
+            this.grboxDevice.Controls.Add(this.txtAndroidBootloader);
+            this.grboxDevice.Controls.Add(this.lblAndroidBootloader);
+            this.grboxDevice.Controls.Add(this.txtAndroidBoardName);
+            this.grboxDevice.Controls.Add(this.lblAndroidBoardName);
+            this.grboxDevice.Controls.Add(this.txtDeviceId);
+            this.grboxDevice.Controls.Add(this.lblDeviceId);
+            this.grboxDevice.Location = new System.Drawing.Point(269, 1731);
+            this.grboxDevice.Name = "grboxDevice";
+            this.grboxDevice.Size = new System.Drawing.Size(512, 205);
+            this.grboxDevice.TabIndex = 19;
+            this.grboxDevice.TabStop = false;
+            this.grboxDevice.Text = "Device";
+            // 
+            // txtDeviceModelIdentifier
+            // 
+            this.txtDeviceModelIdentifier.Location = new System.Drawing.Point(386, 71);
+            this.txtDeviceModelIdentifier.Name = "txtDeviceModelIdentifier";
+            this.txtDeviceModelIdentifier.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceModelIdentifier.TabIndex = 1;
+            this.txtDeviceModelIdentifier.Text = "ONE A2003_24_160604";
+            this.txtDeviceModelIdentifier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceModelIdentifier
+            // 
+            this.lblDeviceModelIdentifier.AutoSize = true;
+            this.lblDeviceModelIdentifier.Location = new System.Drawing.Point(270, 74);
+            this.lblDeviceModelIdentifier.Name = "lblDeviceModelIdentifier";
+            this.lblDeviceModelIdentifier.Size = new System.Drawing.Size(110, 13);
+            this.lblDeviceModelIdentifier.TabIndex = 0;
+            this.lblDeviceModelIdentifier.Text = "DeviceModelIdentifier";
+            // 
+            // txtDeviceModel
+            // 
+            this.txtDeviceModel.Location = new System.Drawing.Point(386, 45);
+            this.txtDeviceModel.Name = "txtDeviceModel";
+            this.txtDeviceModel.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceModel.TabIndex = 1;
+            this.txtDeviceModel.Text = "OnePlus2";
+            this.txtDeviceModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceModel
+            // 
+            this.lblDeviceModel.AutoSize = true;
+            this.lblDeviceModel.Location = new System.Drawing.Point(270, 48);
+            this.lblDeviceModel.Name = "lblDeviceModel";
+            this.lblDeviceModel.Size = new System.Drawing.Size(70, 13);
+            this.lblDeviceModel.TabIndex = 0;
+            this.lblDeviceModel.Text = "DeviceModel";
+            // 
+            // txtDeviceBrand
+            // 
+            this.txtDeviceBrand.Location = new System.Drawing.Point(386, 19);
+            this.txtDeviceBrand.Name = "txtDeviceBrand";
+            this.txtDeviceBrand.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceBrand.TabIndex = 1;
+            this.txtDeviceBrand.Text = "OnePlus";
+            this.txtDeviceBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceBrand
+            // 
+            this.lblDeviceBrand.AutoSize = true;
+            this.lblDeviceBrand.Location = new System.Drawing.Point(270, 22);
+            this.lblDeviceBrand.Name = "lblDeviceBrand";
+            this.lblDeviceBrand.Size = new System.Drawing.Size(69, 13);
+            this.lblDeviceBrand.TabIndex = 0;
+            this.lblDeviceBrand.Text = "DeviceBrand";
+            // 
+            // txtFirmwareFingerprint
+            // 
+            this.txtFirmwareFingerprint.Location = new System.Drawing.Point(125, 176);
+            this.txtFirmwareFingerprint.Name = "txtFirmwareFingerprint";
+            this.txtFirmwareFingerprint.Size = new System.Drawing.Size(381, 20);
+            this.txtFirmwareFingerprint.TabIndex = 1;
+            this.txtFirmwareFingerprint.Text = "OnePlus/OnePlus2/OnePlus2:6.0.1/MMB29M/1447840820:user/release-keys";
+            this.txtFirmwareFingerprint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirmwareFingerprint
+            // 
+            this.lblFirmwareFingerprint.AutoSize = true;
+            this.lblFirmwareFingerprint.Location = new System.Drawing.Point(3, 178);
+            this.lblFirmwareFingerprint.Name = "lblFirmwareFingerprint";
+            this.lblFirmwareFingerprint.Size = new System.Drawing.Size(98, 13);
+            this.lblFirmwareFingerprint.TabIndex = 0;
+            this.lblFirmwareFingerprint.Text = "FirmwareFingerprint";
+            // 
+            // txtFirmwareType
+            // 
+            this.txtFirmwareType.Location = new System.Drawing.Point(386, 149);
+            this.txtFirmwareType.Name = "txtFirmwareType";
+            this.txtFirmwareType.Size = new System.Drawing.Size(120, 20);
+            this.txtFirmwareType.TabIndex = 1;
+            this.txtFirmwareType.Text = "user";
+            this.txtFirmwareType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirmwareType
+            // 
+            this.lblFirmwareType.AutoSize = true;
+            this.lblFirmwareType.Location = new System.Drawing.Point(270, 152);
+            this.lblFirmwareType.Name = "lblFirmwareType";
+            this.lblFirmwareType.Size = new System.Drawing.Size(73, 13);
+            this.lblFirmwareType.TabIndex = 0;
+            this.lblFirmwareType.Text = "FirmwareType";
+            // 
+            // txtFirmwareTags
+            // 
+            this.txtFirmwareTags.Location = new System.Drawing.Point(386, 123);
+            this.txtFirmwareTags.Name = "txtFirmwareTags";
+            this.txtFirmwareTags.Size = new System.Drawing.Size(120, 20);
+            this.txtFirmwareTags.TabIndex = 1;
+            this.txtFirmwareTags.Text = "dev-keys";
+            this.txtFirmwareTags.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirmwareTags
+            // 
+            this.lblFirmwareTags.AutoSize = true;
+            this.lblFirmwareTags.Location = new System.Drawing.Point(270, 126);
+            this.lblFirmwareTags.Name = "lblFirmwareTags";
+            this.lblFirmwareTags.Size = new System.Drawing.Size(73, 13);
+            this.lblFirmwareTags.TabIndex = 0;
+            this.lblFirmwareTags.Text = "FirmwareTags";
+            // 
+            // txtFirmwareBrand
+            // 
+            this.txtFirmwareBrand.Location = new System.Drawing.Point(125, 149);
+            this.txtFirmwareBrand.Name = "txtFirmwareBrand";
+            this.txtFirmwareBrand.Size = new System.Drawing.Size(120, 20);
+            this.txtFirmwareBrand.TabIndex = 1;
+            this.txtFirmwareBrand.Text = "OnePlus2";
+            this.txtFirmwareBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblFirmwareBrand
+            // 
+            this.lblFirmwareBrand.AutoSize = true;
+            this.lblFirmwareBrand.Location = new System.Drawing.Point(3, 152);
+            this.lblFirmwareBrand.Name = "lblFirmwareBrand";
+            this.lblFirmwareBrand.Size = new System.Drawing.Size(77, 13);
+            this.lblFirmwareBrand.TabIndex = 0;
+            this.lblFirmwareBrand.Text = "FirmwareBrand";
+            // 
+            // txtHardwareModel
+            // 
+            this.txtHardwareModel.Location = new System.Drawing.Point(125, 123);
+            this.txtHardwareModel.Name = "txtHardwareModel";
+            this.txtHardwareModel.Size = new System.Drawing.Size(120, 20);
+            this.txtHardwareModel.TabIndex = 1;
+            this.txtHardwareModel.Text = "ONE A2003";
+            this.txtHardwareModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblHardwareModel
+            // 
+            this.lblHardwareModel.AutoSize = true;
+            this.lblHardwareModel.Location = new System.Drawing.Point(3, 126);
+            this.lblHardwareModel.Name = "lblHardwareModel";
+            this.lblHardwareModel.Size = new System.Drawing.Size(82, 13);
+            this.lblHardwareModel.TabIndex = 0;
+            this.lblHardwareModel.Text = "HardwareModel";
+            // 
+            // txtHardwareManufacturer
+            // 
+            this.txtHardwareManufacturer.Location = new System.Drawing.Point(125, 97);
+            this.txtHardwareManufacturer.Name = "txtHardwareManufacturer";
+            this.txtHardwareManufacturer.Size = new System.Drawing.Size(120, 20);
+            this.txtHardwareManufacturer.TabIndex = 1;
+            this.txtHardwareManufacturer.Text = "OnePlus";
+            this.txtHardwareManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblHardwareManufacturer
+            // 
+            this.lblHardwareManufacturer.AutoSize = true;
+            this.lblHardwareManufacturer.Location = new System.Drawing.Point(3, 100);
+            this.lblHardwareManufacturer.Name = "lblHardwareManufacturer";
+            this.lblHardwareManufacturer.Size = new System.Drawing.Size(116, 13);
+            this.lblHardwareManufacturer.TabIndex = 0;
+            this.lblHardwareManufacturer.Text = "HardwareManufacturer";
+            // 
+            // txtDeviceModelBoot
+            // 
+            this.txtDeviceModelBoot.Location = new System.Drawing.Point(386, 97);
+            this.txtDeviceModelBoot.Name = "txtDeviceModelBoot";
+            this.txtDeviceModelBoot.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceModelBoot.TabIndex = 1;
+            this.txtDeviceModelBoot.Text = "qcom";
+            this.txtDeviceModelBoot.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceModelBoot
+            // 
+            this.lblDeviceModelBoot.AutoSize = true;
+            this.lblDeviceModelBoot.Location = new System.Drawing.Point(270, 100);
+            this.lblDeviceModelBoot.Name = "lblDeviceModelBoot";
+            this.lblDeviceModelBoot.Size = new System.Drawing.Size(92, 13);
+            this.lblDeviceModelBoot.TabIndex = 0;
+            this.lblDeviceModelBoot.Text = "DeviceModelBoot";
+            // 
+            // txtAndroidBootloader
+            // 
+            this.txtAndroidBootloader.Location = new System.Drawing.Point(125, 71);
+            this.txtAndroidBootloader.Name = "txtAndroidBootloader";
+            this.txtAndroidBootloader.Size = new System.Drawing.Size(120, 20);
+            this.txtAndroidBootloader.TabIndex = 1;
+            this.txtAndroidBootloader.Text = "unknown";
+            this.txtAndroidBootloader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblAndroidBootloader
+            // 
+            this.lblAndroidBootloader.AutoSize = true;
+            this.lblAndroidBootloader.Location = new System.Drawing.Point(3, 74);
+            this.lblAndroidBootloader.Name = "lblAndroidBootloader";
+            this.lblAndroidBootloader.Size = new System.Drawing.Size(94, 13);
+            this.lblAndroidBootloader.TabIndex = 0;
+            this.lblAndroidBootloader.Text = "AndroidBootloader";
+            // 
+            // txtAndroidBoardName
+            // 
+            this.txtAndroidBoardName.Location = new System.Drawing.Point(125, 45);
+            this.txtAndroidBoardName.Name = "txtAndroidBoardName";
+            this.txtAndroidBoardName.Size = new System.Drawing.Size(120, 20);
+            this.txtAndroidBoardName.TabIndex = 1;
+            this.txtAndroidBoardName.Text = "msm8994";
+            this.txtAndroidBoardName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblAndroidBoardName
+            // 
+            this.lblAndroidBoardName.AutoSize = true;
+            this.lblAndroidBoardName.Location = new System.Drawing.Point(3, 48);
+            this.lblAndroidBoardName.Name = "lblAndroidBoardName";
+            this.lblAndroidBoardName.Size = new System.Drawing.Size(99, 13);
+            this.lblAndroidBoardName.TabIndex = 0;
+            this.lblAndroidBoardName.Text = "AndroidBoardName";
+            // 
+            // txtDeviceId
+            // 
+            this.txtDeviceId.Location = new System.Drawing.Point(125, 19);
+            this.txtDeviceId.Name = "txtDeviceId";
+            this.txtDeviceId.Size = new System.Drawing.Size(120, 20);
+            this.txtDeviceId.TabIndex = 1;
+            this.txtDeviceId.Text = "1by3269r3gh7t4a9";
+            this.txtDeviceId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblDeviceId
+            // 
+            this.lblDeviceId.AutoSize = true;
+            this.lblDeviceId.Location = new System.Drawing.Point(3, 22);
+            this.lblDeviceId.Name = "lblDeviceId";
+            this.lblDeviceId.Size = new System.Drawing.Size(50, 13);
+            this.lblDeviceId.TabIndex = 0;
+            this.lblDeviceId.Text = "DeviceId";
             // 
             // grboxSaving
             // 
@@ -491,20 +760,15 @@
             this.grSniping.TabStop = false;
             this.grSniping.Text = "Sniping";
             // 
-            // lstvwPokemon
+            // cboxSnipePokemonNotInPokedex
             // 
-            this.lstvwPokemon.AllowDrop = true;
-            this.lstvwPokemon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstvwPokemon.CheckBoxes = true;
-            this.lstvwPokemon.FullRowSelect = true;
-            this.lstvwPokemon.GridLines = true;
-            this.lstvwPokemon.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstvwPokemon.Location = new System.Drawing.Point(6, 158);
-            this.lstvwPokemon.Name = "lstvwPokemon";
-            this.lstvwPokemon.Size = new System.Drawing.Size(488, 94);
-            this.lstvwPokemon.TabIndex = 41;
-            this.lstvwPokemon.UseCompatibleStateImageBehavior = false;
-            this.lstvwPokemon.View = System.Windows.Forms.View.List;
+            this.cboxSnipePokemonNotInPokedex.AutoSize = true;
+            this.cboxSnipePokemonNotInPokedex.Location = new System.Drawing.Point(6, 189);
+            this.cboxSnipePokemonNotInPokedex.Name = "cboxSnipePokemonNotInPokedex";
+            this.cboxSnipePokemonNotInPokedex.Size = new System.Drawing.Size(166, 17);
+            this.cboxSnipePokemonNotInPokedex.TabIndex = 42;
+            this.cboxSnipePokemonNotInPokedex.Text = "SnipePokemonNotInPokedex";
+            this.cboxSnipePokemonNotInPokedex.UseVisualStyleBackColor = true;
             // 
             // grboxPokemonToSnipe
             // 
@@ -528,30 +792,45 @@
             this.lblPokemon.TabIndex = 2;
             this.lblPokemon.Text = "Pokemon";
             // 
+            // lstvwPokemon
+            // 
+            this.lstvwPokemon.AllowDrop = true;
+            this.lstvwPokemon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstvwPokemon.CheckBoxes = true;
+            this.lstvwPokemon.FullRowSelect = true;
+            this.lstvwPokemon.GridLines = true;
+            this.lstvwPokemon.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lstvwPokemon.Location = new System.Drawing.Point(6, 158);
+            this.lstvwPokemon.Name = "lstvwPokemon";
+            this.lstvwPokemon.Size = new System.Drawing.Size(488, 94);
+            this.lstvwPokemon.TabIndex = 41;
+            this.lstvwPokemon.UseCompatibleStateImageBehavior = false;
+            this.lstvwPokemon.View = System.Windows.Forms.View.List;
+            // 
             // dtgrvwLocations
             // 
             this.dtgrvwLocations.AllowDrop = true;
             this.dtgrvwLocations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwLocations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwLocations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgrvwLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwLocations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Latitude,
             this.Longitude});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwLocations.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwLocations.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgrvwLocations.EnableHeadersVisualStyles = false;
             this.dtgrvwLocations.Location = new System.Drawing.Point(6, 32);
             this.dtgrvwLocations.Name = "dtgrvwLocations";
@@ -1047,6 +1326,17 @@
             this.grboxCatching.TabStop = false;
             this.grboxCatching.Text = "Catching";
             // 
+            // cboxCatchPokemon
+            // 
+            this.cboxCatchPokemon.AutoSize = true;
+            this.cboxCatchPokemon.Location = new System.Drawing.Point(9, 19);
+            this.cboxCatchPokemon.Name = "cboxCatchPokemon";
+            this.cboxCatchPokemon.Size = new System.Drawing.Size(99, 17);
+            this.cboxCatchPokemon.TabIndex = 49;
+            this.cboxCatchPokemon.Text = "CatchPokemon";
+            this.cboxCatchPokemon.UseVisualStyleBackColor = true;
+            this.cboxCatchPokemon.CheckedChanged += new System.EventHandler(this.cboxCatchPokemon_CheckedChanged);
+            // 
             // cbxUseBerriesOperator
             // 
             this.cbxUseBerriesOperator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1436,26 +1726,26 @@
             // 
             this.dtgrvwItemRecycleFilter.AllowDrop = true;
             this.dtgrvwItemRecycleFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwItemRecycleFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwItemRecycleFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgrvwItemRecycleFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwItemRecycleFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Key,
             this.Value});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwItemRecycleFilter.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwItemRecycleFilter.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgrvwItemRecycleFilter.EnableHeadersVisualStyles = false;
             this.dtgrvwItemRecycleFilter.Location = new System.Drawing.Point(9, 322);
             this.dtgrvwItemRecycleFilter.Name = "dtgrvwItemRecycleFilter";
@@ -1958,6 +2248,69 @@
             this.grboxAuthentication.TabStop = false;
             this.grboxAuthentication.Text = "Authentication";
             // 
+            // cboxUseProxyAuthentication
+            // 
+            this.cboxUseProxyAuthentication.AutoSize = true;
+            this.cboxUseProxyAuthentication.Enabled = false;
+            this.cboxUseProxyAuthentication.Location = new System.Drawing.Point(9, 225);
+            this.cboxUseProxyAuthentication.Name = "cboxUseProxyAuthentication";
+            this.cboxUseProxyAuthentication.Size = new System.Drawing.Size(139, 17);
+            this.cboxUseProxyAuthentication.TabIndex = 32;
+            this.cboxUseProxyAuthentication.Text = "UseProxyAuthentication";
+            this.cboxUseProxyAuthentication.UseVisualStyleBackColor = true;
+            this.cboxUseProxyAuthentication.CheckedChanged += new System.EventHandler(this.UseProxyAuthentication_CheckedChanged);
+            // 
+            // cboxUseProxy
+            // 
+            this.cboxUseProxy.AutoSize = true;
+            this.cboxUseProxy.Location = new System.Drawing.Point(9, 150);
+            this.cboxUseProxy.Name = "cboxUseProxy";
+            this.cboxUseProxy.Size = new System.Drawing.Size(71, 17);
+            this.cboxUseProxy.TabIndex = 32;
+            this.cboxUseProxy.Text = "UseProxy";
+            this.cboxUseProxy.UseVisualStyleBackColor = true;
+            this.cboxUseProxy.CheckedChanged += new System.EventHandler(this.cboxUseProxy_CheckedChanged);
+            // 
+            // lblUseProxyPassword
+            // 
+            this.lblUseProxyPassword.AutoSize = true;
+            this.lblUseProxyPassword.Enabled = false;
+            this.lblUseProxyPassword.Location = new System.Drawing.Point(6, 277);
+            this.lblUseProxyPassword.Name = "lblUseProxyPassword";
+            this.lblUseProxyPassword.Size = new System.Drawing.Size(98, 13);
+            this.lblUseProxyPassword.TabIndex = 31;
+            this.lblUseProxyPassword.Text = "UseProxyPassword";
+            // 
+            // lblUseProxyUsername
+            // 
+            this.lblUseProxyUsername.AutoSize = true;
+            this.lblUseProxyUsername.Enabled = false;
+            this.lblUseProxyUsername.Location = new System.Drawing.Point(6, 251);
+            this.lblUseProxyUsername.Name = "lblUseProxyUsername";
+            this.lblUseProxyUsername.Size = new System.Drawing.Size(100, 13);
+            this.lblUseProxyUsername.TabIndex = 31;
+            this.lblUseProxyUsername.Text = "UseProxyUsername";
+            // 
+            // lblUseProxyPort
+            // 
+            this.lblUseProxyPort.AutoSize = true;
+            this.lblUseProxyPort.Enabled = false;
+            this.lblUseProxyPort.Location = new System.Drawing.Point(6, 202);
+            this.lblUseProxyPort.Name = "lblUseProxyPort";
+            this.lblUseProxyPort.Size = new System.Drawing.Size(71, 13);
+            this.lblUseProxyPort.TabIndex = 31;
+            this.lblUseProxyPort.Text = "UseProxyPort";
+            // 
+            // lblUseProxyHost
+            // 
+            this.lblUseProxyHost.AutoSize = true;
+            this.lblUseProxyHost.Enabled = false;
+            this.lblUseProxyHost.Location = new System.Drawing.Point(6, 176);
+            this.lblUseProxyHost.Name = "lblUseProxyHost";
+            this.lblUseProxyHost.Size = new System.Drawing.Size(74, 13);
+            this.lblUseProxyHost.TabIndex = 31;
+            this.lblUseProxyHost.Text = "UseProxyHost";
+            // 
             // lblPtcPassword
             // 
             this.lblPtcPassword.AutoSize = true;
@@ -1966,6 +2319,43 @@
             this.lblPtcPassword.Size = new System.Drawing.Size(69, 13);
             this.lblPtcPassword.TabIndex = 31;
             this.lblPtcPassword.Text = "PtcPassword";
+            // 
+            // txtUseProxyPassword
+            // 
+            this.txtUseProxyPassword.Enabled = false;
+            this.txtUseProxyPassword.Location = new System.Drawing.Point(112, 274);
+            this.txtUseProxyPassword.Name = "txtUseProxyPassword";
+            this.txtUseProxyPassword.PasswordChar = '*';
+            this.txtUseProxyPassword.Size = new System.Drawing.Size(141, 20);
+            this.txtUseProxyPassword.TabIndex = 30;
+            this.txtUseProxyPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtUseProxyUsername
+            // 
+            this.txtUseProxyUsername.Enabled = false;
+            this.txtUseProxyUsername.Location = new System.Drawing.Point(112, 248);
+            this.txtUseProxyUsername.Name = "txtUseProxyUsername";
+            this.txtUseProxyUsername.Size = new System.Drawing.Size(141, 20);
+            this.txtUseProxyUsername.TabIndex = 30;
+            this.txtUseProxyUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtUseProxyPort
+            // 
+            this.txtUseProxyPort.Enabled = false;
+            this.txtUseProxyPort.Location = new System.Drawing.Point(101, 199);
+            this.txtUseProxyPort.Name = "txtUseProxyPort";
+            this.txtUseProxyPort.Size = new System.Drawing.Size(152, 20);
+            this.txtUseProxyPort.TabIndex = 30;
+            this.txtUseProxyPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtUseProxyHost
+            // 
+            this.txtUseProxyHost.Enabled = false;
+            this.txtUseProxyHost.Location = new System.Drawing.Point(101, 173);
+            this.txtUseProxyHost.Name = "txtUseProxyHost";
+            this.txtUseProxyHost.Size = new System.Drawing.Size(152, 20);
+            this.txtUseProxyHost.TabIndex = 30;
+            this.txtUseProxyHost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPtcPassword
             // 
@@ -2289,14 +2679,14 @@
             // 
             this.dtgrvwPokemonTransferFilter.AllowDrop = true;
             this.dtgrvwPokemonTransferFilter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvwPokemonTransferFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvwPokemonTransferFilter.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgrvwPokemonTransferFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvwPokemonTransferFilter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pokemon,
@@ -2308,14 +2698,14 @@
             this.Moves,
             this.KeepMinOperator,
             this.MovesOperator});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvwPokemonTransferFilter.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvwPokemonTransferFilter.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgrvwPokemonTransferFilter.Enabled = false;
             this.dtgrvwPokemonTransferFilter.EnableHeadersVisualStyles = false;
             this.dtgrvwPokemonTransferFilter.Location = new System.Drawing.Point(6, 303);
@@ -2324,6 +2714,72 @@
             this.dtgrvwPokemonTransferFilter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgrvwPokemonTransferFilter.Size = new System.Drawing.Size(500, 150);
             this.dtgrvwPokemonTransferFilter.TabIndex = 14;
+            // 
+            // Pokemon
+            // 
+            this.Pokemon.DataPropertyName = "Key";
+            this.Pokemon.HeaderText = "Pokemon";
+            this.Pokemon.Name = "Pokemon";
+            this.Pokemon.Width = 89;
+            // 
+            // KeepMinCp
+            // 
+            this.KeepMinCp.DataPropertyName = "KeepMinCp";
+            this.KeepMinCp.HeaderText = "KeepMinCp";
+            this.KeepMinCp.Name = "KeepMinCp";
+            this.KeepMinCp.Width = 101;
+            // 
+            // KeepMinLvl
+            // 
+            this.KeepMinLvl.DataPropertyName = "KeepMinLvl";
+            this.KeepMinLvl.HeaderText = "KeepMinLvl";
+            this.KeepMinLvl.Name = "KeepMinLvl";
+            this.KeepMinLvl.Width = 101;
+            // 
+            // UseKeepMinLvl
+            // 
+            this.UseKeepMinLvl.DataPropertyName = "UseKeepMinLvl";
+            this.UseKeepMinLvl.HeaderText = "UseKeepMinLvl";
+            this.UseKeepMinLvl.Name = "UseKeepMinLvl";
+            this.UseKeepMinLvl.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.UseKeepMinLvl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.UseKeepMinLvl.Width = 123;
+            // 
+            // KeepMinIvPercentage
+            // 
+            this.KeepMinIvPercentage.DataPropertyName = "KeepMinIvPercentage";
+            this.KeepMinIvPercentage.HeaderText = "KeepMinIvPercentage";
+            this.KeepMinIvPercentage.Name = "KeepMinIvPercentage";
+            this.KeepMinIvPercentage.Width = 163;
+            // 
+            // KeepMinDuplicatePokemon
+            // 
+            this.KeepMinDuplicatePokemon.DataPropertyName = "KeepMinDuplicatePokemon";
+            this.KeepMinDuplicatePokemon.HeaderText = "KeepMinDuplicatePokemon";
+            this.KeepMinDuplicatePokemon.Name = "KeepMinDuplicatePokemon";
+            this.KeepMinDuplicatePokemon.Width = 198;
+            // 
+            // Moves
+            // 
+            this.Moves.DataPropertyName = "MovesToDisplay";
+            this.Moves.HeaderText = "Moves";
+            this.Moves.Name = "Moves";
+            this.Moves.Width = 73;
+            // 
+            // KeepMinOperator
+            // 
+            this.KeepMinOperator.DataPropertyName = "KeepMinOperator";
+            this.KeepMinOperator.HeaderText = "KeepMinOperator";
+            this.KeepMinOperator.Name = "KeepMinOperator";
+            this.KeepMinOperator.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.KeepMinOperator.Width = 140;
+            // 
+            // MovesOperator
+            // 
+            this.MovesOperator.DataPropertyName = "MovesOperator";
+            this.MovesOperator.HeaderText = "MovesOperator";
+            this.MovesOperator.Name = "MovesOperator";
+            this.MovesOperator.Width = 127;
             // 
             // lblPokemonTransferFilter
             // 
@@ -2481,6 +2937,17 @@
             this.grboxGeneralConfig.TabIndex = 9;
             this.grboxGeneralConfig.TabStop = false;
             this.grboxGeneralConfig.Text = "General Config";
+            // 
+            // cboxUseWebsocket
+            // 
+            this.cboxUseWebsocket.AutoSize = true;
+            this.cboxUseWebsocket.Location = new System.Drawing.Point(9, 289);
+            this.cboxUseWebsocket.Name = "cboxUseWebsocket";
+            this.cboxUseWebsocket.Size = new System.Drawing.Size(100, 17);
+            this.cboxUseWebsocket.TabIndex = 43;
+            this.cboxUseWebsocket.Text = "UseWebsocket";
+            this.cboxUseWebsocket.UseVisualStyleBackColor = true;
+            this.cboxUseWebsocket.CheckedChanged += new System.EventHandler(this.cboxUseWebsocket_CheckedChanged);
             // 
             // lblFavoriteMinIvPercentage
             // 
@@ -2794,476 +3261,6 @@
             this.bckgrwkrLoading.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bckgrwkrLoading_DoWork);
             this.bckgrwkrLoading.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bckgrwkrLoading_ProgressChanged);
             // 
-            // cboxCatchPokemon
-            // 
-            this.cboxCatchPokemon.AutoSize = true;
-            this.cboxCatchPokemon.Location = new System.Drawing.Point(9, 19);
-            this.cboxCatchPokemon.Name = "cboxCatchPokemon";
-            this.cboxCatchPokemon.Size = new System.Drawing.Size(99, 17);
-            this.cboxCatchPokemon.TabIndex = 49;
-            this.cboxCatchPokemon.Text = "CatchPokemon";
-            this.cboxCatchPokemon.UseVisualStyleBackColor = true;
-            this.cboxCatchPokemon.CheckedChanged += new System.EventHandler(this.cboxCatchPokemon_CheckedChanged);
-            // 
-            // cboxUseWebsocket
-            // 
-            this.cboxUseWebsocket.AutoSize = true;
-            this.cboxUseWebsocket.Location = new System.Drawing.Point(9, 289);
-            this.cboxUseWebsocket.Name = "cboxUseWebsocket";
-            this.cboxUseWebsocket.Size = new System.Drawing.Size(100, 17);
-            this.cboxUseWebsocket.TabIndex = 43;
-            this.cboxUseWebsocket.Text = "UseWebsocket";
-            this.cboxUseWebsocket.UseVisualStyleBackColor = true;
-            this.cboxUseWebsocket.CheckedChanged += new System.EventHandler(this.cboxUseWebsocket_CheckedChanged);
-            // 
-            // Pokemon
-            // 
-            this.Pokemon.DataPropertyName = "Key";
-            this.Pokemon.HeaderText = "Pokemon";
-            this.Pokemon.Name = "Pokemon";
-            this.Pokemon.Width = 89;
-            // 
-            // KeepMinCp
-            // 
-            this.KeepMinCp.DataPropertyName = "KeepMinCp";
-            this.KeepMinCp.HeaderText = "KeepMinCp";
-            this.KeepMinCp.Name = "KeepMinCp";
-            this.KeepMinCp.Width = 101;
-            // 
-            // KeepMinLvl
-            // 
-            this.KeepMinLvl.DataPropertyName = "KeepMinLvl";
-            this.KeepMinLvl.HeaderText = "KeepMinLvl";
-            this.KeepMinLvl.Name = "KeepMinLvl";
-            this.KeepMinLvl.Width = 101;
-            // 
-            // UseKeepMinLvl
-            // 
-            this.UseKeepMinLvl.DataPropertyName = "UseKeepMinLvl";
-            this.UseKeepMinLvl.HeaderText = "UseKeepMinLvl";
-            this.UseKeepMinLvl.Name = "UseKeepMinLvl";
-            this.UseKeepMinLvl.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.UseKeepMinLvl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.UseKeepMinLvl.Width = 123;
-            // 
-            // KeepMinIvPercentage
-            // 
-            this.KeepMinIvPercentage.DataPropertyName = "KeepMinIvPercentage";
-            this.KeepMinIvPercentage.HeaderText = "KeepMinIvPercentage";
-            this.KeepMinIvPercentage.Name = "KeepMinIvPercentage";
-            this.KeepMinIvPercentage.Width = 163;
-            // 
-            // KeepMinDuplicatePokemon
-            // 
-            this.KeepMinDuplicatePokemon.DataPropertyName = "KeepMinDuplicatePokemon";
-            this.KeepMinDuplicatePokemon.HeaderText = "KeepMinDuplicatePokemon";
-            this.KeepMinDuplicatePokemon.Name = "KeepMinDuplicatePokemon";
-            this.KeepMinDuplicatePokemon.Width = 198;
-            // 
-            // Moves
-            // 
-            this.Moves.DataPropertyName = "MovesToDisplay";
-            this.Moves.HeaderText = "Moves";
-            this.Moves.Name = "Moves";
-            this.Moves.Width = 73;
-            // 
-            // KeepMinOperator
-            // 
-            this.KeepMinOperator.DataPropertyName = "KeepMinOperator";
-            this.KeepMinOperator.HeaderText = "KeepMinOperator";
-            this.KeepMinOperator.Name = "KeepMinOperator";
-            this.KeepMinOperator.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.KeepMinOperator.Width = 140;
-            // 
-            // MovesOperator
-            // 
-            this.MovesOperator.DataPropertyName = "MovesOperator";
-            this.MovesOperator.HeaderText = "MovesOperator";
-            this.MovesOperator.Name = "MovesOperator";
-            this.MovesOperator.Width = 127;
-            // 
-            // txtUseProxyHost
-            // 
-            this.txtUseProxyHost.Enabled = false;
-            this.txtUseProxyHost.Location = new System.Drawing.Point(101, 173);
-            this.txtUseProxyHost.Name = "txtUseProxyHost";
-            this.txtUseProxyHost.Size = new System.Drawing.Size(152, 20);
-            this.txtUseProxyHost.TabIndex = 30;
-            this.txtUseProxyHost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblUseProxyHost
-            // 
-            this.lblUseProxyHost.AutoSize = true;
-            this.lblUseProxyHost.Enabled = false;
-            this.lblUseProxyHost.Location = new System.Drawing.Point(6, 176);
-            this.lblUseProxyHost.Name = "lblUseProxyHost";
-            this.lblUseProxyHost.Size = new System.Drawing.Size(74, 13);
-            this.lblUseProxyHost.TabIndex = 31;
-            this.lblUseProxyHost.Text = "UseProxyHost";
-            // 
-            // txtUseProxyPort
-            // 
-            this.txtUseProxyPort.Enabled = false;
-            this.txtUseProxyPort.Location = new System.Drawing.Point(101, 199);
-            this.txtUseProxyPort.Name = "txtUseProxyPort";
-            this.txtUseProxyPort.Size = new System.Drawing.Size(152, 20);
-            this.txtUseProxyPort.TabIndex = 30;
-            this.txtUseProxyPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblUseProxyPort
-            // 
-            this.lblUseProxyPort.AutoSize = true;
-            this.lblUseProxyPort.Enabled = false;
-            this.lblUseProxyPort.Location = new System.Drawing.Point(6, 202);
-            this.lblUseProxyPort.Name = "lblUseProxyPort";
-            this.lblUseProxyPort.Size = new System.Drawing.Size(71, 13);
-            this.lblUseProxyPort.TabIndex = 31;
-            this.lblUseProxyPort.Text = "UseProxyPort";
-            // 
-            // txtUseProxyUsername
-            // 
-            this.txtUseProxyUsername.Enabled = false;
-            this.txtUseProxyUsername.Location = new System.Drawing.Point(112, 248);
-            this.txtUseProxyUsername.Name = "txtUseProxyUsername";
-            this.txtUseProxyUsername.Size = new System.Drawing.Size(141, 20);
-            this.txtUseProxyUsername.TabIndex = 30;
-            this.txtUseProxyUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblUseProxyUsername
-            // 
-            this.lblUseProxyUsername.AutoSize = true;
-            this.lblUseProxyUsername.Enabled = false;
-            this.lblUseProxyUsername.Location = new System.Drawing.Point(6, 251);
-            this.lblUseProxyUsername.Name = "lblUseProxyUsername";
-            this.lblUseProxyUsername.Size = new System.Drawing.Size(100, 13);
-            this.lblUseProxyUsername.TabIndex = 31;
-            this.lblUseProxyUsername.Text = "UseProxyUsername";
-            // 
-            // txtUseProxyPassword
-            // 
-            this.txtUseProxyPassword.Enabled = false;
-            this.txtUseProxyPassword.Location = new System.Drawing.Point(112, 274);
-            this.txtUseProxyPassword.Name = "txtUseProxyPassword";
-            this.txtUseProxyPassword.PasswordChar = '*';
-            this.txtUseProxyPassword.Size = new System.Drawing.Size(141, 20);
-            this.txtUseProxyPassword.TabIndex = 30;
-            this.txtUseProxyPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblUseProxyPassword
-            // 
-            this.lblUseProxyPassword.AutoSize = true;
-            this.lblUseProxyPassword.Enabled = false;
-            this.lblUseProxyPassword.Location = new System.Drawing.Point(6, 277);
-            this.lblUseProxyPassword.Name = "lblUseProxyPassword";
-            this.lblUseProxyPassword.Size = new System.Drawing.Size(98, 13);
-            this.lblUseProxyPassword.TabIndex = 31;
-            this.lblUseProxyPassword.Text = "UseProxyPassword";
-            // 
-            // cboxUseProxy
-            // 
-            this.cboxUseProxy.AutoSize = true;
-            this.cboxUseProxy.Location = new System.Drawing.Point(9, 150);
-            this.cboxUseProxy.Name = "cboxUseProxy";
-            this.cboxUseProxy.Size = new System.Drawing.Size(71, 17);
-            this.cboxUseProxy.TabIndex = 32;
-            this.cboxUseProxy.Text = "UseProxy";
-            this.cboxUseProxy.UseVisualStyleBackColor = true;
-            this.cboxUseProxy.CheckedChanged += new System.EventHandler(this.cboxUseProxy_CheckedChanged);
-            // 
-            // cboxUseProxyAuthentication
-            // 
-            this.cboxUseProxyAuthentication.AutoSize = true;
-            this.cboxUseProxyAuthentication.Enabled = false;
-            this.cboxUseProxyAuthentication.Location = new System.Drawing.Point(9, 225);
-            this.cboxUseProxyAuthentication.Name = "cboxUseProxyAuthentication";
-            this.cboxUseProxyAuthentication.Size = new System.Drawing.Size(139, 17);
-            this.cboxUseProxyAuthentication.TabIndex = 32;
-            this.cboxUseProxyAuthentication.Text = "UseProxyAuthentication";
-            this.cboxUseProxyAuthentication.UseVisualStyleBackColor = true;
-            this.cboxUseProxyAuthentication.CheckedChanged += new System.EventHandler(this.UseProxyAuthentication_CheckedChanged);
-            // 
-            // cboxSnipePokemonNotInPokedex
-            // 
-            this.cboxSnipePokemonNotInPokedex.AutoSize = true;
-            this.cboxSnipePokemonNotInPokedex.Location = new System.Drawing.Point(6, 189);
-            this.cboxSnipePokemonNotInPokedex.Name = "cboxSnipePokemonNotInPokedex";
-            this.cboxSnipePokemonNotInPokedex.Size = new System.Drawing.Size(166, 17);
-            this.cboxSnipePokemonNotInPokedex.TabIndex = 42;
-            this.cboxSnipePokemonNotInPokedex.Text = "SnipePokemonNotInPokedex";
-            this.cboxSnipePokemonNotInPokedex.UseVisualStyleBackColor = true;
-            // 
-            // grboxDevice
-            // 
-            this.grboxDevice.Controls.Add(this.txtDeviceModelIdentifier);
-            this.grboxDevice.Controls.Add(this.lblDeviceModelIdentifier);
-            this.grboxDevice.Controls.Add(this.txtDeviceModel);
-            this.grboxDevice.Controls.Add(this.lblDeviceModel);
-            this.grboxDevice.Controls.Add(this.txtDeviceBrand);
-            this.grboxDevice.Controls.Add(this.lblDeviceBrand);
-            this.grboxDevice.Controls.Add(this.txtFirmwareFingerprint);
-            this.grboxDevice.Controls.Add(this.lblFirmwareFingerprint);
-            this.grboxDevice.Controls.Add(this.txtFirmwareType);
-            this.grboxDevice.Controls.Add(this.lblFirmwareType);
-            this.grboxDevice.Controls.Add(this.txtFirmwareTags);
-            this.grboxDevice.Controls.Add(this.lblFirmwareTags);
-            this.grboxDevice.Controls.Add(this.txtFirmwareBrand);
-            this.grboxDevice.Controls.Add(this.lblFirmwareBrand);
-            this.grboxDevice.Controls.Add(this.txtHardwareModel);
-            this.grboxDevice.Controls.Add(this.lblHardwareModel);
-            this.grboxDevice.Controls.Add(this.txtHardwareManufacturer);
-            this.grboxDevice.Controls.Add(this.lblHardwareManufacturer);
-            this.grboxDevice.Controls.Add(this.txtDeviceModelBoot);
-            this.grboxDevice.Controls.Add(this.lblDeviceModelBoot);
-            this.grboxDevice.Controls.Add(this.txtAndroidBootloader);
-            this.grboxDevice.Controls.Add(this.lblAndroidBootloader);
-            this.grboxDevice.Controls.Add(this.txtAndroidBoardName);
-            this.grboxDevice.Controls.Add(this.lblAndroidBoardName);
-            this.grboxDevice.Controls.Add(this.txtDeviceId);
-            this.grboxDevice.Controls.Add(this.lblDeviceId);
-            this.grboxDevice.Location = new System.Drawing.Point(269, 1731);
-            this.grboxDevice.Name = "grboxDevice";
-            this.grboxDevice.Size = new System.Drawing.Size(512, 205);
-            this.grboxDevice.TabIndex = 19;
-            this.grboxDevice.TabStop = false;
-            this.grboxDevice.Text = "Device";
-            // 
-            // lblDeviceId
-            // 
-            this.lblDeviceId.AutoSize = true;
-            this.lblDeviceId.Location = new System.Drawing.Point(3, 22);
-            this.lblDeviceId.Name = "lblDeviceId";
-            this.lblDeviceId.Size = new System.Drawing.Size(50, 13);
-            this.lblDeviceId.TabIndex = 0;
-            this.lblDeviceId.Text = "DeviceId";
-            // 
-            // txtDeviceId
-            // 
-            this.txtDeviceId.Location = new System.Drawing.Point(125, 19);
-            this.txtDeviceId.Name = "txtDeviceId";
-            this.txtDeviceId.Size = new System.Drawing.Size(120, 20);
-            this.txtDeviceId.TabIndex = 1;
-            this.txtDeviceId.Text = "1by3269r3gh7t4a9";
-            this.txtDeviceId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblAndroidBoardName
-            // 
-            this.lblAndroidBoardName.AutoSize = true;
-            this.lblAndroidBoardName.Location = new System.Drawing.Point(3, 48);
-            this.lblAndroidBoardName.Name = "lblAndroidBoardName";
-            this.lblAndroidBoardName.Size = new System.Drawing.Size(99, 13);
-            this.lblAndroidBoardName.TabIndex = 0;
-            this.lblAndroidBoardName.Text = "AndroidBoardName";
-            // 
-            // txtAndroidBoardName
-            // 
-            this.txtAndroidBoardName.Location = new System.Drawing.Point(125, 45);
-            this.txtAndroidBoardName.Name = "txtAndroidBoardName";
-            this.txtAndroidBoardName.Size = new System.Drawing.Size(120, 20);
-            this.txtAndroidBoardName.TabIndex = 1;
-            this.txtAndroidBoardName.Text = "msm8994";
-            this.txtAndroidBoardName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblAndroidBootloader
-            // 
-            this.lblAndroidBootloader.AutoSize = true;
-            this.lblAndroidBootloader.Location = new System.Drawing.Point(3, 74);
-            this.lblAndroidBootloader.Name = "lblAndroidBootloader";
-            this.lblAndroidBootloader.Size = new System.Drawing.Size(94, 13);
-            this.lblAndroidBootloader.TabIndex = 0;
-            this.lblAndroidBootloader.Text = "AndroidBootloader";
-            // 
-            // txtAndroidBootloader
-            // 
-            this.txtAndroidBootloader.Location = new System.Drawing.Point(125, 71);
-            this.txtAndroidBootloader.Name = "txtAndroidBootloader";
-            this.txtAndroidBootloader.Size = new System.Drawing.Size(120, 20);
-            this.txtAndroidBootloader.TabIndex = 1;
-            this.txtAndroidBootloader.Text = "unknown";
-            this.txtAndroidBootloader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblDeviceBrand
-            // 
-            this.lblDeviceBrand.AutoSize = true;
-            this.lblDeviceBrand.Location = new System.Drawing.Point(270, 22);
-            this.lblDeviceBrand.Name = "lblDeviceBrand";
-            this.lblDeviceBrand.Size = new System.Drawing.Size(69, 13);
-            this.lblDeviceBrand.TabIndex = 0;
-            this.lblDeviceBrand.Text = "DeviceBrand";
-            this.lblDeviceBrand.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // txtDeviceBrand
-            // 
-            this.txtDeviceBrand.Location = new System.Drawing.Point(386, 19);
-            this.txtDeviceBrand.Name = "txtDeviceBrand";
-            this.txtDeviceBrand.Size = new System.Drawing.Size(120, 20);
-            this.txtDeviceBrand.TabIndex = 1;
-            this.txtDeviceBrand.Text = "OnePlus";
-            this.txtDeviceBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblDeviceModel
-            // 
-            this.lblDeviceModel.AutoSize = true;
-            this.lblDeviceModel.Location = new System.Drawing.Point(270, 48);
-            this.lblDeviceModel.Name = "lblDeviceModel";
-            this.lblDeviceModel.Size = new System.Drawing.Size(70, 13);
-            this.lblDeviceModel.TabIndex = 0;
-            this.lblDeviceModel.Text = "DeviceModel";
-            this.lblDeviceModel.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // txtDeviceModel
-            // 
-            this.txtDeviceModel.Location = new System.Drawing.Point(386, 45);
-            this.txtDeviceModel.Name = "txtDeviceModel";
-            this.txtDeviceModel.Size = new System.Drawing.Size(120, 20);
-            this.txtDeviceModel.TabIndex = 1;
-            this.txtDeviceModel.Text = "OnePlus2";
-            this.txtDeviceModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblDeviceModelIdentifier
-            // 
-            this.lblDeviceModelIdentifier.AutoSize = true;
-            this.lblDeviceModelIdentifier.Location = new System.Drawing.Point(270, 74);
-            this.lblDeviceModelIdentifier.Name = "lblDeviceModelIdentifier";
-            this.lblDeviceModelIdentifier.Size = new System.Drawing.Size(110, 13);
-            this.lblDeviceModelIdentifier.TabIndex = 0;
-            this.lblDeviceModelIdentifier.Text = "DeviceModelIdentifier";
-            this.lblDeviceModelIdentifier.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // txtDeviceModelIdentifier
-            // 
-            this.txtDeviceModelIdentifier.Location = new System.Drawing.Point(386, 71);
-            this.txtDeviceModelIdentifier.Name = "txtDeviceModelIdentifier";
-            this.txtDeviceModelIdentifier.Size = new System.Drawing.Size(120, 20);
-            this.txtDeviceModelIdentifier.TabIndex = 1;
-            this.txtDeviceModelIdentifier.Text = "ONE A2003_24_160604";
-            this.txtDeviceModelIdentifier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblDeviceModelBoot
-            // 
-            this.lblDeviceModelBoot.AutoSize = true;
-            this.lblDeviceModelBoot.Location = new System.Drawing.Point(270, 100);
-            this.lblDeviceModelBoot.Name = "lblDeviceModelBoot";
-            this.lblDeviceModelBoot.Size = new System.Drawing.Size(92, 13);
-            this.lblDeviceModelBoot.TabIndex = 0;
-            this.lblDeviceModelBoot.Text = "DeviceModelBoot";
-            // 
-            // txtDeviceModelBoot
-            // 
-            this.txtDeviceModelBoot.Location = new System.Drawing.Point(386, 97);
-            this.txtDeviceModelBoot.Name = "txtDeviceModelBoot";
-            this.txtDeviceModelBoot.Size = new System.Drawing.Size(120, 20);
-            this.txtDeviceModelBoot.TabIndex = 1;
-            this.txtDeviceModelBoot.Text = "qcom";
-            this.txtDeviceModelBoot.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblHardwareManufacturer
-            // 
-            this.lblHardwareManufacturer.AutoSize = true;
-            this.lblHardwareManufacturer.Location = new System.Drawing.Point(3, 100);
-            this.lblHardwareManufacturer.Name = "lblHardwareManufacturer";
-            this.lblHardwareManufacturer.Size = new System.Drawing.Size(116, 13);
-            this.lblHardwareManufacturer.TabIndex = 0;
-            this.lblHardwareManufacturer.Text = "HardwareManufacturer";
-            // 
-            // txtHardwareManufacturer
-            // 
-            this.txtHardwareManufacturer.Location = new System.Drawing.Point(125, 97);
-            this.txtHardwareManufacturer.Name = "txtHardwareManufacturer";
-            this.txtHardwareManufacturer.Size = new System.Drawing.Size(120, 20);
-            this.txtHardwareManufacturer.TabIndex = 1;
-            this.txtHardwareManufacturer.Text = "OnePlus";
-            this.txtHardwareManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblHardwareModel
-            // 
-            this.lblHardwareModel.AutoSize = true;
-            this.lblHardwareModel.Location = new System.Drawing.Point(3, 126);
-            this.lblHardwareModel.Name = "lblHardwareModel";
-            this.lblHardwareModel.Size = new System.Drawing.Size(82, 13);
-            this.lblHardwareModel.TabIndex = 0;
-            this.lblHardwareModel.Text = "HardwareModel";
-            // 
-            // txtHardwareModel
-            // 
-            this.txtHardwareModel.Location = new System.Drawing.Point(125, 123);
-            this.txtHardwareModel.Name = "txtHardwareModel";
-            this.txtHardwareModel.Size = new System.Drawing.Size(120, 20);
-            this.txtHardwareModel.TabIndex = 1;
-            this.txtHardwareModel.Text = "ONE A2003";
-            this.txtHardwareModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblFirmwareBrand
-            // 
-            this.lblFirmwareBrand.AutoSize = true;
-            this.lblFirmwareBrand.Location = new System.Drawing.Point(3, 152);
-            this.lblFirmwareBrand.Name = "lblFirmwareBrand";
-            this.lblFirmwareBrand.Size = new System.Drawing.Size(77, 13);
-            this.lblFirmwareBrand.TabIndex = 0;
-            this.lblFirmwareBrand.Text = "FirmwareBrand";
-            // 
-            // txtFirmwareBrand
-            // 
-            this.txtFirmwareBrand.Location = new System.Drawing.Point(125, 149);
-            this.txtFirmwareBrand.Name = "txtFirmwareBrand";
-            this.txtFirmwareBrand.Size = new System.Drawing.Size(120, 20);
-            this.txtFirmwareBrand.TabIndex = 1;
-            this.txtFirmwareBrand.Text = "OnePlus2";
-            this.txtFirmwareBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblFirmwareTags
-            // 
-            this.lblFirmwareTags.AutoSize = true;
-            this.lblFirmwareTags.Location = new System.Drawing.Point(270, 126);
-            this.lblFirmwareTags.Name = "lblFirmwareTags";
-            this.lblFirmwareTags.Size = new System.Drawing.Size(73, 13);
-            this.lblFirmwareTags.TabIndex = 0;
-            this.lblFirmwareTags.Text = "FirmwareTags";
-            // 
-            // txtFirmwareTags
-            // 
-            this.txtFirmwareTags.Location = new System.Drawing.Point(386, 123);
-            this.txtFirmwareTags.Name = "txtFirmwareTags";
-            this.txtFirmwareTags.Size = new System.Drawing.Size(120, 20);
-            this.txtFirmwareTags.TabIndex = 1;
-            this.txtFirmwareTags.Text = "dev-keys";
-            this.txtFirmwareTags.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblFirmwareType
-            // 
-            this.lblFirmwareType.AutoSize = true;
-            this.lblFirmwareType.Location = new System.Drawing.Point(270, 152);
-            this.lblFirmwareType.Name = "lblFirmwareType";
-            this.lblFirmwareType.Size = new System.Drawing.Size(73, 13);
-            this.lblFirmwareType.TabIndex = 0;
-            this.lblFirmwareType.Text = "FirmwareType";
-            // 
-            // txtFirmwareType
-            // 
-            this.txtFirmwareType.Location = new System.Drawing.Point(386, 149);
-            this.txtFirmwareType.Name = "txtFirmwareType";
-            this.txtFirmwareType.Size = new System.Drawing.Size(120, 20);
-            this.txtFirmwareType.TabIndex = 1;
-            this.txtFirmwareType.Text = "user";
-            this.txtFirmwareType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblFirmwareFingerprint
-            // 
-            this.lblFirmwareFingerprint.AutoSize = true;
-            this.lblFirmwareFingerprint.Location = new System.Drawing.Point(3, 178);
-            this.lblFirmwareFingerprint.Name = "lblFirmwareFingerprint";
-            this.lblFirmwareFingerprint.Size = new System.Drawing.Size(98, 13);
-            this.lblFirmwareFingerprint.TabIndex = 0;
-            this.lblFirmwareFingerprint.Text = "FirmwareFingerprint";
-            // 
-            // txtFirmwareFingerprint
-            // 
-            this.txtFirmwareFingerprint.Location = new System.Drawing.Point(125, 176);
-            this.txtFirmwareFingerprint.Name = "txtFirmwareFingerprint";
-            this.txtFirmwareFingerprint.Size = new System.Drawing.Size(381, 20);
-            this.txtFirmwareFingerprint.TabIndex = 1;
-            this.txtFirmwareFingerprint.Text = "OnePlus/OnePlus2/OnePlus2:6.0.1/MMB29M/1447840820:user/release-keys";
-            this.txtFirmwareFingerprint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3279,6 +3276,8 @@
             this.Text = "Configuration";
             this.Load += new System.EventHandler(this.frmConfig_Load);
             this.panel1.ResumeLayout(false);
+            this.grboxDevice.ResumeLayout(false);
+            this.grboxDevice.PerformLayout();
             this.grboxSaving.ResumeLayout(false);
             this.grboxSaving.PerformLayout();
             this.grSniping.ResumeLayout(false);
@@ -3308,8 +3307,6 @@
             this.grboxGeneralConfig.PerformLayout();
             this.grboxOldSetting.ResumeLayout(false);
             this.grboxOldSetting.PerformLayout();
-            this.grboxDevice.ResumeLayout(false);
-            this.grboxDevice.PerformLayout();
             this.ResumeLayout(false);
 
         }
